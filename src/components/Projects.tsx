@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { ExternalLink, Github, Star, GitFork } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface Repository {
   id: number;
@@ -17,6 +18,7 @@ interface Repository {
 const Projects = () => {
   const [repos, setRepos] = useState<Repository[]>([]);
   const [loading, setLoading] = useState(true);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const fetchRepos = async () => {
@@ -25,14 +27,14 @@ const Projects = () => {
         const data = await response.json();
         setRepos(data.filter((repo: Repository) => !repo.name.includes('OniMock')));
       } catch (error) {
-        console.error('Erro ao buscar repositórios:', error);
+        console.error(t('projects.error'), error);
       } finally {
         setLoading(false);
       }
     };
 
     fetchRepos();
-  }, []);
+  }, [t]);
 
   const getLanguageColor = (language: string) => {
     const colors: { [key: string]: string } = {
@@ -55,7 +57,7 @@ const Projects = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-gradient">Projetos</span>
+              <span className="text-gradient">{t('projects.title')}</span>
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -84,11 +86,10 @@ const Projects = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Projetos</span>
+            <span className="text-gradient">{t('projects.title')}</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Uma seleção dos meus projetos mais recentes e interessantes, 
-            disponíveis no GitHub para exploração e contribuição.
+            {t('projects.subtitle')}
           </p>
         </div>
 
@@ -126,7 +127,7 @@ const Projects = () => {
               </div>
 
               <p className="text-gray-400 text-sm mb-4 line-clamp-3">
-                {repo.description || 'Projeto interessante desenvolvido com paixão e dedicação.'}
+                {repo.description || t('projects.defaultDesc')}
               </p>
 
               <div className="flex flex-wrap gap-2 mb-4">
@@ -172,7 +173,7 @@ const Projects = () => {
             className="px-8 py-4 glass-card hover:bg-white/10 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
           >
             <Github className="w-5 h-5" />
-            Ver todos os projetos
+            {t('projects.viewAll')}
           </a>
         </div>
       </div>

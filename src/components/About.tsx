@@ -1,7 +1,10 @@
 
 import { Code, Coffee, Lightbulb, Rocket } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
+  
   const skills = [
     'JavaScript/TypeScript',
     'React/Next.js',
@@ -14,10 +17,26 @@ const About = () => {
   ];
 
   const interests = [
-    { icon: Code, title: 'Clean Code', desc: 'Código limpo e bem estruturado' },
-    { icon: Lightbulb, title: 'Inovação', desc: 'Sempre buscando novas soluções' },
-    { icon: Rocket, title: 'Performance', desc: 'Otimização e alta performance' },
-    { icon: Coffee, title: 'Open Source', desc: 'Contribuindo para a comunidade' }
+    { 
+      icon: Code, 
+      title: t('about.interests.cleancode.title'), 
+      desc: t('about.interests.cleancode.desc') 
+    },
+    { 
+      icon: Lightbulb, 
+      title: t('about.interests.innovation.title'), 
+      desc: t('about.interests.innovation.desc') 
+    },
+    { 
+      icon: Rocket, 
+      title: t('about.interests.performance.title'), 
+      desc: t('about.interests.performance.desc') 
+    },
+    { 
+      icon: Coffee, 
+      title: t('about.interests.opensource.title'), 
+      desc: t('about.interests.opensource.desc') 
+    }
   ];
 
   return (
@@ -25,31 +44,26 @@ const About = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Sobre Mim</span>
+            <span className="text-gradient">{t('about.title')}</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Desenvolvedor apaixonado por tecnologia, sempre em busca de criar soluções 
-            elegantes e eficientes que impactem positivamente a vida das pessoas.
+            {t('about.subtitle')}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6 animate-slide-in-left">
-            <h3 className="text-2xl font-semibold text-white mb-4">Minha Jornada</h3>
+            <h3 className="text-2xl font-semibold text-white mb-4">{t('about.journey')}</h3>
             <p className="text-gray-300 leading-relaxed">
-              Como desenvolvedor full stack, tenho paixão por criar experiências digitais 
-              excepcionais. Especializo-me em tecnologias modernas e estou sempre 
-              explorando novas ferramentas e metodologias.
+              {t('about.journey.p1')}
             </p>
             <p className="text-gray-300 leading-relaxed">
-              Acredito que o código deve ser não apenas funcional, mas também elegante 
-              e maintível. Cada projeto é uma oportunidade de aprender algo novo e 
-              contribuir para a comunidade de desenvolvedores.
+              {t('about.journey.p2')}
             </p>
           </div>
           
           <div className="glass-card p-8 animate-slide-in-right">
-            <h3 className="text-xl font-semibold text-white mb-6">Tecnologias</h3>
+            <h3 className="text-xl font-semibold text-white mb-6">{t('about.technologies')}</h3>
             <div className="grid grid-cols-2 gap-3">
               {skills.map((skill, index) => (
                 <div

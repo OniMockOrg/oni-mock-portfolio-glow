@@ -27,6 +27,30 @@ const translations = {
     'hero.viewProjects': 'Ver Projetos',
     'hero.aboutMe': 'Sobre Mim',
     
+    // About
+    'about.title': 'Sobre Mim',
+    'about.subtitle': 'Desenvolvedor apaixonado por tecnologia, sempre em busca de criar soluções elegantes e eficientes que impactem positivamente a vida das pessoas.',
+    'about.journey': 'Minha Jornada',
+    'about.journey.p1': 'Como desenvolvedor full stack, tenho paixão por criar experiências digitais excepcionais. Especializo-me em tecnologias modernas e estou sempre explorando novas ferramentas e metodologias.',
+    'about.journey.p2': 'Acredito que o código deve ser não apenas funcional, mas também elegante e maintível. Cada projeto é uma oportunidade de aprender algo novo e contribuir para a comunidade de desenvolvedores.',
+    'about.technologies': 'Tecnologias',
+    'about.interests.cleancode.title': 'Clean Code',
+    'about.interests.cleancode.desc': 'Código limpo e bem estruturado',
+    'about.interests.innovation.title': 'Inovação',
+    'about.interests.innovation.desc': 'Sempre buscando novas soluções',
+    'about.interests.performance.title': 'Performance',
+    'about.interests.performance.desc': 'Otimização e alta performance',
+    'about.interests.opensource.title': 'Open Source',
+    'about.interests.opensource.desc': 'Contribuindo para a comunidade',
+    
+    // Projects
+    'projects.title': 'Projetos',
+    'projects.subtitle': 'Uma seleção dos meus projetos mais recentes e interessantes, disponíveis no GitHub para exploração e contribuição.',
+    'projects.viewAll': 'Ver todos os projetos',
+    'projects.loading': 'Carregando projetos...',
+    'projects.defaultDesc': 'Projeto interessante desenvolvido com paixão e dedicação.',
+    'projects.error': 'Erro ao buscar repositórios:',
+    
     // Contact
     'contact.title': 'Vamos Conversar',
     'contact.subtitle': 'Interessado em colaborar ou tem alguma ideia incrível? Vamos transformar conceitos em realidade juntos.',
@@ -53,6 +77,30 @@ const translations = {
     'hero.description': 'Transforming ideas into code, creating incredible digital experiences and innovative solutions that make a difference.',
     'hero.viewProjects': 'View Projects',
     'hero.aboutMe': 'About Me',
+    
+    // About
+    'about.title': 'About Me',
+    'about.subtitle': 'Developer passionate about technology, always seeking to create elegant and efficient solutions that positively impact people\'s lives.',
+    'about.journey': 'My Journey',
+    'about.journey.p1': 'As a full stack developer, I have a passion for creating exceptional digital experiences. I specialize in modern technologies and am always exploring new tools and methodologies.',
+    'about.journey.p2': 'I believe code should be not only functional, but also elegant and maintainable. Every project is an opportunity to learn something new and contribute to the developer community.',
+    'about.technologies': 'Technologies',
+    'about.interests.cleancode.title': 'Clean Code',
+    'about.interests.cleancode.desc': 'Clean and well-structured code',
+    'about.interests.innovation.title': 'Innovation',
+    'about.interests.innovation.desc': 'Always seeking new solutions',
+    'about.interests.performance.title': 'Performance',
+    'about.interests.performance.desc': 'Optimization and high performance',
+    'about.interests.opensource.title': 'Open Source',
+    'about.interests.opensource.desc': 'Contributing to the community',
+    
+    // Projects
+    'projects.title': 'Projects',
+    'projects.subtitle': 'A selection of my most recent and interesting projects, available on GitHub for exploration and contribution.',
+    'projects.viewAll': 'View all projects',
+    'projects.loading': 'Loading projects...',
+    'projects.defaultDesc': 'Interesting project developed with passion and dedication.',
+    'projects.error': 'Error fetching repositories:',
     
     // Contact
     'contact.title': 'Let\'s Talk',
