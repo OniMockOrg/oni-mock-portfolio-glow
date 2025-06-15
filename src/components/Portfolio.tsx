@@ -1,4 +1,5 @@
 
+import Navigation from './Navigation';
 import Hero from './Hero';
 import About from './About';
 import Projects from './Projects';
@@ -7,6 +8,7 @@ import Contact from './Contact';
 const Portfolio = () => {
   return (
     <div className="min-h-screen">
+      <Navigation />
       <Hero />
       <About />
       <Projects />

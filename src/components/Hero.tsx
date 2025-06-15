@@ -40,14 +40,24 @@ const Hero = () => {
   }, [displayText, currentIndex, isDeleting, titles]);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80"
+          alt="Technology background"
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background/90"></div>
+      </div>
+
       {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-10">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="container mx-auto px-6 text-center z-10">
+      <div className="container mx-auto px-6 text-center z-20 relative">
         <div className="animate-fade-in">
           <h1 className="text-6xl md:text-8xl font-bold mb-6">
             <span className="text-gradient">OniMock</span>
