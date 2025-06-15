@@ -1,10 +1,12 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +18,10 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { href: '#home', label: 'Início' },
-    { href: '#about', label: 'Sobre' },
-    { href: '#projects', label: 'Projetos' },
-    { href: '#contact', label: 'Contato' },
+    { href: '#home', label: t('nav.home') },
+    { href: '#about', label: t('nav.about') },
+    { href: '#projects', label: t('nav.projects') },
+    { href: '#contact', label: t('nav.contact') },
   ];
 
   const scrollToSection = (href: string) => {
@@ -28,6 +30,10 @@ const Navigation = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMobileMenuOpen(false);
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'pt' ? 'en' : 'pt');
   };
 
   return (
@@ -60,6 +66,15 @@ const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
+            
+            {/* Language Toggle */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300 glass-card hover:bg-white/10 rounded-lg"
+            >
+              <Globe size={16} />
+              <span className="text-sm font-medium">{language.toUpperCase()}</span>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,6 +98,15 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
+            
+            {/* Mobile Language Toggle */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 w-full py-3 text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              <Globe size={16} />
+              <span>{language === 'pt' ? 'Português' : 'English'}</span>
+            </button>
           </div>
         )}
       </div>

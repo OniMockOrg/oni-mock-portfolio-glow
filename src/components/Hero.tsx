@@ -1,18 +1,20 @@
 
 import { useEffect, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const { t } = useLanguage();
   
   const titles = [
-    'Desenvolvedor Full Stack',
-    'Entusiasta de Tecnologia',
-    'Criador de Soluções',
-    'Problem Solver',
-    'Code Enthusiast'
+    t('hero.titles.0'),
+    t('hero.titles.1'),
+    t('hero.titles.2'),
+    t('hero.titles.3'),
+    t('hero.titles.4')
   ];
 
   useEffect(() => {
@@ -41,20 +43,30 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image - Tech/Crypto themed */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80"
-          alt="Technology background"
-          className="w-full h-full object-cover opacity-20"
+          src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=2000&q=80"
+          alt="Blockchain and cryptocurrency technology background"
+          className="w-full h-full object-cover opacity-15"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background/90"></div>
+      </div>
+
+      {/* Additional Tech Overlay */}
+      <div className="absolute inset-0 z-5">
+        <img
+          src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=2000&q=80"
+          alt="Programming code background"
+          className="w-full h-full object-cover opacity-10 mix-blend-overlay"
+        />
       </div>
 
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden z-10">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 text-center z-20 relative">
@@ -71,8 +83,7 @@ const Hero = () => {
           </div>
           
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Transformando ideias em código, criando experiências digitais incríveis 
-            e soluções inovadoras que fazem a diferença.
+            {t('hero.description')}
           </p>
           
           <div className="flex gap-6 justify-center flex-wrap">
@@ -80,13 +91,13 @@ const Hero = () => {
               href="#projects"
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
             >
-              Ver Projetos
+              {t('hero.viewProjects')}
             </a>
             <a
               href="#about"
               className="px-8 py-4 glass-card hover:bg-white/10 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105"
             >
-              Sobre Mim
+              {t('hero.aboutMe')}
             </a>
           </div>
         </div>

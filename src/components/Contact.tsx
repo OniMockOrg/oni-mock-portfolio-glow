@@ -1,7 +1,10 @@
 
 import { Mail, Github, Linkedin, MapPin } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact = () => {
+  const { t } = useLanguage();
+  
   const socialLinks = [
     {
       icon: Github,
@@ -28,11 +31,10 @@ const Contact = () => {
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Vamos Conversar</span>
+            <span className="text-gradient">{t('contact.title')}</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Interessado em colaborar ou tem alguma ideia incrível? 
-            Vamos transformar conceitos em realidade juntos.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -62,18 +64,17 @@ const Contact = () => {
 
           <div className="space-y-4">
             <h3 className="text-2xl font-semibold text-white mb-6">
-              Pronto para o próximo projeto?
+              {t('contact.ready')}
             </h3>
             <p className="text-gray-400 mb-8">
-              Seja um projeto freelance, uma oportunidade de trabalho ou apenas uma conversa sobre tecnologia, 
-              estou sempre aberto a novas possibilidades.
+              {t('contact.description')}
             </p>
             <a
               href="mailto:contato@onimock.dev"
               className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
             >
               <Mail className="w-5 h-5" />
-              Entrar em Contato
+              {t('contact.button')}
             </a>
           </div>
         </div>
