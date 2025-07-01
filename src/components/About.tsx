@@ -1,42 +1,43 @@
-
 import { Code, Coffee, Lightbulb, Rocket } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../hooks/use-language';
 
 const About = () => {
   const { t } = useLanguage();
-  
+
   const skills = [
     'JavaScript/TypeScript',
+    'Java/Kotlin',
+    'Android Studio',
     'React/Next.js',
     'Node.js',
     'Python',
     'Git/GitHub',
     'AWS/Cloud',
     'Docker',
-    'MongoDB/SQL'
+    'MongoDB/SQL',
   ];
 
   const interests = [
-    { 
-      icon: Code, 
-      title: t('about.interests.cleancode.title'), 
-      desc: t('about.interests.cleancode.desc') 
+    {
+      icon: Code,
+      title: t('about.interests.cleancode.title'),
+      desc: t('about.interests.cleancode.desc'),
     },
-    { 
-      icon: Lightbulb, 
-      title: t('about.interests.innovation.title'), 
-      desc: t('about.interests.innovation.desc') 
+    {
+      icon: Lightbulb,
+      title: t('about.interests.innovation.title'),
+      desc: t('about.interests.innovation.desc'),
     },
-    { 
-      icon: Rocket, 
-      title: t('about.interests.performance.title'), 
-      desc: t('about.interests.performance.desc') 
+    {
+      icon: Rocket,
+      title: t('about.interests.performance.title'),
+      desc: t('about.interests.performance.desc'),
     },
-    { 
-      icon: Coffee, 
-      title: t('about.interests.opensource.title'), 
-      desc: t('about.interests.opensource.desc') 
-    }
+    {
+      icon: Coffee,
+      title: t('about.interests.opensource.title'),
+      desc: t('about.interests.opensource.desc'),
+    },
   ];
 
   return (
@@ -53,7 +54,9 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6 animate-slide-in-left">
-            <h3 className="text-2xl font-semibold text-white mb-4">{t('about.journey')}</h3>
+            <h3 className="text-2xl font-semibold text-white mb-4">
+              {t('about.journey')}
+            </h3>
             <p className="text-gray-300 leading-relaxed">
               {t('about.journey.p1')}
             </p>
@@ -61,9 +64,11 @@ const About = () => {
               {t('about.journey.p2')}
             </p>
           </div>
-          
+
           <div className="glass-card p-8 animate-slide-in-right">
-            <h3 className="text-xl font-semibold text-white mb-6">{t('about.technologies')}</h3>
+            <h3 className="text-xl font-semibold text-white mb-6">
+              {t('about.technologies')}
+            </h3>
             <div className="grid grid-cols-2 gap-3">
               {skills.map((skill, index) => (
                 <div
@@ -88,7 +93,9 @@ const About = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <Icon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                <h4 className="text-lg font-semibold text-white mb-2">{interest.title}</h4>
+                <h4 className="text-lg font-semibold text-white mb-2">
+                  {interest.title}
+                </h4>
                 <p className="text-gray-400 text-sm">{interest.desc}</p>
               </div>
             );

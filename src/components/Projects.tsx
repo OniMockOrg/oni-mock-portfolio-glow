@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from 'react';
 import { ExternalLink, Github, Star, GitFork } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../hooks/use-language';
 
 interface Repository {
   id: number;
@@ -23,9 +22,13 @@ const Projects = () => {
   useEffect(() => {
     const fetchRepos = async () => {
       try {
-        const response = await fetch('https://api.github.com/users/OniMock/repos?sort=updated&per_page=6');
+        const response = await fetch(
+          'https://api.github.com/users/OniMock/repos?sort=updated&per_page=6'
+        );
         const data = await response.json();
-        setRepos(data.filter((repo: Repository) => !repo.name.includes('OniMock')));
+        setRepos(
+          data.filter((repo: Repository) => !repo.name.includes('OniMock'))
+        );
       } catch (error) {
         console.error(t('projects.error'), error);
       } finally {
@@ -145,8 +148,14 @@ const Projects = () => {
                 <div className="flex items-center gap-2">
                   {repo.language && (
                     <>
-                      <div className={`w-3 h-3 rounded-full ${getLanguageColor(repo.language)}`}></div>
-                      <span className="text-gray-400 text-sm">{repo.language}</span>
+                      <div
+                        className={`w-3 h-3 rounded-full ${getLanguageColor(
+                          repo.language
+                        )}`}
+                      ></div>
+                      <span className="text-gray-400 text-sm">
+                        {repo.language}
+                      </span>
                     </>
                   )}
                 </div>

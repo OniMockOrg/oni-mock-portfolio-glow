@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../hooks/use-language';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,11 +46,12 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div 
-            className="text-2xl font-bold text-gradient cursor-pointer"
+          <div
+            className="flex items-center gap-2 h-10 cursor-pointer"
             onClick={() => scrollToSection('#home')}
           >
-            OniMock
+            <img src="/logo.svg" alt="Logo" className="h-full w-auto" />
+            <span className="text-2xl font-bold text-gradient">OniMock</span>
           </div>
 
           {/* Desktop Menu */}
@@ -66,14 +66,16 @@ const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
-            
+
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-2 px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300 glass-card hover:bg-white/10 rounded-lg"
             >
               <Globe size={16} />
-              <span className="text-sm font-medium">{language.toUpperCase()}</span>
+              <span className="text-sm font-medium">
+                {language.toUpperCase()}
+              </span>
             </button>
           </div>
 
@@ -98,7 +100,7 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            
+
             {/* Mobile Language Toggle */}
             <button
               onClick={toggleLanguage}

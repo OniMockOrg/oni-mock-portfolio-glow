@@ -1,29 +1,29 @@
-
 import { Mail, Github, Linkedin, MapPin } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { SiDiscord } from 'react-icons/si';
+import { useLanguage } from '../hooks/use-language';
 
 const Contact = () => {
   const { t } = useLanguage();
-  
+
   const socialLinks = [
     {
       icon: Github,
       label: 'GitHub',
       url: 'https://github.com/OniMock',
-      color: 'hover:text-gray-300'
+      color: 'hover:text-gray-300',
     },
     {
-      icon: Linkedin,
-      label: 'LinkedIn',
-      url: '#',
-      color: 'hover:text-blue-400'
+      icon: SiDiscord,
+      label: 'Discord',
+      url: 'https://discord.com/users/1038808339418710016',
+      color: 'hover:text-blue-400',
     },
     {
       icon: Mail,
       label: 'Email',
-      url: 'mailto:contato@onimock.dev',
-      color: 'hover:text-red-400'
-    }
+      url: 'mailto:onimock@gmail.com',
+      color: 'hover:text-red-400',
+    },
   ];
 
   return (
@@ -66,11 +66,9 @@ const Contact = () => {
             <h3 className="text-2xl font-semibold text-white mb-6">
               {t('contact.ready')}
             </h3>
-            <p className="text-gray-400 mb-8">
-              {t('contact.description')}
-            </p>
+            <p className="text-gray-400 mb-8">{t('contact.description')}</p>
             <a
-              href="mailto:contato@onimock.dev"
+              href="mailto:onimock@gmail.com"
               className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
             >
               <Mail className="w-5 h-5" />
