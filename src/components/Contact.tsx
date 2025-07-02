@@ -1,5 +1,5 @@
-import { Mail, Github, Linkedin, MapPin } from 'lucide-react';
-import { SiDiscord } from 'react-icons/si';
+import { Mail, MapPin } from 'lucide-react';
+import { SiDiscord, SiGithub, SiX } from 'react-icons/si';
 import { useLanguage } from '../hooks/use-language';
 
 const Contact = () => {
@@ -7,7 +7,7 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      icon: Github,
+      icon: SiGithub,
       label: 'GitHub',
       url: 'https://github.com/OniMock',
       color: 'hover:text-gray-300',
@@ -17,6 +17,12 @@ const Contact = () => {
       label: 'Discord',
       url: 'https://discord.com/users/1038808339418710016',
       color: 'hover:text-blue-400',
+    },
+    {
+      icon: SiX,
+      label: 'X',
+      url: 'https://x.com/OnimockNft',
+      color: 'hover:text-orange-400',
     },
     {
       icon: Mail,
@@ -41,7 +47,7 @@ const Contact = () => {
         <div className="glass-card p-8 md:p-12 text-center">
           <div className="mb-8">
             <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-4" />
-            <p className="text-gray-300">Brasil</p>
+            <p className="text-gray-300">{t('contact.country')}</p>
           </div>
 
           <div className="flex justify-center gap-8 mb-12">

@@ -51,6 +51,7 @@ const translations = {
     'projects.error': 'Error fetching repositories:',
 
     // Contact
+    'contact.country': 'Brazil',
     'contact.title': "Let's Talk",
     'contact.subtitle':
       "Interested in collaborating or have an amazing idea? Let's transform concepts into reality together.",
@@ -75,7 +76,7 @@ const translations = {
     'hero.titles.2': 'Criador de Soluções',
     'hero.titles.3': 'Moderador',
     'hero.titles.4': 'Entusiasta da Programação',
-    'hero.titles.5': 'Entusiasta de Tecnlogia',
+    'hero.titles.5': 'Entusiasta de Tecnologia',
     'hero.description':
       'Transformando ideias em código, criando experiências digitais incríveis e soluções inovadoras que fazem a diferença.',
     'hero.viewProjects': 'Ver Projetos',
@@ -111,6 +112,7 @@ const translations = {
     'projects.error': 'Erro ao buscar repositórios:',
 
     // Contact
+    'contact.country': 'Brasil',
     'contact.title': 'Vamos Conversar',
     'contact.subtitle':
       'Interessado em colaborar ou tem alguma ideia incrível? Vamos transformar conceitos em realidade juntos.',
