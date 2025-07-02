@@ -5,7 +5,145 @@ import { useMemo, useRef } from 'react';
 import Logo from '../assets/logo.svg?react';
 import clsx from 'clsx';
 
-const MoonSVG = ({ size = 56 }) => (
+const MoonSVG = ({ size = 90 }) => (
+  <svg
+    height={size}
+    width={size}
+    version="1.1"
+    id="Layer_1"
+    viewBox="0 0 499.6 499.6"
+    xmlSpace="preserve"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g transform="translate(-59.66263,-40.603047)">
+      <g transform="translate(46.431227,36.525898)">
+        <ellipse style={{ fill: '#dcf9f6' }} cx="133.60001" cy="425.20001" rx="2.4000001" ry="21.6" />
+        <ellipse style={{ fill: '#dcf9f6' }} cx="133.60001" cy="426" rx="21.6" ry="2.4000001" />
+        <ellipse
+          transform="matrix(0.7054,-0.7088,0.7088,0.7054,18.6212,346.765)"
+          style={{ fill: '#dcf9f6' }}
+          cx="426.474"
+          cy="150.981"
+          rx="21.6"
+          ry="2.4000001"
+        />
+        <ellipse
+          transform="matrix(0.7054,0.7088,-0.7088,0.7054,232.7671,-257.5539)"
+          style={{ fill: '#dcf9f6' }}
+          cx="426.22501"
+          cy="151.245"
+          rx="21.6"
+          ry="2.4000001"
+        />
+        <ellipse style={{ fill: '#dcf9f6' }} cx="366.39999" cy="84.400002" rx="0.80000001" ry="9.6000004" />
+        <ellipse style={{ fill: '#dcf9f6' }} cx="366.39999" cy="84.400002" rx="9.6000004" ry="0.80000001" />
+        <ellipse
+          transform="matrix(-0.7107,-0.7035,0.7035,-0.7107,232.771,301.5383)"
+          style={{ fill: '#dcf9f6' }}
+          cx="178.38699"
+          cy="102.907"
+          rx="10.4"
+          ry="0.80000001"
+        />
+        <ellipse
+          transform="matrix(0.7107,-0.7035,0.7035,0.7107,-20.6411,155.2913)"
+          style={{ fill: '#dcf9f6' }}
+          cx="178.491"
+          cy="102.742"
+          rx="10.4"
+          ry="0.80000001"
+        />
+        <ellipse
+          transform="matrix(-0.7089,-0.7053,0.7053,-0.7089,-92.7171,692.6153)"
+          style={{ fill: '#dcf9f6' }}
+          cx="96.570999"
+          cy="365.44101"
+          rx="10.4"
+          ry="0.80000001"
+        />
+        <ellipse
+          transform="matrix(0.7089,-0.7053,0.7053,0.7089,-229.2989,174.8202)"
+          style={{ fill: '#dcf9f6' }}
+          cx="97.139"
+          cy="365.198"
+          rx="10.4"
+          ry="0.80000001"
+        />
+        <ellipse
+          transform="matrix(0.6999,-0.7143,0.7143,0.6999,37.5702,239.1812)"
+          style={{ fill: '#dcf9f6' }}
+          cx="303.39499"
+          cy="74.884003"
+          rx="4.8000002"
+          ry="0.80000001"
+        />
+        <ellipse
+          transform="matrix(0.6999,0.7143,-0.7143,0.6999,144.8238,-194.2028)"
+          style={{ fill: '#dcf9f6' }}
+          cx="303.50101"
+          cy="75.230003"
+          rx="4.8000002"
+          ry="0.80000001"
+        />
+        <ellipse
+          transform="matrix(0.6998,-0.7144,0.7144,0.6998,-254.4496,288.0746)"
+          style={{ fill: '#dcf9f6' }}
+          cx="215.498"
+          cy="446.75601"
+          rx="4.8000002"
+          ry="0.80000001"
+        />
+        <ellipse
+          transform="matrix(0.6998,0.7144,-0.7144,0.6998,384.246,-19.8844)"
+          style={{ fill: '#dcf9f6' }}
+          cx="215.78"
+          cy="447.19501"
+          rx="4.8000002"
+          ry="0.80000001"
+        />
+        <circle style={{ fill: '#dcf9f6' }} cx="249.60001" cy="250" r="160" />
+      </g>
+      <path
+        style={{ fill: '#95bfb9' }}
+        d="m 432.03123,286.5259 c 0,88 -48,160 -136,160 -88,0 -160,-72 -160,-160 0,-88 72,-160 160,-160 88,0 136,72 136,160 z"
+      />
+      <g transform="translate(46.431227,36.525898)">
+        <circle style={{ fill: '#78a8a0' }} cx="138.39999" cy="165.2" r="9.6000004" />
+        <circle style={{ fill: '#78a8a0' }} cx="124.8" cy="201.2" r="1.6" />
+        <circle style={{ fill: '#78a8a0' }} cx="189.60001" cy="222" r="29.6" />
+        <circle style={{ fill: '#78a8a0' }} cx="202.39999" cy="157.2" r="8" />
+        <circle style={{ fill: '#78a8a0' }} cx="257.60001" cy="153.2" r="2.4000001" />
+        <circle style={{ fill: '#78a8a0' }} cx="278.39999" cy="126" r="2.4000001" />
+        <circle style={{ fill: '#78a8a0' }} cx="201.60001" cy="127.6" r="4" />
+        <circle style={{ fill: '#78a8a0' }} cx="233.60001" cy="114" r="1.6" />
+        <circle style={{ fill: '#78a8a0' }} cx="270.39999" cy="206" r="6.4000001" />
+        <circle style={{ fill: '#78a8a0' }} cx="318.39999" cy="202" r="4" />
+        <circle style={{ fill: '#78a8a0' }} cx="328.79999" cy="156.39999" r="6.4000001" />
+        <circle style={{ fill: '#78a8a0' }} cx="300.79999" cy="285.20001" r="17.6" />
+        <circle style={{ fill: '#78a8a0' }} cx="156" cy="295.60001" r="5.5999999" />
+        <circle style={{ fill: '#78a8a0' }} cx="213.60001" cy="271.60001" r="2.4000001" />
+        <circle style={{ fill: '#78a8a0' }} cx="241.60001" cy="331.60001" r="9.6000004" />
+        <circle style={{ fill: '#78a8a0' }} cx="124.8" cy="254.8" r="6.4000001" />
+        <circle style={{ fill: '#78a8a0' }} cx="267.20001" cy="250.8" r="1.6" />
+        <circle style={{ fill: '#78a8a0' }} cx="344" cy="254" r="4" />
+        <circle style={{ fill: '#78a8a0' }} cx="174.39999" cy="339.60001" r="9.6000004" />
+        <circle style={{ fill: '#78a8a0' }} cx="193.60001" cy="305.20001" r="3.2" />
+        <circle style={{ fill: '#78a8a0' }} cx="292.79999" cy="342.79999" r="3.2" />
+        <circle style={{ fill: '#78a8a0' }} cx="241.60001" cy="369.20001" r="2.4000001" />
+        <circle style={{ fill: '#78a8a0' }} cx="201.60001" cy="365.20001" r="1.6" />
+        <circle style={{ fill: '#78a8a0' }} cx="332.79999" cy="328.39999" r="6.4000001" />
+        <circle style={{ fill: '#78a8a0' }} cx="284" cy="375.60001" r="4" />
+        <circle style={{ fill: '#78a8a0' }} cx="245.60001" cy="289.20001" r="3.2" />
+        <circle style={{ fill: '#78a8a0' }} cx="353.60001" cy="300.39999" r="6.4000001" />
+        <circle style={{ fill: '#78a8a0' }} cx="134.39999" cy="323.60001" r="5.5999999" />
+        <circle style={{ fill: '#78a8a0' }} cx="309.60001" cy="241.2" r="7.1999998" />
+      </g>
+    </g>
+  </svg>
+);
+
+
+const MoonSVG2 = ({ size = 56 }) => (
   <svg width={size} height={size} viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <radialGradient id="moonGrad" cx="50%" cy="45%" r="60%">
@@ -42,7 +180,7 @@ const MoonSVG = ({ size = 56 }) => (
 const LogoWithMoonOrbit = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const logoSize = 156;
-  const moonSize = logoSize * 0.8; // 124.8px
+  const moonSize = logoSize * 1.2; // 124.8px
   const [scrollY, setScrollY] = useState(window.scrollY);
   const [angle, setAngle] = useState(0);
 
@@ -140,7 +278,7 @@ const InifinityMoonTitle = () => {
           transition: 'z-index 0.2s',
         }}
       >
-        <MoonSVG size={moonSize} />
+        <MoonSVG2 size={moonSize} />
       </div>
       {/* Texto OniMock */}
       <h1 className="text-6xl md:text-8xl font-bold mb-0 relative z-10">
