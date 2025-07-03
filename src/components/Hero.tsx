@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { useLanguage } from '../hooks/use-language';
 import { useMemo, useRef } from 'react';
@@ -177,14 +177,74 @@ const MoonSVG2 = ({ size = 56 }) => (
   </svg>
 );
 
+const STAR_COUNT = 38;
+const STAR_MIN_SIZE = 1.2;
+const STAR_MAX_SIZE = 4.2;
+const STAR_FIELD_RADIUS = 120; // distância máxima das estrelas ao centro
+
+function randomBetween(a: number, b: number) {
+  return a + Math.random() * (b - a);
+}
+
+// Gera posições fixas para as estrelas (mantém estável entre renders)
+function useStarField(count: number, radius: number) {
+  const [stars] = useState(() => {
+    return Array.from({ length: count }, (_, i) => {
+      const angle = randomBetween(0, 2 * Math.PI);
+      const dist = randomBetween(radius * 0.45, radius * 1.0);
+      const size = randomBetween(STAR_MIN_SIZE, STAR_MAX_SIZE) * (i % 2 === 0 ? 1 : 1.5);
+      return {
+        x: Math.cos(angle) * dist,
+        y: Math.sin(angle) * dist * randomBetween(0.7, 1.1),
+        size,
+        opacity: randomBetween(0.45, 0.95),
+        twinkle: Math.random() > 0.7,
+      };
+    });
+  });
+  return stars;
+}
+
+// Substitua o hook useStarField por uma versão que usa a tela toda:
+function useStarFieldFullScreen(count: number) {
+  const [stars, setStars] = useState(() => [] as any[]);
+
+  useEffect(() => {
+    function generateStars() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      return Array.from({ length: count }, (_, i) => {
+        const x = Math.random() * width;
+        const y = Math.random() * height;
+        const size = randomBetween(STAR_MIN_SIZE, STAR_MAX_SIZE) * (i % 2 === 0 ? 1 : 1.5);
+        return {
+          x,
+          y,
+          size,
+          opacity: randomBetween(0.45, 0.95),
+          twinkle: Math.random() > 0.7,
+        };
+      });
+    }
+    setStars(generateStars());
+    const handleResize = () => setStars(generateStars());
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [count]);
+  return stars;
+}
+
 const LogoWithMoonOrbit = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const logoSize = 156;
-  const moonSize = logoSize * 1.2; // 124.8px
+  const moonSize = logoSize * 1.2;
   const [scrollY, setScrollY] = useState(window.scrollY);
   const [angle, setAngle] = useState(0);
+  const [moonRot, setMoonRot] = useState(0);
+  const [starRot, setStarRot] = useState(0);
+  const stars = useStarField(STAR_COUNT, STAR_FIELD_RADIUS);
 
-  // Suavização do ângulo (lerp)
+  // Suavização dos ângulos (lerp)
   useEffect(() => {
     let animationFrame: number;
     const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
@@ -192,6 +252,12 @@ const LogoWithMoonOrbit = () => {
       // Ângulo alvo baseado no scroll
       const targetAngle = (scrollY * 0.5) % 360;
       setAngle(prev => lerp(prev, targetAngle, 0.15));
+      // Rotação da lua no próprio eixo (profundidade)
+      const targetMoonRot = (scrollY * 1.2) % 360;
+      setMoonRot(prev => lerp(prev, targetMoonRot, 0.12));
+      // Rotação do campo de estrelas (bem sutil)
+      const targetStarRot = (scrollY * 0.18) % 360;
+      setStarRot(prev => lerp(prev, targetStarRot, 0.09));
       animationFrame = requestAnimationFrame(update);
     };
     animationFrame = requestAnimationFrame(update);
@@ -207,23 +273,54 @@ const LogoWithMoonOrbit = () => {
   // Órbita: 90% da lua para fora do logo
   const moonRadius = moonSize / 2;
   const logoRadius = logoSize / 2;
-  // O centro da lua orbita a uma distância tal que 90% da lua fica para fora
   const orbitRadius = logoRadius + moonRadius * 0.4;
-  const rx = orbitRadius; // horizontal
-  const ry = orbitRadius * 0.7; // vertical, para dar leve elipse
+  const rx = orbitRadius;
+  const ry = orbitRadius * 0.7;
   const rad = (angle * Math.PI) / 180;
   const moonX = rx * Math.cos(rad);
   const moonY = ry * Math.sin(rad);
 
+  // Rotação do campo de estrelas
+  const starFieldStyle = {
+    transform: `translate(-50%, -50%) rotate(${starRot}deg)`
+  };
+
   return (
     <div ref={containerRef} className="relative flex justify-center items-center my-16 select-none" style={{ minHeight: logoSize }}>
+      {/* Campo de estrelas - ATRÁS de tudo */}
+      <div
+        className="absolute left-1/2 top-1/2 pointer-events-none z-0"
+        style={{ width: logoSize * 3, height: logoSize * 3, ...starFieldStyle }}
+      >
+        {stars.map((star, i) => (
+          <div
+            key={i}
+            style={{
+              position: 'absolute',
+              left: `calc(50% + ${star.x}px)` ,
+              top: `calc(50% + ${star.y}px)` ,
+              width: star.size,
+              height: star.size,
+              borderRadius: '50%',
+              background: `radial-gradient(circle, #fff 60%, #a78bfa 100%)`,
+              opacity: star.opacity,
+              boxShadow: `0 0 ${star.size * 2.5}px #fff8`,
+              filter: star.twinkle ? 'blur(0.5px)' : undefined,
+              transition: 'opacity 0.7s',
+              pointerEvents: 'none',
+            }}
+          />
+        ))}
+      </div>
       {/* Lua cartoon (SVG) - ATRÁS do logo */}
       <div
         className="absolute left-1/2 top-1/2"
         style={{
-          transform: `translate(-50%, -50%) translate(${moonX}px, ${moonY}px)`,
+          transform: `translate(-50%, -50%) translate(${moonX}px, ${moonY}px) rotate(${moonRot}deg)`,
           zIndex: 1,
           pointerEvents: 'none',
+          transition: 'filter 0.2s',
+          filter: 'drop-shadow(0 2px 16px #a78bfa33)',
         }}
       >
         <MoonSVG size={moonSize} />
@@ -352,6 +449,27 @@ const Hero = () => {
     };
   }, []);
 
+  // Campo de estrelas tela toda
+  const [scrollY, setScrollY] = useState(window.scrollY);
+  const [starRot, setStarRot] = useState(0);
+  const stars = useStarFieldFullScreen(90);
+  useEffect(() => {
+    let animationFrame: number;
+    const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+    const update = () => {
+      const targetStarRot = (window.scrollY * 0.18) % 360;
+      setStarRot(prev => lerp(prev, targetStarRot, 0.09));
+      animationFrame = requestAnimationFrame(update);
+    };
+    animationFrame = requestAnimationFrame(update);
+    return () => cancelAnimationFrame(animationFrame);
+  }, []);
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section
       id="home"
@@ -451,6 +569,37 @@ const Hero = () => {
 
           {/* Animação do Logo + Lua Orbitando */}
           <LogoWithMoonOrbit />
+
+          {/* Campo de estrelas tela toda */}
+          <div
+            className="pointer-events-none fixed inset-0 z-0"
+            style={{
+              width: '100vw',
+              height: '100vh',
+              overflow: 'hidden',
+              transform: `rotate(${starRot}deg)`
+            }}
+          >
+            {stars.map((star, i) => (
+              <div
+                key={i}
+                style={{
+                  position: 'absolute',
+                  left: star.x,
+                  top: star.y,
+                  width: star.size,
+                  height: star.size,
+                  borderRadius: '50%',
+                  background: `radial-gradient(circle, #fff 60%, #a78bfa 100%)`,
+                  opacity: star.opacity,
+                  boxShadow: `0 0 ${star.size * 2.5}px #fff8`,
+                  filter: star.twinkle ? 'blur(0.5px)' : undefined,
+                  transition: 'opacity 0.7s',
+                  pointerEvents: 'none',
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
