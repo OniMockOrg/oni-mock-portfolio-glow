@@ -211,8 +211,8 @@ function useStarFieldFullScreen(count: number) {
 
   useEffect(() => {
     function generateStars() {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
+      const width = window.innerWidth * 1.5;
+      const height = window.innerHeight * 1.5;
       return Array.from({ length: count }, (_, i) => {
         const x = Math.random() * width;
         const y = Math.random() * height;
@@ -574,10 +574,13 @@ const Hero = () => {
           <div
             className="pointer-events-none fixed inset-0 z-0"
             style={{
-              width: '100vw',
-              height: '100vh',
+              width: '150vw',
+              height: '150vh',
+              left: '50%',
+              top: '50%',
+              transform: `translate(-50%, -50%) rotate(${starRot}deg)`,
+              position: 'fixed',
               overflow: 'hidden',
-              transform: `rotate(${starRot}deg)`
             }}
           >
             {stars.map((star, i) => (
