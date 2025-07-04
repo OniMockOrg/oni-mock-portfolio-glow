@@ -15,7 +15,7 @@ const Contact = () => {
     {
       icon: SiDiscord,
       label: 'Discord',
-      url: 'https://discord.com/users/1038808339418710016',
+      url: 'https://discord.gg/mGgQ7MejFR',
       color: 'hover:text-blue-400',
     },
     {
