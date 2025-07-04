@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
-import { ExternalLink, Github, Star, GitFork } from 'lucide-react';
+import { ExternalLink, Star, GitFork } from 'lucide-react';
+import { SiGithub } from 'react-icons/si';
 import { useLanguage } from '../hooks/use-language';
+
+const projectQuantity = 6;
 
 interface Repository {
   id: number;
@@ -8,10 +11,11 @@ interface Repository {
   description: string;
   html_url: string;
   homepage?: string;
-  language: string;
+  language: string | null;
   stargazers_count: number;
   forks_count: number;
   topics: string[];
+  languages_url: string;
 }
 
 const Projects = () => {
@@ -23,12 +27,25 @@ const Projects = () => {
     const fetchRepos = async () => {
       try {
         const response = await fetch(
-          'https://api.github.com/users/OniMock/repos?sort=updated&per_page=6'
+          'https://api.github.com/users/OniMock/repos?sort=updated&per_page=16'
         );
         const data = await response.json();
-        setRepos(
-          data.filter((repo: Repository) => !repo.name.includes('OniMock'))
-        );
+        let filtered = data.filter((repo: Repository) => !repo.name.includes('OniMock')).slice(0, projectQuantity);
+
+        const updatedRepos = await Promise.all(filtered.map(async (repo: Repository) => {
+          if (repo.language === null && repo.languages_url) {
+            try {
+              const langRes = await fetch(repo.languages_url);
+              const langs = await langRes.json();
+              const mainLang = Object.entries(langs).sort((a, b) => Number(b[1]) - Number(a[1]))[0]?.[0] || null;
+              return { ...repo, language: mainLang };
+            } catch {
+              return repo;
+            }
+          }
+          return repo;
+        }));
+        setRepos(updatedRepos);
       } catch (error) {
         console.error(t('projects.error'), error);
       } finally {
@@ -45,6 +62,7 @@ const Projects = () => {
       TypeScript: 'bg-blue-500',
       Python: 'bg-green-500',
       Java: 'bg-orange-500',
+      Shell: 'bg-pink-400',
       HTML: 'bg-red-500',
       CSS: 'bg-purple-500',
       React: 'bg-cyan-500',
@@ -64,7 +82,7 @@ const Projects = () => {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[...Array(6)].map((_, index) => (
+            {[...Array(projectQuantity)].map((_, index) => (
               <div key={index} className="glass-card p-6 animate-pulse">
                 <div className="h-4 bg-gray-700 rounded mb-4"></div>
                 <div className="h-3 bg-gray-700 rounded mb-2 w-3/4"></div>
@@ -100,33 +118,22 @@ const Projects = () => {
           {repos.map((repo, index) => (
             <div
               key={repo.id}
-              className="glass-card p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 animate-fade-in group"
+              className="glass-card p-6 flex flex-col h-full hover:bg-white/10 transition-all duration-300 hover:scale-105 animate-fade-in group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <div className="flex items-center mb-4">
+                <a
+                  href={repo.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors flex items-center"
+                  style={{ marginRight: 5 }}
+                >
+                  <SiGithub className="w-4 h-4 text-gray-300" />
+                </a>
+                <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors" style={{ marginLeft: 5 }}>
                   {repo.name}
                 </h3>
-                <div className="flex gap-2">
-                  <a
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors"
-                  >
-                    <Github className="w-4 h-4 text-gray-300" />
-                  </a>
-                  {repo.homepage && (
-                    <a
-                      href={repo.homepage}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors"
-                    >
-                      <ExternalLink className="w-4 h-4 text-gray-300" />
-                    </a>
-                  )}
-                </div>
               </div>
 
               <p className="text-gray-400 text-sm mb-4 line-clamp-3">
@@ -144,7 +151,7 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mt-auto">
                 <div className="flex items-center gap-2">
                   {repo.language && (
                     <>
@@ -181,7 +188,7 @@ const Projects = () => {
             rel="noopener noreferrer"
             className="px-8 py-4 glass-card hover:bg-white/10 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
           >
-            <Github className="w-5 h-5" />
+            <SiGithub className="w-5 h-5" />
             {t('projects.viewAll')}
           </a>
         </div>
