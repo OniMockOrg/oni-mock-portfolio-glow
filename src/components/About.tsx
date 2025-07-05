@@ -1,5 +1,6 @@
 import { Code, Coffee, Lightbulb, Rocket } from 'lucide-react';
 import { useLanguage } from '../hooks/use-language';
+import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
 
 const About = () => {
   const { t } = useLanguage();
@@ -44,12 +45,27 @@ const About = () => {
     <section id="about" className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
             <span className="text-gradient">{t('about.title')}</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            {t('about.subtitle')}
-          </p>
+        </div>
+        <div className="flex justify-center mb-16">
+          <div className="glass-card flex flex-col md:flex-row items-center md:items-center gap-8 p-8 w-full max-w-3xl shadow-2xl bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl">
+            <div className="flex-shrink-0 flex justify-center items-center">
+              <div className="relative group">
+                <span className="absolute inset-0 rounded-2xl p-1 bg-gradient-to-tr from-blue-400 via-pink-400 to-yellow-400 blur-sm opacity-80 group-hover:opacity-100 transition-all duration-300"></span>
+                <Avatar className="h-44 w-44 rounded-2xl border-4 border-transparent group-hover:scale-105 group-hover:shadow-xl transition-transform duration-300 bg-white/10 relative z-10">
+                  <AvatarImage src="https://github.com/OniMock.png" alt="OniMock GitHub Avatar" className="object-cover h-full w-full rounded-2xl" />
+                  <AvatarFallback>OM</AvatarFallback>
+                </Avatar>
+              </div>
+            </div>
+            <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">
+              <p className="text-lg font text-white mb-6">
+                {t('about.subtitle')}
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
