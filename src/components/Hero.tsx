@@ -206,32 +206,44 @@ function useStarField(count: number, radius: number) {
 }
 
 // Substitua o hook useStarField por uma versão que usa a tela toda:
-function useStarFieldFullScreen(count: number) {
-  const [stars, setStars] = useState(() => [] as any[]);
-
+function useStarFieldFullScreenSVG(count: number) {
+  // Gera as estrelas uma única vez por montagem
+  const [dimensions, setDimensions] = useState(() => ({
+    width: window.innerWidth * 1.5,
+    height: window.innerHeight * 1.5,
+  }));
   useEffect(() => {
-    function generateStars() {
-      const width = window.innerWidth * 1.5;
-      const height = window.innerHeight * 1.5;
-      return Array.from({ length: count }, (_, i) => {
-        const x = Math.random() * width;
-        const y = Math.random() * height;
-        const size = randomBetween(STAR_MIN_SIZE, STAR_MAX_SIZE) * (i % 2 === 0 ? 1 : 1.5);
-        return {
-          x,
-          y,
-          size,
-          opacity: randomBetween(0.45, 0.95),
-          twinkle: Math.random() > 0.7,
-        };
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth * 1.5,
+        height: window.innerHeight * 1.5,
       });
-    }
-    setStars(generateStars());
-    const handleResize = () => setStars(generateStars());
+    };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [count]);
-  return stars;
+  }, []);
+  const stars = useMemo(() => {
+    // Metade das estrelas serão bem pequenas
+    const smallCount = Math.floor(count * 0.5);
+    const normalCount = count - smallCount;
+    const smallStars = Array.from({ length: smallCount }, (_, i) => ({
+      cx: Math.random() * dimensions.width,
+      cy: Math.random() * dimensions.height,
+      r: randomBetween(0.5, 1.5),
+      opacity: randomBetween(0.25, 0.7),
+      twinkle: Math.random() > 0.8,
+    }));
+    const normalStars = Array.from({ length: normalCount }, (_, i) => ({
+      cx: Math.random() * dimensions.width,
+      cy: Math.random() * dimensions.height,
+      r: randomBetween(STAR_MIN_SIZE, STAR_MAX_SIZE) * (i % 2 === 0 ? 1 : 1.5),
+      opacity: randomBetween(0.45, 0.95),
+      twinkle: Math.random() > 0.7,
+    }));
+    return [...smallStars, ...normalStars];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [count, dimensions.width, dimensions.height]);
+  return { stars, width: dimensions.width, height: dimensions.height };
 }
 
 const LogoWithMoonOrbit = () => {
@@ -449,10 +461,9 @@ const Hero = () => {
     };
   }, []);
 
-  // Campo de estrelas tela toda
-  const [scrollY, setScrollY] = useState(window.scrollY);
+  // Campo de estrelas tela toda (SVG otimizado)
   const [starRot, setStarRot] = useState(0);
-  const stars = useStarFieldFullScreen(90);
+  const { stars, width: starFieldWidth, height: starFieldHeight } = useStarFieldFullScreenSVG(160);
   useEffect(() => {
     let animationFrame: number;
     const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
@@ -463,11 +474,6 @@ const Hero = () => {
     };
     animationFrame = requestAnimationFrame(update);
     return () => cancelAnimationFrame(animationFrame);
-  }, []);
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -570,38 +576,42 @@ const Hero = () => {
           {/* Animação do Logo + Lua Orbitando */}
           <LogoWithMoonOrbit />
 
-          {/* Campo de estrelas tela toda */}
+          {/* Campo de estrelas tela toda (SVG otimizado) */}
           <div
             className="pointer-events-none fixed inset-0 z-0"
             style={{
-              width: '150vw',
-              height: '150vh',
+              width: starFieldWidth,
+              height: starFieldHeight,
               left: '50%',
               top: '50%',
               transform: `translate(-50%, -50%) rotate(${starRot}deg)`,
               position: 'fixed',
               overflow: 'hidden',
+              willChange: 'transform',
             }}
           >
-            {stars.map((star, i) => (
-              <div
-                key={i}
-                style={{
-                  position: 'absolute',
-                  left: star.x,
-                  top: star.y,
-                  width: star.size,
-                  height: star.size,
-                  borderRadius: '50%',
-                  background: `radial-gradient(circle, #fff 60%, #a78bfa 100%)`,
-                  opacity: star.opacity,
-                  boxShadow: `0 0 ${star.size * 2.5}px #fff8`,
-                  filter: star.twinkle ? 'blur(0.5px)' : undefined,
-                  transition: 'opacity 0.7s',
-                  pointerEvents: 'none',
-                }}
-              />
-            ))}
+            <svg width={starFieldWidth} height={starFieldHeight} style={{ display: 'block' }}>
+              <defs>
+                <radialGradient id="starGrad" cx="50%" cy="50%" r="100%">
+                  <stop offset="60%" stopColor="#fff" />
+                  <stop offset="100%" stopColor="#a78bfa" />
+                </radialGradient>
+                <filter id="blur">
+                  <feGaussianBlur stdDeviation="0.5" />
+                </filter>
+              </defs>
+              {stars.map((star, i) => (
+                <circle
+                  key={i}
+                  cx={star.cx}
+                  cy={star.cy}
+                  r={star.r}
+                  fill="url(#starGrad)"
+                  opacity={star.opacity}
+                  filter={star.twinkle ? 'url(#blur)' : undefined}
+                />
+              ))}
+            </svg>
           </div>
         </div>
       </div>
