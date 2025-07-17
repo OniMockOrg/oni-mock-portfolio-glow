@@ -1,5 +1,5 @@
 import { Mail, MapPin } from 'lucide-react';
-import { SiDiscord, SiGithub, SiX } from 'react-icons/si';
+import { SiDiscord, SiGithub, SiX, SiTelegram } from 'react-icons/si';
 import { useLanguage } from '../hooks/use-language';
 
 const Contact = () => {
@@ -7,16 +7,22 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      icon: SiGithub,
-      label: 'GitHub',
-      url: 'https://github.com/OniMock',
-      color: 'hover:text-gray-300',
-    },
-    {
       icon: SiDiscord,
       label: 'Discord',
       url: 'https://discord.gg/mGgQ7MejFR',
       color: 'hover:text-blue-400',
+    },
+    {
+      icon: SiTelegram,
+      label: 'Telegram',
+      url: 'https://t.me/onimock',
+      color: 'hover:text-green-400',
+    },
+    {
+      icon: SiGithub,
+      label: 'GitHub',
+      url: 'https://github.com/OniMock',
+      color: 'hover:text-yellow-300',
     },
     {
       icon: SiX,
