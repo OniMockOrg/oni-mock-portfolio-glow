@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../hooks/use-language';
+import LanguageSelector from '../contexts/LanguageSelector';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,10 +32,6 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const toggleLanguage = () => {
-    setLanguage(language === 'pt' ? 'en' : 'pt');
-  };
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -45,7 +42,6 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <div
             className="flex items-center gap-2 h-10 cursor-pointer"
             onClick={() => scrollToSection('#home')}
@@ -54,7 +50,6 @@ const Navigation = () => {
             <span className="text-2xl font-bold text-gradient">OniMock</span>
           </div>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
@@ -66,20 +61,9 @@ const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
-
-            {/* Language Toggle */}
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-2 px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300 glass-card hover:bg-white/10 rounded-lg"
-            >
-              <Globe size={16} />
-              <span className="text-sm font-medium">
-                {language.toUpperCase()}
-              </span>
-            </button>
+            <LanguageSelector />
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden text-white p-2"
@@ -88,7 +72,6 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 glass-card rounded-lg p-4">
             {navItems.map((item) => (
@@ -100,15 +83,9 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-
-            {/* Mobile Language Toggle */}
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-2 w-full py-3 text-gray-300 hover:text-white transition-colors duration-300"
-            >
-              <Globe size={16} />
-              <span>{language === 'pt' ? 'Português' : 'English'}</span>
-            </button>
+            <div className="mt-4 pt-4 border-t border-white/10">
+              <LanguageSelector />
+            </div>
           </div>
         )}
       </div>

@@ -1,10 +1,10 @@
 import { createContext } from 'react';
-
-type Language = 'en' | 'pt';
+import { LanguageConfig } from '../types/language';
 
 export interface LanguageContextType {
-  language: Language;
-  setLanguage: (lang: Language) => void;
+  currentLanguage: string;
+  availableLanguages: LanguageConfig[];
+  setLanguage: (lang: string) => void;
   t: (key: string, vars?: Record<string, string | number>) => string;
 }
 
