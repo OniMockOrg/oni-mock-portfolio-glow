@@ -25,6 +25,12 @@ const LanguageSelector = () => {
     (lang) => lang.code === currentLanguage
   );
 
+  // Sort languages to show the current language first
+  const sortedLanguages = [
+    ...availableLanguages.filter((lang) => lang.code === currentLanguage),
+    ...availableLanguages.filter((lang) => lang.code !== currentLanguage),
+  ];
+
   return (
     <div className="relative" ref={dropdownRef}>
       <button
@@ -54,7 +60,7 @@ const LanguageSelector = () => {
              animate-fade-in-down"
         >
           <div className="max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
-            {availableLanguages.map((language, index) => (
+            {sortedLanguages.map((language, index) => (
               <div key={language.code}>
                 {index !== 0 && <div className="h-px bg-white/10 my-1" />}
                 <button
