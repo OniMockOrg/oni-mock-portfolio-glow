@@ -56,7 +56,7 @@ const es: LanguageFile = {
     'projects.error': 'Error al obtener repositorios:',
 
     // Contact
-    'contact.country': 'España',
+    'contact.country': 'Brasil',
     'contact.title': 'Hablemos',
     'contact.subtitle':
       '¿Interesado en colaborar o tienes una idea increíble? Transformemos conceptos en realidad juntos.',

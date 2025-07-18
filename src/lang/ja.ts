@@ -55,7 +55,7 @@ const ja: LanguageFile = {
     'projects.error': 'リポジトリの取得エラー：',
 
     // Contact
-    'contact.country': '日本',
+    'contact.country': 'ブラジル (Burajiru)',
     'contact.title': '話しましょう',
     'contact.subtitle':
       'コラボレーションに興味がある、または素晴らしいアイデアがありますか？一緒にコンセプトを現実に変えましょう。',

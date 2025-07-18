@@ -55,7 +55,7 @@ const ko: LanguageFile = {
     'projects.error': '리포지토리 가져오기 오류:',
 
     // Contact
-    'contact.country': '한국',
+    'contact.country': '브라질 (Beurajil)',
     'contact.title': '대화합시다',
     'contact.subtitle':
       '협업에 관심이 있거나 멋진 아이디어가 있나요? 함께 개념을 현실로 바꿉시다.',

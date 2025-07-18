@@ -56,7 +56,7 @@ const hi: LanguageFile = {
     'projects.error': 'रिपॉजिटरी प्राप्त करने में त्रुटि:',
 
     // Contact
-    'contact.country': 'भारत',
+    'contact.country': 'ब्राज़ील (Braazeel)',
     'contact.title': 'आइए बात करें',
     'contact.subtitle':
       'सहयोग करने में रुचि रखते हैं या आपके पास कोई शानदार विचार है? आइए अवधारणाओं को वास्तविकता में बदलें।',

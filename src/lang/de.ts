@@ -57,7 +57,7 @@ const de: LanguageFile = {
     'projects.error': 'Fehler beim Abrufen der Repositories:',
 
     // Contact
-    'contact.country': 'Deutschland',
+    'contact.country': 'Brasilien',
     'contact.title': 'Lass uns reden',
     'contact.subtitle':
       'Interessiert an einer Zusammenarbeit oder hast du eine großartige Idee? Lass uns Konzepte gemeinsam in die Realität umsetzen.',

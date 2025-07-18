@@ -55,7 +55,7 @@ const zh: LanguageFile = {
     'projects.error': '获取存储库时出错：',
 
     // Contact
-    'contact.country': '中国',
+    'contact.country': '巴西 (Bāxī)',
     'contact.title': '让我们聊聊',
     'contact.subtitle': '有兴趣合作或有绝妙的想法？让我们一起将概念变为现实。',
     'contact.ready': '准备好迎接下一个项目了吗？',

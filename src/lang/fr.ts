@@ -57,7 +57,7 @@ const fr: LanguageFile = {
     'projects.error': 'Erreur lors de la récupération des dépôts :',
 
     // Contact
-    'contact.country': 'France',
+    'contact.country': 'Brésil',
     'contact.title': 'Parlons-en',
     'contact.subtitle':
       'Intéressé par une collaboration ou une idée incroyable ? Transformons des concepts en réalité ensemble.',

@@ -57,7 +57,7 @@ const ru: LanguageFile = {
     'projects.error': 'Ошибка при получении репозиториев:',
 
     // Contact
-    'contact.country': 'Россия',
+    'contact.country': 'Бразилия (Brazilija)',
     'contact.title': 'Давай поговорим',
     'contact.subtitle':
       'Хотите сотрудничать или у вас есть потрясающая идея? Давай воплощать концепции в реальность вместе.',

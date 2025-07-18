@@ -55,7 +55,7 @@ const ar: LanguageFile = {
     'projects.error': 'خطأ في جلب المستودعات:',
 
     // Contact
-    'contact.country': 'السعودية',
+    'contact.country': 'البرازيل (Al-Brazīl)',
     'contact.title': 'لنتحدث',
     'contact.subtitle':
       'مهتم بالتعاون أو لديك فكرة رائعة؟ دعنا نحول المفاهيم إلى واقع معًا.',

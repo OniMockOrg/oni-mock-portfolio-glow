@@ -56,7 +56,7 @@ const it: LanguageFile = {
     'projects.error': 'Errore nel recupero dei repository:',
 
     // Contact
-    'contact.country': 'Italia',
+    'contact.country': 'Brasile',
     'contact.title': 'Parliamone',
     'contact.subtitle':
       'Interessato a collaborare o hai un’idea fantastica? Trasformiamo i concetti in realtà insieme.',
