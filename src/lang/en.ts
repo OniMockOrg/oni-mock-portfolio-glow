@@ -11,6 +11,7 @@ const en: LanguageFile = {
     // Navigation
     'nav.home': 'Home',
     'nav.about': 'About',
+    'nav.services': 'Services',
     'nav.projects': 'Projects',
     'nav.contact': 'Contact',
 
@@ -45,6 +46,16 @@ const en: LanguageFile = {
     'about.interests.opensource.title': 'Open Source',
     'about.interests.opensource.desc': 'Contributing to the community',
 
+    // Services
+    'services.title': 'Services',
+    'services.subtitle': 'Specialized solutions for raffle automation and digital management',
+    'services.automation.title': 'Raffle Automation',
+    'services.automation.description': 'Complete automation system for raffles through the AlphaBot platform. We offer efficient and reliable solutions for managing raffles, from participant registration to winner selection.',
+    'services.automation.feature1': 'Automated participant management and registration',
+    'services.automation.feature2': 'Transparent and secure winner selection system',
+    'services.automation.feature3': 'Real-time reports and detailed analytics',
+    'services.automation.cta': 'Learn More',
+
     // Projects
     'projects.title': 'Projects',
     'projects.subtitle':
@@ -67,6 +78,20 @@ const en: LanguageFile = {
 
     // Footer
     'footer.text': '© {year} OniMock. Built with ❤️ and lots of coffee.',
+
+    // AlphaBot Page
+    'alphabot.hero.title': 'AlphaBot Raffle Automation',
+    'alphabot.hero.subtitle': 'Complete automation platform for raffles and digital management',
+    'alphabot.hero.description': 'Transform your raffle management with our advanced automation system. From participant registration to winner selection, AlphaBot offers a complete and reliable solution.',
+    'alphabot.hero.cta': 'Get Started',
+    
+    // AlphaBot Features
+    'alphabot.features.automation.title': 'Complete Automation',
+    'alphabot.features.automation.description': 'Fully automated system to manage raffles from start to finish.',
+    'alphabot.features.security.title': 'Guaranteed Security',
+    'alphabot.features.security.description': 'Advanced data protection and complete transparency in draws.',
+    'alphabot.features.reports.title': 'Detailed Reports',
+    'alphabot.features.reports.description': 'Complete analysis and real-time reports for better management.',
   },
 };
 

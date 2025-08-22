@@ -11,6 +11,7 @@ const ko: LanguageFile = {
     // Navigation
     'nav.home': '홈',
     'nav.about': '소개',
+    'nav.services': '서비스',
     'nav.projects': '프로젝트',
     'nav.contact': '연락처',
 
@@ -45,6 +46,16 @@ const ko: LanguageFile = {
     'about.interests.opensource.title': '오픈 소스',
     'about.interests.opensource.desc': '커뮤니티에 기여',
 
+    // Services
+    'services.title': '서비스',
+    'services.subtitle': '추첨 자동화 및 디지털 관리 전문 솔루션',
+    'services.automation.title': '추첨 자동화',
+    'services.automation.description': 'AlphaBot 플랫폼을 통한 포괄적인 추첨 자동화 시스템. 참가자 등록부터 당첨자 선정까지 효율적이고 신뢰할 수 있는 추첨 관리 솔루션을 제공합니다.',
+    'services.automation.feature1': '참가자 및 등록의 자동화된 관리',
+    'services.automation.feature2': '투명하고 안전한 당첨자 선정 시스템',
+    'services.automation.feature3': '실시간 보고서 및 상세 분석',
+    'services.automation.cta': '자세히 보기',
+
     // Projects
     'projects.title': '프로젝트',
     'projects.subtitle':
@@ -65,7 +76,21 @@ const ko: LanguageFile = {
     'contact.button': '연락하기',
 
     // Footer
-    'footer.text': '© {year} OniMock. ❤️와 많은 커피로 개발됨.',
+    'footer.text': '© {year} OniMock. ❤️와 많은 커피로 개발되었습니다.',
+
+    // AlphaBot Page
+    'alphabot.hero.title': 'AlphaBot 추첨 자동화',
+    'alphabot.hero.subtitle': '추첨 및 디지털 관리를 위한 완전한 자동화 플랫폼',
+    'alphabot.hero.description': '우리의 고급 자동화 시스템으로 추첨 관리를 혁신하세요. 참가자 등록부터 당첨자 선택까지, AlphaBot은 완전하고 신뢰할 수 있는 솔루션을 제공합니다.',
+    'alphabot.hero.cta': '지금 시작하기',
+    
+    // AlphaBot Features
+    'alphabot.features.automation.title': '완전 자동화',
+    'alphabot.features.automation.description': '처음부터 끝까지 추첨을 관리하는 완전 자동화 시스템.',
+    'alphabot.features.security.title': '보장된 보안',
+    'alphabot.features.security.description': '고급 데이터 보호 및 추첨의 완전한 투명성.',
+    'alphabot.features.reports.title': '상세 보고서',
+    'alphabot.features.reports.description': '포괄적인 분석 및 실시간 보고서로 더 나은 관리.',
   },
 };
 

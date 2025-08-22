@@ -2,11 +2,14 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../hooks/use-language';
 import LanguageSelector from '../contexts/LanguageSelector';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,16 +21,31 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { href: '#home', label: t('nav.home') },
-    { href: '#about', label: t('nav.about') },
-    { href: '#projects', label: t('nav.projects') },
-    { href: '#contact', label: t('nav.contact') },
+    { href: '#home', label: t('nav.home'), isRoute: false },
+    { href: '#about', label: t('nav.about'), isRoute: false },
+    { href: '/alphabot', label: t('nav.services'), isRoute: true },
+    { href: '#projects', label: t('nav.projects'), isRoute: false },
+    { href: '#contact', label: t('nav.contact'), isRoute: false },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (href: string, isRoute: boolean) => {
+    if (isRoute) {
+      navigate(href);
+    } else {
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     }
     setIsMobileMenuOpen(false);
   };
@@ -44,7 +62,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <div
             className="flex items-center gap-2 h-10 cursor-pointer"
-            onClick={() => scrollToSection('#home')}
+            onClick={() => navigate('/')}
           >
             <img src="/logo.svg" alt="Logo" className="h-full w-auto" />
             <span className="text-2xl font-bold text-gradient">OniMock</span>
@@ -54,7 +72,7 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.href}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item.href, item.isRoute)}
                 className="text-gray-300 hover:text-white transition-colors duration-300 relative group"
               >
                 {item.label}
@@ -77,7 +95,7 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.href}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item.href, item.isRoute)}
                 className="block w-full text-left py-3 text-gray-300 hover:text-white transition-colors duration-300"
               >
                 {item.label}

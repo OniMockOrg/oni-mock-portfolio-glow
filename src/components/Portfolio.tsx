@@ -1,6 +1,7 @@
 import Navigation from './Navigation';
 import Hero from './Hero';
 import About from './About';
+import Services from './Services';
 import Projects from './Projects';
 import Contact from './Contact';
 import { useLanguage } from '../hooks/use-language';
@@ -13,6 +14,7 @@ const Portfolio = () => {
       <Navigation />
       <Hero />
       <About />
+      <Services />
       <Projects />
       <Contact />
 

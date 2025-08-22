@@ -11,6 +11,7 @@ const it: LanguageFile = {
     // Navigation
     'nav.home': 'Home',
     'nav.about': 'Chi sono',
+    'nav.services': 'Servizi',
     'nav.projects': 'Progetti',
     'nav.contact': 'Contatti',
 
@@ -45,6 +46,16 @@ const it: LanguageFile = {
     'about.interests.opensource.title': 'Open Source',
     'about.interests.opensource.desc': 'Contribuire alla comunità',
 
+    // Services
+    'services.title': 'Servizi',
+    'services.subtitle': 'Soluzioni specializzate in automazione di sorteggi e gestione digitale',
+    'services.automation.title': 'Automazione di Sorteggi',
+    'services.automation.description': 'Sistema completo di automazione per sorteggi tramite la piattaforma AlphaBot. Offriamo soluzioni efficienti e affidabili per la gestione dei sorteggi, dall\'iscrizione dei partecipanti alla selezione dei vincitori.',
+    'services.automation.feature1': 'Gestione automatizzata di partecipanti e iscrizioni',
+    'services.automation.feature2': 'Sistema trasparente e sicuro di selezione dei vincitori',
+    'services.automation.feature3': 'Report in tempo reale e analisi dettagliate',
+    'services.automation.cta': 'Scopri di più',
+
     // Projects
     'projects.title': 'Progetti',
     'projects.subtitle':
@@ -67,6 +78,20 @@ const it: LanguageFile = {
 
     // Footer
     'footer.text': '© {year} OniMock. Sviluppato con ❤️ e tanto caffè.',
+
+    // AlphaBot Page
+    'alphabot.hero.title': 'Automazione Lotterie AlphaBot',
+    'alphabot.hero.subtitle': 'Piattaforma completa di automazione per lotterie e gestione digitale',
+    'alphabot.hero.description': 'Trasforma la tua gestione delle lotterie con il nostro sistema di automazione avanzato. Dalla registrazione dei partecipanti alla selezione dei vincitori, AlphaBot offre una soluzione completa e affidabile.',
+    'alphabot.hero.cta': 'Inizia Ora',
+    
+    // AlphaBot Features
+    'alphabot.features.automation.title': 'Automazione Completa',
+    'alphabot.features.automation.description': 'Sistema completamente automatizzato per gestire le lotterie dall\'inizio alla fine.',
+    'alphabot.features.security.title': 'Sicurezza Garantita',
+    'alphabot.features.security.description': 'Protezione avanzata dei dati e trasparenza totale nei sorteggi.',
+    'alphabot.features.reports.title': 'Report Dettagliati',
+    'alphabot.features.reports.description': 'Analisi complete e report in tempo reale per una migliore gestione.',
   },
 };
 

@@ -11,6 +11,7 @@ const es: LanguageFile = {
     // Navigation
     'nav.home': 'Inicio',
     'nav.about': 'Acerca de',
+    'nav.services': 'Servicios',
     'nav.projects': 'Proyectos',
     'nav.contact': 'Contacto',
 
@@ -45,6 +46,16 @@ const es: LanguageFile = {
     'about.interests.opensource.title': 'Código Abierto',
     'about.interests.opensource.desc': 'Contribuyendo a la comunidad',
 
+    // Services
+    'services.title': 'Servicios',
+    'services.subtitle': 'Soluciones especializadas en automatización de rifas y gestión digital',
+    'services.automation.title': 'Automatización de Rifas',
+    'services.automation.description': 'Sistema completo de automatización para rifas a través de la plataforma AlphaBot. Ofrecemos soluciones eficientes y confiables para la gestión de rifas, desde el registro de participantes hasta la selección de ganadores.',
+    'services.automation.feature1': 'Gestión automatizada de participantes y registros',
+    'services.automation.feature2': 'Sistema transparente y seguro de selección de ganadores',
+    'services.automation.feature3': 'Informes en tiempo real y análisis detallados',
+    'services.automation.cta': 'Saber Más',
+
     // Projects
     'projects.title': 'Proyectos',
     'projects.subtitle':
@@ -66,7 +77,21 @@ const es: LanguageFile = {
     'contact.button': 'Contactar',
 
     // Footer
-    'footer.text': '© {year} OniMock. Desarrollado con ❤️ y mucho café.',
+    'footer.text': '© {year} OniMock. Construido con ❤️ y mucho café.',
+
+    // AlphaBot Page
+    'alphabot.hero.title': 'Automatización de Sorteos AlphaBot',
+    'alphabot.hero.subtitle': 'Plataforma completa de automatización para sorteos y gestión digital',
+    'alphabot.hero.description': 'Transforma tu gestión de sorteos con nuestro sistema avanzado de automatización. Desde el registro de participantes hasta la selección de ganadores, AlphaBot ofrece una solución completa y confiable.',
+    'alphabot.hero.cta': 'Comenzar Ahora',
+    
+    // AlphaBot Features
+    'alphabot.features.automation.title': 'Automatización Completa',
+    'alphabot.features.automation.description': 'Sistema totalmente automatizado para gestionar sorteos de principio a fin.',
+    'alphabot.features.security.title': 'Seguridad Garantizada',
+    'alphabot.features.security.description': 'Protección avanzada de datos y transparencia total en los sorteos.',
+    'alphabot.features.reports.title': 'Informes Detallados',
+    'alphabot.features.reports.description': 'Análisis completos e informes en tiempo real para una mejor gestión.',
   },
 };
 

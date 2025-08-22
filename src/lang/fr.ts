@@ -11,6 +11,7 @@ const fr: LanguageFile = {
     // Navigation
     'nav.home': 'Accueil',
     'nav.about': 'À propos',
+    'nav.services': 'Services',
     'nav.projects': 'Projets',
     'nav.contact': 'Contact',
 
@@ -46,6 +47,16 @@ const fr: LanguageFile = {
     'about.interests.opensource.title': 'Open Source',
     'about.interests.opensource.desc': 'Contribuer à la communauté',
 
+    // Services
+    'services.title': 'Services',
+    'services.subtitle': 'Solutions spécialisées en automatisation de tirages au sort et gestion numérique',
+    'services.automation.title': 'Automatisation de Tirages au Sort',
+    'services.automation.description': 'Système complet d\'automatisation pour les tirages au sort via la plateforme AlphaBot. Nous offrons des solutions efficaces et fiables pour la gestion des tirages au sort, de l\'inscription des participants à la sélection des gagnants.',
+    'services.automation.feature1': 'Gestion automatisée des participants et des inscriptions',
+    'services.automation.feature2': 'Système transparent et sécurisé de sélection des gagnants',
+    'services.automation.feature3': 'Rapports en temps réel et analyses détaillées',
+    'services.automation.cta': 'En savoir plus',
+
     // Projects
     'projects.title': 'Projets',
     'projects.subtitle':
@@ -68,6 +79,20 @@ const fr: LanguageFile = {
 
     // Footer
     'footer.text': '© {year} OniMock. Développé avec ❤️ et beaucoup de café.',
+
+    // AlphaBot Page
+    'alphabot.hero.title': 'Automatisation de Tirages AlphaBot',
+    'alphabot.hero.subtitle': 'Plateforme complète d\'automatisation pour tirages et gestion numérique',
+    'alphabot.hero.description': 'Transformez votre gestion de tirages avec notre système d\'automatisation avancé. De l\'inscription des participants à la sélection des gagnants, AlphaBot offre une solution complète et fiable.',
+    'alphabot.hero.cta': 'Commencer Maintenant',
+    
+    // AlphaBot Features
+    'alphabot.features.automation.title': 'Automatisation Complète',
+    'alphabot.features.automation.description': 'Système entièrement automatisé pour gérer les tirages du début à la fin.',
+    'alphabot.features.security.title': 'Sécurité Garantie',
+    'alphabot.features.security.description': 'Protection avancée des données et transparence totale dans les tirages.',
+    'alphabot.features.reports.title': 'Rapports Détaillés',
+    'alphabot.features.reports.description': 'Analyses complètes et rapports en temps réel pour une meilleure gestion.',
   },
 };
 

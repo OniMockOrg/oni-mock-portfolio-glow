@@ -11,6 +11,7 @@ const ar: LanguageFile = {
     // Navigation
     'nav.home': 'الرئيسية',
     'nav.about': 'عني',
+    'nav.services': 'الخدمات',
     'nav.projects': 'المشاريع',
     'nav.contact': 'اتصل بنا',
 
@@ -45,6 +46,16 @@ const ar: LanguageFile = {
     'about.interests.opensource.title': 'المصدر المفتوح',
     'about.interests.opensource.desc': 'المساهمة في المجتمع',
 
+    // Services
+    'services.title': 'الخدمات',
+    'services.subtitle': 'حلول متخصصة في أتمتة السحوبات والإدارة الرقمية',
+    'services.automation.title': 'أتمتة السحوبات',
+    'services.automation.description': 'نظام شامل لأتمتة السحوبات من خلال منصة AlphaBot. نوفر حلول إدارة السحوبات الفعالة والموثوقة من تسجيل المشاركين إلى اختيار الفائزين.',
+    'services.automation.feature1': 'إدارة آلية للمشاركين والتسجيلات',
+    'services.automation.feature2': 'نظام اختيار الفائزين الشفاف والآمن',
+    'services.automation.feature3': 'تقارير فورية وتحليلات مفصلة',
+    'services.automation.cta': 'اعرف المزيد',
+
     // Projects
     'projects.title': 'المشاريع',
     'projects.subtitle':
@@ -65,7 +76,21 @@ const ar: LanguageFile = {
     'contact.button': 'اتصل بي',
 
     // Footer
-    'footer.text': '© {year} OniMock. تم تطويره بـ ❤️ وكثير من القهوة.',
+    'footer.text': '© {year} OniMock. تم التطوير بـ ❤️ والكثير من القهوة.',
+
+    // AlphaBot Page
+    'alphabot.hero.title': 'أتمتة السحوبات AlphaBot',
+    'alphabot.hero.subtitle': 'منصة أتمتة شاملة للسحوبات والإدارة الرقمية',
+    'alphabot.hero.description': 'حوّل إدارة السحوبات الخاصة بك مع نظام الأتمتة المتقدم لدينا. من تسجيل المشاركين إلى اختيار الفائزين، يقدم AlphaBot حلاً شاملاً وموثوقاً.',
+    'alphabot.hero.cta': 'ابدأ الآن',
+    
+    // AlphaBot Features
+    'alphabot.features.automation.title': 'أتمتة كاملة',
+    'alphabot.features.automation.description': 'نظام آلي بالكامل لإدارة السحوبات من البداية إلى النهاية.',
+    'alphabot.features.security.title': 'أمان مضمون',
+    'alphabot.features.security.description': 'حماية متقدمة للبيانات وشفافية كاملة في السحوبات.',
+    'alphabot.features.reports.title': 'تقارير مفصلة',
+    'alphabot.features.reports.description': 'تحليلات شاملة وتقارير فورية لإدارة أفضل.',
   },
 };
 

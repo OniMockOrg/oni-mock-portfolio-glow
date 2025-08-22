@@ -11,6 +11,7 @@ const ja: LanguageFile = {
     // Navigation
     'nav.home': 'ホーム',
     'nav.about': '自己紹介',
+    'nav.services': 'サービス',
     'nav.projects': 'プロジェクト',
     'nav.contact': '連絡先',
 
@@ -45,6 +46,16 @@ const ja: LanguageFile = {
     'about.interests.opensource.title': 'オープンソース',
     'about.interests.opensource.desc': 'コミュニティへの貢献',
 
+    // Services
+    'services.title': 'サービス',
+    'services.subtitle': '抽選自動化とデジタル管理の専門ソリューション',
+    'services.automation.title': '抽選自動化',
+    'services.automation.description': 'AlphaBotプラットフォームを通じた包括的な抽選自動化システム。参加者登録から当選者選出まで、効率的で信頼性の高い抽選管理ソリューションを提供します。',
+    'services.automation.feature1': '参加者と登録の自動化管理',
+    'services.automation.feature2': '透明で安全な当選者選出システム',
+    'services.automation.feature3': 'リアルタイムレポートと詳細分析',
+    'services.automation.cta': '詳細を見る',
+
     // Projects
     'projects.title': 'プロジェクト',
     'projects.subtitle':
@@ -65,7 +76,21 @@ const ja: LanguageFile = {
     'contact.button': '連絡する',
 
     // Footer
-    'footer.text': '© {year} OniMock。❤️とたくさんのコーヒーで開発されました。',
+    'footer.text': '© {year} OniMock. ❤️とたくさんのコーヒーで開発されました。',
+
+    // AlphaBot Page
+    'alphabot.hero.title': 'AlphaBot 抽選自動化',
+    'alphabot.hero.subtitle': '抽選とデジタル管理のための完全な自動化プラットフォーム',
+    'alphabot.hero.description': '私たちの高度な自動化システムで抽選管理を変革しましょう。参加者登録から当選者選択まで、AlphaBotは完全で信頼性の高いソリューションを提供します。',
+    'alphabot.hero.cta': '今すぐ始める',
+    
+    // AlphaBot Features
+    'alphabot.features.automation.title': '完全自動化',
+    'alphabot.features.automation.description': '抽選を最初から最後まで管理する完全自動化システム。',
+    'alphabot.features.security.title': '保証されたセキュリティ',
+    'alphabot.features.security.description': '高度なデータ保護と抽選の完全な透明性。',
+    'alphabot.features.reports.title': '詳細レポート',
+    'alphabot.features.reports.description': '包括的な分析とリアルタイムレポートによる優れた管理。',
   },
 };
 

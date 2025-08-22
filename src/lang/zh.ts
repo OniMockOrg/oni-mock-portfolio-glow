@@ -11,6 +11,7 @@ const zh: LanguageFile = {
     // Navigation
     'nav.home': '首页',
     'nav.about': '关于',
+    'nav.services': '服务',
     'nav.projects': '项目',
     'nav.contact': '联系方式',
 
@@ -45,6 +46,16 @@ const zh: LanguageFile = {
     'about.interests.opensource.title': '开源',
     'about.interests.opensource.desc': '为社区贡献',
 
+    // Services
+    'services.title': '服务',
+    'services.subtitle': '专业的抽奖自动化和数字管理解决方案',
+    'services.automation.title': '抽奖自动化',
+    'services.automation.description': '通过AlphaBot平台提供完整的抽奖自动化系统。我们提供高效可靠的抽奖管理解决方案，从参与者注册到获奖者选择。',
+    'services.automation.feature1': '参与者和注册的自动化管理',
+    'services.automation.feature2': '透明安全的获奖者选择系统',
+    'services.automation.feature3': '实时报告和详细分析',
+    'services.automation.cta': '了解更多',
+
     // Projects
     'projects.title': '项目',
     'projects.subtitle':
@@ -65,6 +76,20 @@ const zh: LanguageFile = {
 
     // Footer
     'footer.text': '© {year} OniMock。用❤️和大量咖啡开发。',
+
+    // AlphaBot Page
+    'alphabot.hero.title': 'AlphaBot 抽奖自动化',
+    'alphabot.hero.subtitle': '抽奖和数字化管理的完整自动化平台',
+    'alphabot.hero.description': '使用我们先进的自动化系统改变您的抽奖管理。从参与者注册到获奖者选择，AlphaBot 提供完整可靠的解决方案。',
+    'alphabot.hero.cta': '立即开始',
+    
+    // AlphaBot Features
+    'alphabot.features.automation.title': '完全自动化',
+    'alphabot.features.automation.description': '从头到尾管理抽奖的完全自动化系统。',
+    'alphabot.features.security.title': '保证安全',
+    'alphabot.features.security.description': '先进的数据保护和抽奖的完全透明度。',
+    'alphabot.features.reports.title': '详细报告',
+    'alphabot.features.reports.description': '全面分析和实时报告，实现更好的管理。',
   },
 };
 

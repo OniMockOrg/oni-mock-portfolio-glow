@@ -11,6 +11,7 @@ const ptBr: LanguageFile = {
     // Navigation
     'nav.home': 'Início',
     'nav.about': 'Sobre',
+    'nav.services': 'Serviços',
     'nav.projects': 'Projetos',
     'nav.contact': 'Contato',
 
@@ -45,6 +46,16 @@ const ptBr: LanguageFile = {
     'about.interests.opensource.title': 'Open Source',
     'about.interests.opensource.desc': 'Contribuindo para a comunidade',
 
+    // Services
+    'services.title': 'Serviços',
+    'services.subtitle': 'Soluções especializadas em automação de rifas e gestão digital',
+    'services.automation.title': 'Automação de Rifas',
+    'services.automation.description': 'Sistema completo de automação para rifas através da plataforma AlphaBot. Oferecemos soluções eficientes e confiáveis para gerenciamento de rifas, desde o cadastro de participantes até a seleção de ganhadores.',
+    'services.automation.feature1': 'Gerenciamento automatizado de participantes e cadastros',
+    'services.automation.feature2': 'Sistema transparente e seguro de seleção de ganhadores',
+    'services.automation.feature3': 'Relatórios em tempo real e análises detalhadas',
+    'services.automation.cta': 'Saiba Mais',
+
     // Projects
     'projects.title': 'Projetos',
     'projects.subtitle':
@@ -66,7 +77,21 @@ const ptBr: LanguageFile = {
     'contact.button': 'Entrar em Contato',
 
     // Footer
-    'footer.text': '© {year} OniMock. Desenvolvido com ❤️ e muito café.',
+    'footer.text': '© {year} OniMock. Construído com ❤️ e muito café.',
+
+    // AlphaBot Page
+    'alphabot.hero.title': 'Automação de Rifas AlphaBot',
+    'alphabot.hero.subtitle': 'Plataforma completa de automação para rifas e gestão digital',
+    'alphabot.hero.description': 'Transforme sua gestão de rifas com nosso sistema avançado de automação. Do cadastro de participantes à seleção de ganhadores, o AlphaBot oferece uma solução completa e confiável.',
+    'alphabot.hero.cta': 'Começar Agora',
+    
+    // AlphaBot Features
+    'alphabot.features.automation.title': 'Automação Completa',
+    'alphabot.features.automation.description': 'Sistema totalmente automatizado para gerenciar rifas do início ao fim.',
+    'alphabot.features.security.title': 'Segurança Garantida',
+    'alphabot.features.security.description': 'Proteção avançada de dados e transparência total nos sorteios.',
+    'alphabot.features.reports.title': 'Relatórios Detalhados',
+    'alphabot.features.reports.description': 'Análises completas e relatórios em tempo real para melhor gestão.',
   },
 };
 

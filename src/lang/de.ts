@@ -11,6 +11,7 @@ const de: LanguageFile = {
     // Navigation
     'nav.home': 'Startseite',
     'nav.about': 'Über mich',
+    'nav.services': 'Dienstleistungen',
     'nav.projects': 'Projekte',
     'nav.contact': 'Kontakt',
 
@@ -46,6 +47,16 @@ const de: LanguageFile = {
     'about.interests.opensource.title': 'Open Source',
     'about.interests.opensource.desc': 'Beitrag zur Gemeinschaft',
 
+    // Services
+    'services.title': 'Dienstleistungen',
+    'services.subtitle': 'Spezialisierte Lösungen für Verlosungsautomatisierung und digitales Management',
+    'services.automation.title': 'Verlosungsautomatisierung',
+    'services.automation.description': 'Komplettes Automatisierungssystem für Verlosungen über die AlphaBot-Plattform. Wir bieten effiziente und zuverlässige Lösungen für das Management von Verlosungen, von der Teilnehmerregistrierung bis zur Gewinnerauswahl.',
+    'services.automation.feature1': 'Automatisierte Teilnehmer- und Registrierungsverwaltung',
+    'services.automation.feature2': 'Transparentes und sicheres Gewinnerauswahlsystem',
+    'services.automation.feature3': 'Echtzeitberichte und detaillierte Analysen',
+    'services.automation.cta': 'Mehr erfahren',
+
     // Projects
     'projects.title': 'Projekte',
     'projects.subtitle':
@@ -68,6 +79,20 @@ const de: LanguageFile = {
 
     // Footer
     'footer.text': '© {year} OniMock. Entwickelt mit ❤️ und viel Kaffee.',
+
+    // AlphaBot Page
+    'alphabot.hero.title': 'AlphaBot Verlosungsautomatisierung',
+    'alphabot.hero.subtitle': 'Komplette Automatisierungsplattform für Verlosungen und digitales Management',
+    'alphabot.hero.description': 'Transformieren Sie Ihr Verlosungsmanagement mit unserem fortschrittlichen Automatisierungssystem. Von der Teilnehmerregistrierung bis zur Gewinnerauswahl bietet AlphaBot eine vollständige und zuverlässige Lösung.',
+    'alphabot.hero.cta': 'Jetzt Starten',
+    
+    // AlphaBot Features
+    'alphabot.features.automation.title': 'Vollständige Automatisierung',
+    'alphabot.features.automation.description': 'Vollautomatisiertes System zur Verwaltung von Verlosungen von Anfang bis Ende.',
+    'alphabot.features.security.title': 'Garantierte Sicherheit',
+    'alphabot.features.security.description': 'Erweiterte Datensicherheit und vollständige Transparenz bei Verlosungen.',
+    'alphabot.features.reports.title': 'Detaillierte Berichte',
+    'alphabot.features.reports.description': 'Umfassende Analysen und Echtzeitberichte für besseres Management.',
   },
 };
 

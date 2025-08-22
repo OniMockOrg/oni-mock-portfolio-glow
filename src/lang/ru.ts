@@ -11,6 +11,7 @@ const ru: LanguageFile = {
     // Navigation
     'nav.home': 'Главная',
     'nav.about': 'Обо мне',
+    'nav.services': 'Услуги',
     'nav.projects': 'Проекты',
     'nav.contact': 'Контакты',
 
@@ -46,6 +47,16 @@ const ru: LanguageFile = {
     'about.interests.opensource.title': 'Открытый код',
     'about.interests.opensource.desc': 'Вклад в сообщество',
 
+    // Services
+    'services.title': 'Услуги',
+    'services.subtitle': 'Специализированные решения для автоматизации розыгрышей и цифрового управления',
+    'services.automation.title': 'Автоматизация Розыгрышей',
+    'services.automation.description': 'Комплексная система автоматизации розыгрышей через платформу AlphaBot. Мы предлагаем эффективные и надежные решения для управления розыгрышами, от регистрации участников до выбора победителей.',
+    'services.automation.feature1': 'Автоматизированное управление участниками и регистрацией',
+    'services.automation.feature2': 'Прозрачная и безопасная система выбора победителей',
+    'services.automation.feature3': 'Отчеты в реальном времени и детальная аналитика',
+    'services.automation.cta': 'Узнать больше',
+
     // Projects
     'projects.title': 'Проекты',
     'projects.subtitle':
@@ -67,8 +78,21 @@ const ru: LanguageFile = {
     'contact.button': 'Связаться',
 
     // Footer
-    'footer.text':
-      '© {year} OniMock. Разработано с ❤️ и большим количеством кофе.',
+    'footer.text': '© {year} OniMock. Разработано с ❤️ и большим количеством кофе.',
+
+    // AlphaBot Page
+    'alphabot.hero.title': 'Автоматизация Розыгрышей AlphaBot',
+    'alphabot.hero.subtitle': 'Полная платформа автоматизации для розыгрышей и цифрового управления',
+    'alphabot.hero.description': 'Трансформируйте управление розыгрышами с нашей продвинутой системой автоматизации. От регистрации участников до выбора победителей, AlphaBot предлагает полное и надежное решение.',
+    'alphabot.hero.cta': 'Начать Сейчас',
+    
+    // AlphaBot Features
+    'alphabot.features.automation.title': 'Полная Автоматизация',
+    'alphabot.features.automation.description': 'Полностью автоматизированная система для управления розыгрышами от начала до конца.',
+    'alphabot.features.security.title': 'Гарантированная Безопасность',
+    'alphabot.features.security.description': 'Продвинутая защита данных и полная прозрачность в розыгрышах.',
+    'alphabot.features.reports.title': 'Детальные Отчеты',
+    'alphabot.features.reports.description': 'Комплексная аналитика и отчеты в реальном времени для лучшего управления.',
   },
 };
 
