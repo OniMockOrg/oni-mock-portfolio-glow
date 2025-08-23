@@ -2,8 +2,16 @@ import React, { useEffect } from 'react';
 import { useLanguage } from '../hooks/use-language';
 import Navigation from '../components/Navigation';
 import AlphaBotSections from '../components/AlphaBotSections';
-import { Button } from '../components/ui/button';
-import { ArrowRight, Zap, Shield, BarChart3, Sparkles, Rocket, Brain } from 'lucide-react';
+import AnimatedButton from '../components/ui/animated-button';
+import {
+  ArrowRight,
+  Zap,
+  Shield,
+  BarChart3,
+  Sparkles,
+  Rocket,
+  Brain,
+} from 'lucide-react';
 
 export const AlphaBot = () => {
   const { t } = useLanguage();
@@ -21,16 +29,16 @@ export const AlphaBot = () => {
         <div className="absolute top-1/2 -left-40 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute bottom-0 right-1/3 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
-      
+
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce delay-300"></div>
         <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-pink-400 rounded-full animate-bounce delay-700"></div>
         <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce delay-1000"></div>
       </div>
-      
+
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
@@ -46,43 +54,43 @@ export const AlphaBot = () => {
               </span>
               <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-pulse"></div>
             </div>
-            
+
             {/* Enhanced Title */}
             <h1 className="text-6xl md:text-8xl font-black mb-8 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight tracking-tight">
               <span className="inline-block transition-transform duration-300">
                 {t('alphabot.hero.title')}
               </span>
             </h1>
-            
+
             {/* Enhanced Description */}
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed font-light">
               {t('alphabot.hero.description')}
             </p>
-            
+
             {/* Enhanced CTA Button */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
-                className="group relative bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 hover:from-purple-400 hover:to-blue-400 text-white px-12 py-6 rounded-2xl text-lg font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/40 backdrop-blur-sm overflow-hidden"
-                onClick={() => window.open(import.meta.env.VITE_ALPHABOT_SAAS_URL, '_blank')}
-                style={{ boxShadow: '0 2px 16px 0 #a78bfa44' }}
+              <AnimatedButton
+                variant="gradient"
+                size="lg"
+                icon={Rocket}
+                iconPosition="left"
+                onClick={() =>
+                  window.open(import.meta.env.VITE_ALPHABOT_SAAS_URL, '_blank')
+                }
+                className="font-bold"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <span className="relative z-10 flex items-center gap-3">
-                  <Rocket className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                  {t('alphabot.hero.cta')}
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
-              </Button>
-              
-              <Button 
-                size="lg" 
+                {t('alphabot.hero.cta')}
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300 ml-3" />
+              </AnimatedButton>
+
+              <AnimatedButton
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-6 rounded-2xl text-lg font-semibold transition-all duration-300 hover:scale-105 bg-transparent"
+                size="lg"
+                icon={Brain}
+                iconPosition="left"
               >
-                <Brain className="w-5 h-5 mr-2" />
                 {t('alphabot.hero.demo')}
-              </Button>
+              </AnimatedButton>
             </div>
           </div>
         </div>
@@ -97,47 +105,60 @@ export const AlphaBot = () => {
               Recursos Revolucionários
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tecnologia de ponta que transforma a forma como você gerencia seus projetos
+              Tecnologia de ponta que transforma a forma como você gerencia seus
+              projetos
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {/* Feature 1 - Enhanced */}
             <div className="group relative bg-gradient-to-br from-white/10 via-purple-500/10 to-pink-500/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 hover:bg-gradient-to-br hover:from-white/15 hover:via-purple-500/15 hover:to-pink-500/15 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
+
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:shadow-purple-500/50 transition-all duration-300 group-hover:scale-110">
                   <Zap className="w-8 h-8 text-white group-hover:rotate-12 transition-transform duration-300" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-purple-200 transition-colors">{t('alphabot.features.automation.title')}</h3>
-                <p className="text-gray-300 text-lg leading-relaxed group-hover:text-gray-200 transition-colors">{t('alphabot.features.automation.description')}</p>
+                <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-purple-200 transition-colors">
+                  {t('alphabot.features.automation.title')}
+                </h3>
+                <p className="text-gray-300 text-lg leading-relaxed group-hover:text-gray-200 transition-colors">
+                  {t('alphabot.features.automation.description')}
+                </p>
               </div>
             </div>
-            
+
             {/* Feature 2 - Enhanced */}
             <div className="group relative bg-gradient-to-br from-white/10 via-blue-500/10 to-cyan-500/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 hover:bg-gradient-to-br hover:from-white/15 hover:via-blue-500/15 hover:to-cyan-500/15 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
+
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:shadow-blue-500/50 transition-all duration-300 group-hover:scale-110">
                   <Shield className="w-8 h-8 text-white group-hover:rotate-12 transition-transform duration-300" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-blue-200 transition-colors">{t('alphabot.features.security.title')}</h3>
-                <p className="text-gray-300 text-lg leading-relaxed group-hover:text-gray-200 transition-colors">{t('alphabot.features.security.description')}</p>
+                <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-blue-200 transition-colors">
+                  {t('alphabot.features.security.title')}
+                </h3>
+                <p className="text-gray-300 text-lg leading-relaxed group-hover:text-gray-200 transition-colors">
+                  {t('alphabot.features.security.description')}
+                </p>
               </div>
             </div>
-            
+
             {/* Feature 3 - Enhanced */}
             <div className="group relative bg-gradient-to-br from-white/10 via-green-500/10 to-emerald-500/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 hover:bg-gradient-to-br hover:from-white/15 hover:via-green-500/15 hover:to-emerald-500/15 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25">
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
+
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:shadow-green-500/50 transition-all duration-300 group-hover:scale-110">
                   <BarChart3 className="w-8 h-8 text-white group-hover:rotate-12 transition-transform duration-300" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-green-200 transition-colors">{t('alphabot.features.reports.title')}</h3>
-                <p className="text-gray-300 text-lg leading-relaxed group-hover:text-gray-200 transition-colors">{t('alphabot.features.reports.description')}</p>
+                <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-green-200 transition-colors">
+                  {t('alphabot.features.reports.title')}
+                </h3>
+                <p className="text-gray-300 text-lg leading-relaxed group-hover:text-gray-200 transition-colors">
+                  {t('alphabot.features.reports.description')}
+                </p>
               </div>
             </div>
           </div>
