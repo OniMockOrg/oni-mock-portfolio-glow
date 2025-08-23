@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../hooks/use-language';
+import AnimatedButton from './ui/animated-button';
 import { Bot, Bell, Shield, Sparkles, Rocket, Star } from 'lucide-react';
 
 interface SectionProps {
@@ -26,7 +27,7 @@ const Section: React.FC<SectionProps> = ({
   feature3Key,
   imagePosition,
   gradientFrom,
-  gradientTo
+  gradientTo,
 }) => {
   const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
@@ -43,7 +44,7 @@ const Section: React.FC<SectionProps> = ({
       },
       {
         threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -50px 0px',
       }
     );
 
@@ -72,12 +73,13 @@ const Section: React.FC<SectionProps> = ({
     : '-translate-x-full opacity-0 scale-95';
 
   return (
-    <div
-      ref={sectionRef}
-      className="py-16 overflow-hidden"
-    >
+    <div ref={sectionRef} className="py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className={`flex flex-col ${imagePosition === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'} gap-16 items-center`}>
+        <div
+          className={`flex flex-col ${
+            imagePosition === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'
+          } gap-16 items-center`}
+        >
           <ImageComponent
             imageAnimationClass={imageAnimationClass}
             icon={icon}
@@ -105,19 +107,28 @@ interface ImageComponentProps {
   gradientTo: string;
 }
 
-const ImageComponent: React.FC<ImageComponentProps> = ({ imageAnimationClass, icon, gradientFrom, gradientTo }) => (
+const ImageComponent: React.FC<ImageComponentProps> = ({
+  imageAnimationClass,
+  icon,
+  gradientFrom,
+  gradientTo,
+}) => (
   <div
     className={`flex-1 flex justify-center items-center transform transition-all duration-700 ease-out will-change-transform ${imageAnimationClass}`}
   >
     <div className="relative group">
       {/* Enhanced Glow Effect */}
       <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/30 via-pink-500/30 to-cyan-500/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-75 group-hover:opacity-100"></div>
-      
+
       {/* Glass Container */}
-      <div className={`relative w-80 h-80 bg-gradient-to-br ${gradientFrom} ${gradientTo} rounded-3xl flex items-center justify-center shadow-2xl border border-white/20 backdrop-blur-xl group-hover:shadow-purple-500/25 transition-all duration-500 group-hover:scale-105`}>
+      <div
+        className={`relative w-80 h-80 bg-gradient-to-br ${gradientFrom} ${gradientTo} rounded-3xl flex items-center justify-center shadow-2xl border border-white/20 backdrop-blur-xl group-hover:shadow-purple-500/25 transition-all duration-500 group-hover:scale-105`}
+      >
         <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-3xl"></div>
-        <div className="relative text-white text-7xl drop-shadow-lg group-hover:scale-110 transition-transform duration-500">{icon}</div>
-        
+        <div className="relative text-white text-7xl drop-shadow-lg group-hover:scale-110 transition-transform duration-500">
+          {icon}
+        </div>
+
         {/* Floating Elements */}
         <div className="absolute top-4 right-4 bg-gradient-to-r from-white/20 to-white/10 rounded-full p-2 shadow-lg backdrop-blur-sm">
           <Sparkles className="w-4 h-4 text-white animate-pulse" />
@@ -136,7 +147,14 @@ interface TextComponentProps {
   feature3Key: string;
 }
 
-const TextComponent: React.FC<TextComponentProps> = ({ textAnimationClass, titleKey, descriptionKey, feature1Key, feature2Key, feature3Key }) => {
+const TextComponent: React.FC<TextComponentProps> = ({
+  textAnimationClass,
+  titleKey,
+  descriptionKey,
+  feature1Key,
+  feature2Key,
+  feature3Key,
+}) => {
   const { t } = useLanguage();
   return (
     <div
@@ -153,33 +171,41 @@ const TextComponent: React.FC<TextComponentProps> = ({ textAnimationClass, title
           <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-full p-2 shadow-lg group-hover:shadow-purple-500/50 transition-all duration-300">
             <div className="w-3 h-3 bg-white rounded-full"></div>
           </div>
-          <p className="text-lg text-gray-300 group-hover:text-gray-200 transition-colors">{t(feature1Key)}</p>
+          <p className="text-lg text-gray-300 group-hover:text-gray-200 transition-colors">
+            {t(feature1Key)}
+          </p>
         </div>
         <div className="flex items-start space-x-4 group">
           <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-full p-2 shadow-lg group-hover:shadow-purple-500/50 transition-all duration-300">
             <div className="w-3 h-3 bg-white rounded-full"></div>
           </div>
-          <p className="text-lg text-gray-300 group-hover:text-gray-200 transition-colors">{t(feature2Key)}</p>
+          <p className="text-lg text-gray-300 group-hover:text-gray-200 transition-colors">
+            {t(feature2Key)}
+          </p>
         </div>
         <div className="flex items-start space-x-4 group">
           <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-full p-2 shadow-lg group-hover:shadow-purple-500/50 transition-all duration-300">
             <div className="w-3 h-3 bg-white rounded-full"></div>
           </div>
-          <p className="text-lg text-gray-300 group-hover:text-gray-200 transition-colors">{t(feature3Key)}</p>
+          <p className="text-lg text-gray-300 group-hover:text-gray-200 transition-colors">
+            {t(feature3Key)}
+          </p>
         </div>
       </div>
-      
+
       {/* Enhanced CTA Button - Only show for management section */}
       {titleKey === 'alphabot.sections.management.title' && (
         <div className="mt-12">
-          <button className="group relative bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 hover:from-purple-400 hover:to-blue-400 text-white px-10 py-4 rounded-2xl text-lg font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/40 backdrop-blur-sm overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <span className="relative z-10 flex items-center gap-3">
-              <Rocket className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-              {t('alphabot.sections.learnMore')}
-              <Star className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-            </span>
-          </button>
+          <AnimatedButton
+            variant="gradient"
+            size="md"
+            icon={Rocket}
+            iconPosition="left"
+            className="font-bold"
+          >
+            {t('alphabot.sections.learnMore')}
+            <Star className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 ml-3" />
+          </AnimatedButton>
         </div>
       )}
     </div>
@@ -236,7 +262,7 @@ const AlphaBotSections: React.FC = () => {
       </div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]"></div>
-      
+
       <div className="relative z-10">
         {sections.map((section, index) => (
           <div key={section.id}>

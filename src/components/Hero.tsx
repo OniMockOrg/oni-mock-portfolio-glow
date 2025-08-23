@@ -17,8 +17,20 @@ const MoonSVG = ({ size = 90 }) => (
   >
     <g transform="translate(-59.66263,-40.603047)">
       <g transform="translate(46.431227,36.525898)">
-        <ellipse style={{ fill: '#dcf9f6' }} cx="133.60001" cy="425.20001" rx="2.4000001" ry="21.6" />
-        <ellipse style={{ fill: '#dcf9f6' }} cx="133.60001" cy="426" rx="21.6" ry="2.4000001" />
+        <ellipse
+          style={{ fill: '#dcf9f6' }}
+          cx="133.60001"
+          cy="425.20001"
+          rx="2.4000001"
+          ry="21.6"
+        />
+        <ellipse
+          style={{ fill: '#dcf9f6' }}
+          cx="133.60001"
+          cy="426"
+          rx="21.6"
+          ry="2.4000001"
+        />
         <ellipse
           transform="matrix(0.7054,-0.7088,0.7088,0.7054,18.6212,346.765)"
           style={{ fill: '#dcf9f6' }}
@@ -35,8 +47,20 @@ const MoonSVG = ({ size = 90 }) => (
           rx="21.6"
           ry="2.4000001"
         />
-        <ellipse style={{ fill: '#dcf9f6' }} cx="366.39999" cy="84.400002" rx="0.80000001" ry="9.6000004" />
-        <ellipse style={{ fill: '#dcf9f6' }} cx="366.39999" cy="84.400002" rx="9.6000004" ry="0.80000001" />
+        <ellipse
+          style={{ fill: '#dcf9f6' }}
+          cx="366.39999"
+          cy="84.400002"
+          rx="0.80000001"
+          ry="9.6000004"
+        />
+        <ellipse
+          style={{ fill: '#dcf9f6' }}
+          cx="366.39999"
+          cy="84.400002"
+          rx="9.6000004"
+          ry="0.80000001"
+        />
         <ellipse
           transform="matrix(-0.7107,-0.7035,0.7035,-0.7107,232.771,301.5383)"
           style={{ fill: '#dcf9f6' }}
@@ -108,43 +132,148 @@ const MoonSVG = ({ size = 90 }) => (
         d="m 432.03123,286.5259 c 0,88 -48,160 -136,160 -88,0 -160,-72 -160,-160 0,-88 72,-160 160,-160 88,0 136,72 136,160 z"
       />
       <g transform="translate(46.431227,36.525898)">
-        <circle style={{ fill: '#78a8a0' }} cx="138.39999" cy="165.2" r="9.6000004" />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="138.39999"
+          cy="165.2"
+          r="9.6000004"
+        />
         <circle style={{ fill: '#78a8a0' }} cx="124.8" cy="201.2" r="1.6" />
         <circle style={{ fill: '#78a8a0' }} cx="189.60001" cy="222" r="29.6" />
         <circle style={{ fill: '#78a8a0' }} cx="202.39999" cy="157.2" r="8" />
-        <circle style={{ fill: '#78a8a0' }} cx="257.60001" cy="153.2" r="2.4000001" />
-        <circle style={{ fill: '#78a8a0' }} cx="278.39999" cy="126" r="2.4000001" />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="257.60001"
+          cy="153.2"
+          r="2.4000001"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="278.39999"
+          cy="126"
+          r="2.4000001"
+        />
         <circle style={{ fill: '#78a8a0' }} cx="201.60001" cy="127.6" r="4" />
         <circle style={{ fill: '#78a8a0' }} cx="233.60001" cy="114" r="1.6" />
-        <circle style={{ fill: '#78a8a0' }} cx="270.39999" cy="206" r="6.4000001" />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="270.39999"
+          cy="206"
+          r="6.4000001"
+        />
         <circle style={{ fill: '#78a8a0' }} cx="318.39999" cy="202" r="4" />
-        <circle style={{ fill: '#78a8a0' }} cx="328.79999" cy="156.39999" r="6.4000001" />
-        <circle style={{ fill: '#78a8a0' }} cx="300.79999" cy="285.20001" r="17.6" />
-        <circle style={{ fill: '#78a8a0' }} cx="156" cy="295.60001" r="5.5999999" />
-        <circle style={{ fill: '#78a8a0' }} cx="213.60001" cy="271.60001" r="2.4000001" />
-        <circle style={{ fill: '#78a8a0' }} cx="241.60001" cy="331.60001" r="9.6000004" />
-        <circle style={{ fill: '#78a8a0' }} cx="124.8" cy="254.8" r="6.4000001" />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="328.79999"
+          cy="156.39999"
+          r="6.4000001"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="300.79999"
+          cy="285.20001"
+          r="17.6"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="156"
+          cy="295.60001"
+          r="5.5999999"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="213.60001"
+          cy="271.60001"
+          r="2.4000001"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="241.60001"
+          cy="331.60001"
+          r="9.6000004"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="124.8"
+          cy="254.8"
+          r="6.4000001"
+        />
         <circle style={{ fill: '#78a8a0' }} cx="267.20001" cy="250.8" r="1.6" />
         <circle style={{ fill: '#78a8a0' }} cx="344" cy="254" r="4" />
-        <circle style={{ fill: '#78a8a0' }} cx="174.39999" cy="339.60001" r="9.6000004" />
-        <circle style={{ fill: '#78a8a0' }} cx="193.60001" cy="305.20001" r="3.2" />
-        <circle style={{ fill: '#78a8a0' }} cx="292.79999" cy="342.79999" r="3.2" />
-        <circle style={{ fill: '#78a8a0' }} cx="241.60001" cy="369.20001" r="2.4000001" />
-        <circle style={{ fill: '#78a8a0' }} cx="201.60001" cy="365.20001" r="1.6" />
-        <circle style={{ fill: '#78a8a0' }} cx="332.79999" cy="328.39999" r="6.4000001" />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="174.39999"
+          cy="339.60001"
+          r="9.6000004"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="193.60001"
+          cy="305.20001"
+          r="3.2"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="292.79999"
+          cy="342.79999"
+          r="3.2"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="241.60001"
+          cy="369.20001"
+          r="2.4000001"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="201.60001"
+          cy="365.20001"
+          r="1.6"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="332.79999"
+          cy="328.39999"
+          r="6.4000001"
+        />
         <circle style={{ fill: '#78a8a0' }} cx="284" cy="375.60001" r="4" />
-        <circle style={{ fill: '#78a8a0' }} cx="245.60001" cy="289.20001" r="3.2" />
-        <circle style={{ fill: '#78a8a0' }} cx="353.60001" cy="300.39999" r="6.4000001" />
-        <circle style={{ fill: '#78a8a0' }} cx="134.39999" cy="323.60001" r="5.5999999" />
-        <circle style={{ fill: '#78a8a0' }} cx="309.60001" cy="241.2" r="7.1999998" />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="245.60001"
+          cy="289.20001"
+          r="3.2"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="353.60001"
+          cy="300.39999"
+          r="6.4000001"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="134.39999"
+          cy="323.60001"
+          r="5.5999999"
+        />
+        <circle
+          style={{ fill: '#78a8a0' }}
+          cx="309.60001"
+          cy="241.2"
+          r="7.1999998"
+        />
       </g>
     </g>
   </svg>
 );
 
-
 const MoonSVG2 = ({ size = 56 }) => (
-  <svg width={size} height={size} viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <defs>
       <radialGradient id="moonGrad" cx="50%" cy="45%" r="60%">
         <stop offset="0%" stopColor="#ede9fe" />
@@ -157,23 +286,91 @@ const MoonSVG2 = ({ size = 56 }) => (
       </radialGradient>
     </defs>
     {/* Lua principal */}
-    <ellipse cx="28" cy="28" rx="25" ry="24" fill="url(#moonGrad)" stroke="#7c3aed" strokeWidth="2.5" />
+    <ellipse
+      cx="28"
+      cy="28"
+      rx="25"
+      ry="24"
+      fill="url(#moonGrad)"
+      stroke="#7c3aed"
+      strokeWidth="2.5"
+    />
     {/* Destaque de luz */}
     <ellipse cx="20" cy="18" rx="7" ry="3.5" fill="#ede9fe" fillOpacity="0.7" />
     {/* Crateras com sombra */}
-    <ellipse cx="38" cy="18" rx="4" ry="2.5" fill="url(#craterGrad)" stroke="#7c3aed" strokeWidth="1.1" />
-    <ellipse cx="20" cy="34" rx="2.5" ry="1.5" fill="url(#craterGrad)" stroke="#a78bfa" strokeWidth="0.9" />
-    <ellipse cx="30" cy="38" rx="1.5" ry="1" fill="url(#craterGrad)" stroke="#a78bfa" strokeWidth="0.7" />
-    <ellipse cx="40" cy="32" rx="1.2" ry="0.8" fill="url(#craterGrad)" stroke="#a78bfa" strokeWidth="0.6" />
-    <ellipse cx="24" cy="20" rx="1.8" ry="1.1" fill="url(#craterGrad)" stroke="#a78bfa" strokeWidth="0.6" />
+    <ellipse
+      cx="38"
+      cy="18"
+      rx="4"
+      ry="2.5"
+      fill="url(#craterGrad)"
+      stroke="#7c3aed"
+      strokeWidth="1.1"
+    />
+    <ellipse
+      cx="20"
+      cy="34"
+      rx="2.5"
+      ry="1.5"
+      fill="url(#craterGrad)"
+      stroke="#a78bfa"
+      strokeWidth="0.9"
+    />
+    <ellipse
+      cx="30"
+      cy="38"
+      rx="1.5"
+      ry="1"
+      fill="url(#craterGrad)"
+      stroke="#a78bfa"
+      strokeWidth="0.7"
+    />
+    <ellipse
+      cx="40"
+      cy="32"
+      rx="1.2"
+      ry="0.8"
+      fill="url(#craterGrad)"
+      stroke="#a78bfa"
+      strokeWidth="0.6"
+    />
+    <ellipse
+      cx="24"
+      cy="20"
+      rx="1.8"
+      ry="1.1"
+      fill="url(#craterGrad)"
+      stroke="#a78bfa"
+      strokeWidth="0.6"
+    />
     {/* Olhos cartoon */}
     <ellipse cx="25" cy="27" rx="1.5" ry="2.2" fill="#6d28d9" />
     <ellipse cx="32" cy="27" rx="1.5" ry="2.2" fill="#6d28d9" />
     {/* Brilho nos olhos */}
-    <ellipse cx="25.5" cy="26.2" rx="0.4" ry="0.7" fill="#fff" fillOpacity="0.7" />
-    <ellipse cx="32.5" cy="26.2" rx="0.4" ry="0.7" fill="#fff" fillOpacity="0.7" />
+    <ellipse
+      cx="25.5"
+      cy="26.2"
+      rx="0.4"
+      ry="0.7"
+      fill="#fff"
+      fillOpacity="0.7"
+    />
+    <ellipse
+      cx="32.5"
+      cy="26.2"
+      rx="0.4"
+      ry="0.7"
+      fill="#fff"
+      fillOpacity="0.7"
+    />
     {/* Sorriso simpático */}
-    <path d="M24 34 Q28 38 32 34" stroke="#7c3aed" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+    <path
+      d="M24 34 Q28 38 32 34"
+      stroke="#7c3aed"
+      strokeWidth="1.5"
+      fill="none"
+      strokeLinecap="round"
+    />
   </svg>
 );
 
@@ -192,7 +389,8 @@ function useStarField(count: number, radius: number) {
     return Array.from({ length: count }, (_, i) => {
       const angle = randomBetween(0, 2 * Math.PI);
       const dist = randomBetween(radius * 0.45, radius * 1.0);
-      const size = randomBetween(STAR_MIN_SIZE, STAR_MAX_SIZE) * (i % 2 === 0 ? 1 : 1.5);
+      const size =
+        randomBetween(STAR_MIN_SIZE, STAR_MAX_SIZE) * (i % 2 === 0 ? 1 : 1.5);
       return {
         x: Math.cos(angle) * dist,
         y: Math.sin(angle) * dist * randomBetween(0.7, 1.1),
@@ -241,7 +439,6 @@ function useStarFieldFullScreenSVG(count: number) {
       twinkle: Math.random() > 0.7,
     }));
     return [...smallStars, ...normalStars];
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count, dimensions.width, dimensions.height]);
   return { stars, width: dimensions.width, height: dimensions.height };
 }
@@ -263,13 +460,13 @@ const LogoWithMoonOrbit = () => {
     const update = () => {
       // Ângulo alvo baseado no scroll
       const targetAngle = (scrollY * 0.5) % 360;
-      setAngle(prev => lerp(prev, targetAngle, 0.15));
+      setAngle((prev) => lerp(prev, targetAngle, 0.15));
       // Rotação da lua no próprio eixo (profundidade)
       const targetMoonRot = (scrollY * 1.2) % 360;
-      setMoonRot(prev => lerp(prev, targetMoonRot, 0.12));
+      setMoonRot((prev) => lerp(prev, targetMoonRot, 0.12));
       // Rotação do campo de estrelas (bem sutil)
       const targetStarRot = (scrollY * 0.18) % 360;
-      setStarRot(prev => lerp(prev, targetStarRot, 0.09));
+      setStarRot((prev) => lerp(prev, targetStarRot, 0.09));
       animationFrame = requestAnimationFrame(update);
     };
     animationFrame = requestAnimationFrame(update);
@@ -294,11 +491,15 @@ const LogoWithMoonOrbit = () => {
 
   // Rotação do campo de estrelas
   const starFieldStyle = {
-    transform: `translate(-50%, -50%) rotate(${starRot}deg)`
+    transform: `translate(-50%, -50%) rotate(${starRot}deg)`,
   };
 
   return (
-    <div ref={containerRef} className="relative flex justify-center items-center my-16 select-none" style={{ minHeight: logoSize }}>
+    <div
+      ref={containerRef}
+      className="relative flex justify-center items-center my-16 select-none"
+      style={{ minHeight: logoSize }}
+    >
       {/* Campo de estrelas - ATRÁS de tudo */}
       <div
         className="absolute left-1/2 top-1/2 pointer-events-none z-0"
@@ -309,8 +510,8 @@ const LogoWithMoonOrbit = () => {
             key={i}
             style={{
               position: 'absolute',
-              left: `calc(50% + ${star.x}px)` ,
-              top: `calc(50% + ${star.y}px)` ,
+              left: `calc(50% + ${star.x}px)`,
+              top: `calc(50% + ${star.y}px)`,
               width: star.size,
               height: star.size,
               borderRadius: '50%',
@@ -338,7 +539,10 @@ const LogoWithMoonOrbit = () => {
         <MoonSVG size={moonSize} />
       </div>
       {/* Logo */}
-      <div className="relative z-10 flex items-center justify-center" style={{ width: logoSize, height: logoSize }}>
+      <div
+        className="relative z-10 flex items-center justify-center"
+        style={{ width: logoSize, height: logoSize }}
+      >
         <Logo width={logoSize} height={logoSize} />
       </div>
     </div>
@@ -354,7 +558,7 @@ const InifinityMoonTitle = () => {
   useEffect(() => {
     let frame: number;
     const animate = () => {
-      setT(prev => (prev + 0.012) % 1);
+      setT((prev) => (prev + 0.012) % 1);
       frame = requestAnimationFrame(animate);
     };
     frame = requestAnimationFrame(animate);
@@ -372,11 +576,14 @@ const InifinityMoonTitle = () => {
   // Lemniscata (símbolo do infinito)
   const theta = t * 2 * Math.PI;
   const denom = 1 + Math.pow(Math.sin(theta), 2);
-  const x = a * Math.cos(theta) / denom;
-  const y = a * Math.sin(theta) * Math.cos(theta) / denom;
+  const x = (a * Math.cos(theta)) / denom;
+  const y = (a * Math.sin(theta) * Math.cos(theta)) / denom;
 
   return (
-    <div className="relative flex justify-center items-center mb-6" style={{ height: 80 }}>
+    <div
+      className="relative flex justify-center items-center mb-6"
+      style={{ height: 80 }}
+    >
       {/* Lua animada */}
       <div
         className="absolute left-1/2 top-1/2"
@@ -391,7 +598,9 @@ const InifinityMoonTitle = () => {
       </div>
       {/* Texto OniMock */}
       <h1 className="text-6xl md:text-8xl font-bold mb-0 relative z-10">
-        <span className="text-gradient" ref={textRef}>OniMock</span>
+        <span className="text-gradient" ref={textRef}>
+          OniMock
+        </span>
       </h1>
     </div>
   );
@@ -463,13 +672,17 @@ const Hero = () => {
 
   // Campo de estrelas tela toda (SVG otimizado)
   const [starRot, setStarRot] = useState(0);
-  const { stars, width: starFieldWidth, height: starFieldHeight } = useStarFieldFullScreenSVG(160);
+  const {
+    stars,
+    width: starFieldWidth,
+    height: starFieldHeight,
+  } = useStarFieldFullScreenSVG(160);
   useEffect(() => {
     let animationFrame: number;
     const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
     const update = () => {
       const targetStarRot = (window.scrollY * 0.18) % 360;
-      setStarRot(prev => lerp(prev, targetStarRot, 0.09));
+      setStarRot((prev) => lerp(prev, targetStarRot, 0.09));
       animationFrame = requestAnimationFrame(update);
     };
     animationFrame = requestAnimationFrame(update);
@@ -525,8 +738,12 @@ const Hero = () => {
                   key={i}
                   className={clsx(
                     'inline-block transition-opacity duration-300',
-                    i === displayText.length - 1 && !isDeleting ? 'opacity-100' : 'opacity-80',
-                    isDeleting && i >= displayText.length - 2 ? 'opacity-40' : ''
+                    i === displayText.length - 1 && !isDeleting
+                      ? 'opacity-100'
+                      : 'opacity-80',
+                    isDeleting && i >= displayText.length - 2
+                      ? 'opacity-40'
+                      : ''
                   )}
                   style={{ transitionDelay: `${i * 12}ms` }}
                 >
@@ -548,10 +765,14 @@ const Hero = () => {
           </p>
 
           {/* Botões com animação de entrada e hover tech */}
-          <div className={clsx(
-            'flex gap-6 justify-center flex-wrap transition-all duration-700',
-            showButtons ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          )}>
+          <div
+            className={clsx(
+              'flex gap-6 justify-center flex-wrap transition-all duration-700',
+              showButtons
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-8'
+            )}
+          >
             <a
               href="#projects"
               className="px-8 py-4 bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 hover:from-purple-400 hover:to-blue-400 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[0_0_16px_4px_rgba(124,58,237,0.25)] focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2"
@@ -570,7 +791,7 @@ const Hero = () => {
 
           {/* Seta animada entre botões e logo */}
           <div className="flex justify-center my-4">
-            <ArrowDown className="w-7 h-7 text-purple-400 animate-bounce animate-pulse drop-shadow-[0_0_8px_rgba(168,139,250,0.5)]" />
+            <ArrowDown className="w-7 h-7 text-purple-400 animate-pulse drop-shadow-[0_0_8px_rgba(168,139,250,0.5)]" />
           </div>
 
           {/* Animação do Logo + Lua Orbitando */}
@@ -590,7 +811,11 @@ const Hero = () => {
               willChange: 'transform',
             }}
           >
-            <svg width={starFieldWidth} height={starFieldHeight} style={{ display: 'block' }}>
+            <svg
+              width={starFieldWidth}
+              height={starFieldHeight}
+              style={{ display: 'block' }}
+            >
               <defs>
                 <radialGradient id="starGrad" cx="50%" cy="50%" r="100%">
                   <stop offset="60%" stopColor="#fff" />
