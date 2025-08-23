@@ -49,12 +49,17 @@ const ru: LanguageFile = {
 
     // Services
     'services.title': 'Услуги',
-    'services.subtitle': 'Специализированные решения для автоматизации розыгрышей и цифрового управления',
+    'services.subtitle':
+      'Специализированные решения для автоматизации розыгрышей и цифрового управления',
     'services.automation.title': 'Автоматизация Розыгрышей',
-    'services.automation.description': 'Комплексная система автоматизации розыгрышей через платформу AlphaBot. Мы предлагаем эффективные и надежные решения для управления розыгрышами, от регистрации участников до выбора победителей.',
-    'services.automation.feature1': 'Автоматизированное управление участниками и регистрацией',
-    'services.automation.feature2': 'Прозрачная и безопасная система выбора победителей',
-    'services.automation.feature3': 'Отчеты в реальном времени и детальная аналитика',
+    'services.automation.description':
+      'Комплексная система автоматизации розыгрышей через платформу AlphaBot. Мы предлагаем эффективные и надежные решения для управления розыгрышами, от регистрации участников до выбора победителей.',
+    'services.automation.feature1':
+      'Автоматизированное управление участниками и регистрацией',
+    'services.automation.feature2':
+      'Прозрачная и безопасная система выбора победителей',
+    'services.automation.feature3':
+      'Отчеты в реальном времени и детальная аналитика',
     'services.automation.cta': 'Узнать больше',
 
     // Projects
@@ -78,41 +83,62 @@ const ru: LanguageFile = {
     'contact.button': 'Связаться',
 
     // Footer
-    'footer.text': '© {year} OniMock. Разработано с ❤️ и большим количеством кофе.',
+    'footer.text':
+      '© {year} OniMock. Разработано с ❤️ и большим количеством кофе.',
 
     // AlphaBot Page
     'alphabot.hero.title': 'Автоматизация Розыгрышей AlphaBot',
-    'alphabot.hero.subtitle': 'Полная платформа автоматизации для розыгрышей и цифрового управления',
-    'alphabot.hero.description': 'Трансформируйте управление розыгрышами с нашей продвинутой системой автоматизации. От регистрации участников до выбора победителей, AlphaBot предлагает полное и надежное решение.',
+    'alphabot.hero.subtitle':
+      'Полная платформа автоматизации для розыгрышей и цифрового управления',
+    'alphabot.hero.description':
+      'Трансформируйте управление розыгрышами с нашей продвинутой системой автоматизации. От регистрации участников до выбора победителей, AlphaBot предлагает полное и надежное решение.',
     'alphabot.hero.cta': 'Начать Сейчас',
     'alphabot.hero.demo': 'Посмотреть Демо',
-    
+
     // AlphaBot Features
     'alphabot.features.automation.title': 'Полная Автоматизация',
-    'alphabot.features.automation.description': 'Полностью автоматизированная система для управления розыгрышами от начала до конца.',
+    'alphabot.features.automation.description':
+      'Полностью автоматизированная система для управления розыгрышами от начала до конца.',
     'alphabot.features.security.title': 'Гарантированная Безопасность',
-    'alphabot.features.security.description': 'Продвинутая защита данных и полная прозрачность в розыгрышах.',
+    'alphabot.features.security.description':
+      'Продвинутая защита данных и полная прозрачность в розыгрышах.',
     'alphabot.features.reports.title': 'Детальные Отчеты',
-    'alphabot.features.reports.description': 'Комплексная аналитика и отчеты в реальном времени для лучшего управления.',
+    'alphabot.features.reports.description':
+      'Комплексная аналитика и отчеты в реальном времени для лучшего управления.',
 
     // Информационные разделы AlphaBot
-    'alphabot.sections.automation.title': 'Автоматизация Регистрации в Розыгрышах с Alphabot',
-    'alphabot.sections.automation.description': 'Максимизируйте свои шансы с эффективностью! Автоматизируйте регистрации на платформе Alphabot, экономьте время и увеличивайте шансы получить NFT.',
-    'alphabot.sections.automation.feature1': 'Автоматическая Регистрация: Регистрирует ваши аккаунты как только розыгрыши становятся активными.',
-    'alphabot.sections.automation.feature2': 'Поддержка Мульти-Аккаунтов: Управляйте несколькими аккаунтами одновременно.',
-    'alphabot.sections.automation.feature3': 'Умное Управление Очередью: Оптимизированные регистрации с контролем лимитов.',
+    'alphabot.sections.automation.title':
+      'Автоматизация Регистрации в Розыгрышах с Alphabot',
+    'alphabot.sections.automation.description':
+      'Максимизируйте свои шансы с эффективностью! Автоматизируйте регистрации на платформе Alphabot, экономьте время и увеличивайте шансы получить NFT.',
+    'alphabot.sections.automation.feature1':
+      'Автоматическая Регистрация: Регистрирует ваши аккаунты как только розыгрыши становятся активными.',
+    'alphabot.sections.automation.feature2':
+      'Поддержка Мульти-Аккаунтов: Управляйте несколькими аккаунтами одновременно.',
+    'alphabot.sections.automation.feature3':
+      'Умное Управление Очередью: Оптимизированные регистрации с контролем лимитов.',
 
-    'alphabot.sections.notifications.title': 'Уведомления в Реальном Времени через Discord и Telegram',
-    'alphabot.sections.notifications.description': 'Получайте мгновенные уведомления о регистрациях, победах и возможностях минтинга.',
-    'alphabot.sections.notifications.feature1': 'Мгновенные Уведомления: Информация в нужное время.',
-    'alphabot.sections.notifications.feature2': 'Настраиваемые Вебхуки: Настройте согласно вашим предпочтениям.',
-    'alphabot.sections.notifications.feature3': 'Дружелюбные Обновления: Четкие сообщения с полезными ссылками.',
+    'alphabot.sections.notifications.title':
+      'Уведомления в Реальном Времени через Discord и Telegram',
+    'alphabot.sections.notifications.description':
+      'Получайте мгновенные уведомления о регистрациях, победах и возможностях минтинга.',
+    'alphabot.sections.notifications.feature1':
+      'Мгновенные Уведомления: Информация в нужное время.',
+    'alphabot.sections.notifications.feature2':
+      'Настраиваемые Вебхуки: Настройте согласно вашим предпочтениям.',
+    'alphabot.sections.notifications.feature3':
+      'Дружелюбные Обновления: Четкие сообщения с полезными ссылками.',
 
-    'alphabot.sections.management.title': 'Надежное Управление Ошибками и Данными',
-    'alphabot.sections.management.description': 'Гарантированная надежность для поддержания работы вашей стратегии.',
-    'alphabot.sections.management.feature1': 'Умное Восстановление Ошибок: Автоматические повторные попытки.',
-    'alphabot.sections.management.feature2': 'Безопасное Хранение: MongoDB с периодической очисткой.',
-    'alphabot.sections.management.feature3': 'Масштабируемая Инфраструктура: Управляет большими объемами без конфликтов.',
+    'alphabot.sections.management.title':
+      'Надежное Управление Ошибками и Данными',
+    'alphabot.sections.management.description':
+      'Гарантированная надежность для поддержания работы вашей стратегии.',
+    'alphabot.sections.management.feature1':
+      'Умное Восстановление Ошибок: Автоматические повторные попытки.',
+    'alphabot.sections.management.feature2':
+      'Безопасное Хранение: MongoDB с периодической очисткой.',
+    'alphabot.sections.management.feature3':
+      'Масштабируемая Инфраструктура: Управляет большими объемами без конфликтов.',
 
     'alphabot.sections.learnMore': 'Узнать больше',
   },
