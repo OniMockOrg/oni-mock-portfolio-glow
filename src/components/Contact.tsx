@@ -1,9 +1,34 @@
-import { Mail, MapPin } from 'lucide-react';
+import { useState } from 'react';
+import { Mail, MapPin, Send, MessageCircle, Rocket, Star } from 'lucide-react';
 import { SiDiscord, SiGithub, SiX, SiTelegram } from 'react-icons/si';
 import { useLanguage } from '../hooks/use-language';
+import { AnimatedButton } from './ui/animated-button';
 
 const Contact = () => {
   const { t } = useLanguage();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setIsSubmitting(false);
+    setFormData({ name: '', email: '', subject: '', message: '' });
+  };
 
   const socialLinks = [
     {
@@ -39,53 +64,199 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6">
-      <div className="container mx-auto max-w-4xl">
+    <section id="contact" className="py-20 px-6 relative overflow-hidden bg-gradient-to-br from-slate-900/50 via-blue-900/30 to-slate-900/50">
+      {/* Animated Background Grid */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px',
+          animation: 'grid-move 30s linear infinite'
+        }}></div>
+      </div>
+
+      {/* Dynamic Gradient Orbs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-3/4 right-3/4 w-80 h-80 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse" style={{ animationDelay: '4s' }}></div>
+      </div>
+
+      {/* Floating Particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(25)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full opacity-60"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 2}s`
+            }}
+          ></div>
+        ))}
+      </div>
+      <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">{t('contact.title')}</span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <div className="relative inline-block mb-6">
+            <h2 className="text-4xl md:text-6xl font-bold">
+              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-500 bg-clip-text text-transparent">
+                {t('contact.title')}
+              </span>
+            </h2>
+            <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 blur-2xl rounded-full opacity-50"></div>
+          </div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
             {t('contact.subtitle')}
           </p>
         </div>
 
-        <div className="glass-card p-8 md:p-12 text-center">
-          <div className="mb-8">
-            <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-4" />
-            <p className="text-gray-300">{t('contact.country')}</p>
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Info */}
+          <div className="space-y-8">
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+              <div className="relative glass-card p-8">
+                <h3 className="text-2xl font-semibold text-white mb-6 group-hover:text-blue-300 transition-colors duration-300">{t('contact.ready')}</h3>
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4 group/item hover:scale-105 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover/item:rotate-12 transition-transform duration-300">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-gray-400 text-sm group-hover/item:text-gray-300 transition-colors duration-300">Email</p>
+                      <p className="text-white font-medium group-hover/item:text-blue-300 transition-colors duration-300">onimock@gmail.com</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 group/item hover:scale-105 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover/item:rotate-12 transition-transform duration-300">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-gray-400 text-sm group-hover/item:text-gray-300 transition-colors duration-300">Location</p>
+                      <p className="text-white font-medium group-hover/item:text-purple-300 transition-colors duration-300">{t('contact.country')}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+              <div className="relative glass-card p-8">
+                <h3 className="text-2xl font-semibold text-white mb-6 group-hover:text-purple-300 transition-colors duration-300">Social Links</h3>
+                <div className="flex gap-4">
+                  {socialLinks.map((link) => {
+                    const Icon = link.icon;
+                    return (
+                      <a
+                        key={link.label}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`p-4 rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110 hover:rotate-12 ${link.color}`}
+                        aria-label={link.label}
+                      >
+                        <Icon className="w-6 h-6" />
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="flex justify-center gap-8 mb-12">
-            {socialLinks.map((link) => {
-              const Icon = link.icon;
-              return (
-                <a
-                  key={link.label}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`p-4 rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110 ${link.color}`}
-                  aria-label={link.label}
+          {/* Contact Form */}
+          <div className="group relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+            <div className="relative glass-card p-8">
+              <h3 className="text-2xl font-semibold text-white mb-6 group-hover:text-cyan-300 transition-colors duration-300">{t('contact.button')}</h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300 hover:border-cyan-500/50"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300 hover:border-cyan-500/50"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300 hover:border-cyan-500/50"
+                    placeholder="What's this about?"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400 resize-none transition-all duration-300 hover:border-cyan-500/50"
+                    placeholder="Tell me about your project..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 disabled:from-gray-500 disabled:to-gray-600 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-cyan-500/25 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
-                  <Icon className="w-6 h-6" />
-                </a>
-              );
-            })}
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="text-2xl font-semibold text-white mb-6">
-              {t('contact.ready')}
-            </h3>
-            <p className="text-gray-400 mb-8">{t('contact.description')}</p>
-            <a
-              href="mailto:onimock@gmail.com"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
-            >
-              <Mail className="w-5 h-5" />
-              {t('contact.button')}
-            </a>
+                  {isSubmitting ? (
+                    <div className="flex items-center gap-2">
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      Sending...
+                    </div>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      Send Message
+                    </>
+                  )}
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

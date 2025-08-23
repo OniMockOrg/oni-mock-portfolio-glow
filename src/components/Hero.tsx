@@ -1,9 +1,10 @@
 import { useEffect, useState, useCallback } from 'react';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Rocket, Brain, Zap } from 'lucide-react';
 import { useLanguage } from '../hooks/use-language';
 import { useMemo, useRef } from 'react';
 import Logo from '../assets/logo.svg?react';
 import clsx from 'clsx';
+import { AnimatedButton } from './ui/animated-button';
 
 const MoonSVG = ({ size = 90 }) => (
   <svg
@@ -692,38 +693,41 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
     >
-      {/* Background Image - Tech/Crypto themed */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=2000"
-          alt="Blockchain and cryptocurrency technology background"
-          className="w-full h-full object-cover opacity-10"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background/90"></div>
+      {/* Animated Background Grid */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px',
+          animation: 'grid-move 20s linear infinite'
+        }}></div>
       </div>
 
-      {/* Additional Tech Overlay */}
-      <div className="absolute inset-0 z-5">
-        <img
-          src="https://images.pexels.com/photos/6764234/pexels-photo-6764234.jpeg?auto=format&fit=crop&w=2000&q=80"
-          alt="Programming code background"
-          className="w-full h-full object-cover opacity-5 mix-blend-overlay"
-        />
+      {/* Dynamic Gradient Orbs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
-      {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden z-10">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-        <div
-          className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
-          style={{ animationDelay: '2s' }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-float"
-          style={{ animationDelay: '4s' }}
-        ></div>
+      {/* Floating Particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-60"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 2}s`
+            }}
+          ></div>
+        ))}
       </div>
 
       <div className="container mx-auto px-6 text-center z-20 relative">
@@ -764,7 +768,7 @@ const Hero = () => {
             {t('hero.description')}
           </p>
 
-          {/* Botões com animação de entrada e hover tech */}
+          {/* Botões modernos com AnimatedButton */}
           <div
             className={clsx(
               'flex gap-6 justify-center flex-wrap transition-all duration-700',
@@ -773,25 +777,31 @@ const Hero = () => {
                 : 'opacity-0 translate-y-8'
             )}
           >
-            <a
-              href="#projects"
-              className="px-8 py-4 bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 hover:from-purple-400 hover:to-blue-400 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[0_0_16px_4px_rgba(124,58,237,0.25)] focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2"
-              style={{ boxShadow: '0 2px 16px 0 #a78bfa44' }}
+            <AnimatedButton
+              variant="gradient"
+              size="lg"
+              leftIcon={Rocket}
+              rightIcon={Zap}
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               {t('hero.viewProjects')}
-            </a>
-            <a
-              href="#about"
-              className="px-8 py-4 glass-card hover:bg-white/10 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[0_0_16px_4px_rgba(168,139,250,0.18)] focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2"
-              style={{ boxShadow: '0 2px 16px 0 #a78bfa33' }}
+            </AnimatedButton>
+            <AnimatedButton
+              variant="outline"
+              size="lg"
+              leftIcon={Brain}
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
               {t('hero.aboutMe')}
-            </a>
+            </AnimatedButton>
           </div>
 
-          {/* Seta animada entre botões e logo */}
-          <div className="flex justify-center my-4">
-            <ArrowDown className="w-7 h-7 text-purple-400 animate-pulse drop-shadow-[0_0_8px_rgba(168,139,250,0.5)]" />
+          {/* Seta animada com efeito glow */}
+          <div className="flex justify-center my-8">
+            <div className="relative">
+              <ArrowDown className="w-8 h-8 text-purple-400 animate-bounce drop-shadow-[0_0_12px_rgba(168,139,250,0.8)]" />
+              <div className="absolute inset-0 w-8 h-8 bg-purple-400 rounded-full blur-xl opacity-30 animate-pulse"></div>
+            </div>
           </div>
 
           {/* Animação do Logo + Lua Orbitando */}

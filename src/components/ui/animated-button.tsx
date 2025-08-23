@@ -8,8 +8,8 @@ interface AnimatedButtonProps {
   onClick?: () => void;
   variant?: 'gradient' | 'outline' | 'default';
   size?: 'sm' | 'md' | 'lg';
-  icon?: LucideIcon;
-  iconPosition?: 'left' | 'right';
+  leftIcon?: LucideIcon;
+  rightIcon?: LucideIcon;
   className?: string;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
@@ -20,8 +20,8 @@ export const AnimatedButton: React.FC<AnimatedButtonProps> = ({
   onClick,
   variant = 'default',
   size = 'md',
-  icon: Icon,
-  iconPosition = 'left',
+  leftIcon: LeftIcon,
+  rightIcon: RightIcon,
   className,
   disabled = false,
   type = 'button',
@@ -63,19 +63,25 @@ export const AnimatedButton: React.FC<AnimatedButtonProps> = ({
       <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       
       {/* Content */}
-      <span className="relative z-10 flex items-center gap-3">
-        {Icon && iconPosition === 'left' && (
-          <Icon className={cn(
+      <span className={cn(
+        "relative z-10 flex items-center gap-3",
+        !LeftIcon && !RightIcon && "justify-center"
+      )}>
+        {LeftIcon && (
+          <LeftIcon className={cn(
             iconSizeClasses[size],
             'group-hover:rotate-12 transition-transform duration-300'
           )} />
         )}
-        {children}
-        {Icon && iconPosition === 'right' && (
-          <Icon className={cn(
+        <span className={cn(
+          !LeftIcon && !RightIcon && "text-center"
+        )}>
+          {children}
+        </span>
+        {RightIcon && (
+          <RightIcon className={cn(
             iconSizeClasses[size],
-            iconPosition === 'right' ? 'group-hover:translate-x-1' : 'group-hover:rotate-12',
-            'transition-transform duration-300'
+            'group-hover:translate-x-1 transition-transform duration-300'
           )} />
         )}
       </span>

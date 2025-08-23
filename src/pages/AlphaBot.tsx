@@ -72,22 +72,20 @@ export const AlphaBot = () => {
               <AnimatedButton
                 variant="gradient"
                 size="lg"
-                icon={Rocket}
-                iconPosition="left"
+                leftIcon={Rocket}
+                rightIcon={ArrowRight}
                 onClick={() =>
                   window.open(import.meta.env.VITE_ALPHABOT_SAAS_URL, '_blank')
                 }
                 className="font-bold"
               >
                 {t('alphabot.hero.cta')}
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300 ml-3" />
               </AnimatedButton>
 
               <AnimatedButton
                 variant="outline"
                 size="lg"
-                icon={Brain}
-                iconPosition="left"
+                leftIcon={Brain}
               >
                 {t('alphabot.hero.demo')}
               </AnimatedButton>

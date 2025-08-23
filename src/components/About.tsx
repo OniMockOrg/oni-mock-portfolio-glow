@@ -1,6 +1,7 @@
-import { Code, Coffee, Lightbulb, Rocket } from 'lucide-react';
+import { Code, Coffee, Lightbulb, Rocket, Brain, Star } from 'lucide-react';
 import { useLanguage } from '../hooks/use-language';
 import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
+import { AnimatedButton } from './ui/animated-button';
 
 const About = () => {
   const { t } = useLanguage();
@@ -42,12 +43,52 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-6">
-      <div className="container mx-auto max-w-6xl">
+    <section id="about" className="py-20 px-6 relative overflow-hidden bg-gradient-to-br from-slate-900/50 via-purple-900/30 to-slate-900/50">
+      {/* Animated Background Grid */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px',
+          animation: 'grid-move 25s linear infinite reverse'
+        }}></div>
+      </div>
+
+      {/* Dynamic Gradient Orbs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-3/4 left-3/4 w-60 h-60 bg-gradient-to-br from-violet-500 to-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+      </div>
+
+      {/* Floating Particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1.5 h-1.5 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full opacity-50"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `float ${4 + Math.random() * 3}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 3}s`
+            }}
+          ></div>
+        ))}
+      </div>
+
+      <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            <span className="text-gradient">{t('about.title')}</span>
-          </h2>
+          <div className="relative inline-block mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold">
+              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-500 bg-clip-text text-transparent">
+                {t('about.title')}
+              </span>
+            </h2>
+            <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-2xl rounded-full opacity-50"></div>
+          </div>
         </div>
         <div className="flex justify-center mb-16">
           <div className="glass-card flex flex-col md:flex-row items-center md:items-center gap-8 p-8 w-full max-w-3xl shadow-2xl bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl">
@@ -99,23 +140,40 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {interests.map((interest, index) => {
             const Icon = interest.icon;
             return (
-              <div
-                key={interest.title}
-                className="glass-card p-6 text-center hover:bg-white/10 transition-all duration-300 hover:scale-105 animate-fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <Icon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                <h4 className="text-lg font-semibold text-white mb-2">
-                  {interest.title}
-                </h4>
-                <p className="text-gray-400 text-sm">{interest.desc}</p>
+              <div key={interest.title} className="group relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                <div
+                  className="relative glass-card p-6 text-center hover:scale-105 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/25 animate-fade-in"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  <div className="relative w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-500">
+                    <Icon className="w-8 h-8 text-white" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300">
+                    {interest.title}
+                  </h4>
+                  <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">{interest.desc}</p>
+                </div>
               </div>
             );
           })}
+        </div>
+
+        <div className="text-center">
+          <AnimatedButton
+            variant="gradient"
+            size="lg"
+            leftIcon={Brain}
+            rightIcon={Star}
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            {t('about.cta')}
+          </AnimatedButton>
         </div>
       </div>
     </section>

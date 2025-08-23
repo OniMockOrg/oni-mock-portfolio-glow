@@ -199,8 +199,7 @@ const TextComponent: React.FC<TextComponentProps> = ({
           <AnimatedButton
             variant="gradient"
             size="md"
-            icon={Rocket}
-            iconPosition="left"
+            leftIcon={Rocket}
             className="font-bold"
           >
             {t('alphabot.sections.learnMore')}
