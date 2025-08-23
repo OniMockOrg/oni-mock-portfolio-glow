@@ -64,37 +64,79 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6 relative overflow-hidden bg-gradient-to-br from-slate-900/50 via-blue-900/30 to-slate-900/50">
-      {/* Animated Background Grid */}
-      <div className="absolute inset-0 opacity-10">
+    <section id="contact" className="py-20 px-6 relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Network Connection Background */}
+      <div className="absolute inset-0 opacity-8">
         <div className="absolute inset-0" style={{
           backgroundImage: `
-            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+            radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.1) 2px, transparent 2px),
+            radial-gradient(circle at 75% 75%, rgba(6, 182, 212, 0.1) 2px, transparent 2px),
+            linear-gradient(45deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px)
           `,
-          backgroundSize: '60px 60px',
-          animation: 'grid-move 30s linear infinite'
+          backgroundSize: '80px 80px, 120px 120px, 40px 40px',
+          animation: 'grid-move 40s linear infinite'
         }}></div>
       </div>
 
-      {/* Dynamic Gradient Orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-3/4 right-3/4 w-80 h-80 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse" style={{ animationDelay: '4s' }}></div>
-      </div>
-
-      {/* Floating Particles */}
+      {/* Connection Lines */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(25)].map((_, i) => (
+        {[...Array(8)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full opacity-60"
+            className="absolute bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent"
+            style={{
+              width: `${200 + Math.random() * 400}px`,
+              height: '2px',
+              left: `${Math.random() * 80}%`,
+              top: `${Math.random() * 100}%`,
+              transform: `rotate(${Math.random() * 180}deg)`,
+              animation: `pulse-glow ${4 + Math.random() * 3}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 3}s`
+            }}
+          ></div>
+        ))}
+      </div>
+
+      {/* Communication Orbs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/25 to-emerald-500/25 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-55 animate-pulse" style={{ animationDelay: '2.5s' }}></div>
+        <div className="absolute top-3/4 right-3/4 w-72 h-72 bg-gradient-to-br from-teal-500/15 to-cyan-500/15 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '5s' }}></div>
+      </div>
+
+      {/* Floating Network Nodes */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(12)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 2}s`
+              animation: `float ${6 + Math.random() * 4}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 3}s`
+            }}
+          >
+            <div className="w-3 h-3 bg-gradient-to-r from-cyan-400/40 to-emerald-400/40 rounded-full relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/60 to-emerald-400/60 rounded-full animate-ping"></div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Signal Waves */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute border border-cyan-400/10 rounded-full"
+            style={{
+              width: `${100 + i * 80}px`,
+              height: `${100 + i * 80}px`,
+              left: '20%',
+              top: '30%',
+              animation: `pulse-glow ${3 + i * 0.5}s ease-in-out infinite`,
+              animationDelay: `${i * 0.3}s`
             }}
           ></div>
         ))}

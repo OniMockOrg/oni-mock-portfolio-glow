@@ -278,6 +278,23 @@ html {
   }
 }
 
+@keyframes fall {
+  from {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
 /* Utility classes for animations */
 .animate-float {
   animation: float 6s ease-in-out infinite;

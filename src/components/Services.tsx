@@ -83,39 +83,77 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-900/50 via-indigo-900/30 to-slate-900/50">
-      {/* Animated Background Grid */}
-      <div className="absolute inset-0 opacity-10">
+    <section id="services" className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hexagonal Pattern Background */}
+      <div className="absolute inset-0 opacity-8">
         <div className="absolute inset-0" style={{
           backgroundImage: `
-            linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px)
+            radial-gradient(circle at 25% 25%, rgba(249, 115, 22, 0.1) 2px, transparent 2px),
+            radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 2px, transparent 2px)
           `,
-          backgroundSize: '60px 60px',
-          animation: 'grid-move 30s linear infinite'
+          backgroundSize: '50px 50px',
+          animation: 'grid-move 25s linear infinite reverse'
         }}></div>
       </div>
 
-      {/* Dynamic Gradient Orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-3/4 right-3/4 w-80 h-80 bg-gradient-to-br from-violet-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse" style={{ animationDelay: '4s' }}></div>
-      </div>
-
-      {/* Floating Particles */}
+      {/* Rotating Gears */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(25)].map((_, i) => (
+        {[...Array(6)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full opacity-60"
+            className="absolute border-2 border-orange-400/10 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 2}s`
+              width: `${60 + i * 20}px`,
+              height: `${60 + i * 20}px`,
+              left: `${20 + i * 15}%`,
+              top: `${10 + i * 12}%`,
+              animation: `rotate-slow ${15 + i * 3}s linear infinite ${i % 2 === 0 ? '' : 'reverse'}`,
+              transform: 'rotate(0deg)'
             }}
-          ></div>
+          >
+            <div className="absolute inset-2 border border-orange-400/5 rounded-full"></div>
+            {[...Array(8)].map((_, j) => (
+              <div
+                key={j}
+                className="absolute w-1 h-3 bg-orange-400/10"
+                style={{
+                  left: '50%',
+                  top: '-6px',
+                  transform: `translateX(-50%) rotate(${j * 45}deg)`,
+                  transformOrigin: '50% 50px'
+                }}
+              ></div>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      {/* Innovation Orbs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-orange-500/25 to-red-500/25 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-35 animate-pulse" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-3/4 right-3/4 w-72 h-72 bg-gradient-to-br from-amber-500/15 to-yellow-500/15 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+      </div>
+
+      {/* Circuit Lines */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(12)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute bg-gradient-to-r from-orange-400/20 to-blue-400/20 opacity-30"
+            style={{
+              width: `${100 + Math.random() * 200}px`,
+              height: '2px',
+              left: `${Math.random() * 80}%`,
+              top: `${Math.random() * 100}%`,
+              transform: `rotate(${Math.random() * 360}deg)`,
+              animation: `pulse-glow ${4 + Math.random() * 3}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 3}s`
+            }}
+          >
+            <div className="absolute w-2 h-2 bg-orange-400/40 rounded-full -left-1 -top-0.5"></div>
+            <div className="absolute w-2 h-2 bg-blue-400/40 rounded-full -right-1 -top-0.5"></div>
+          </div>
         ))}
       </div>
       <div className="container mx-auto px-6 relative z-10">

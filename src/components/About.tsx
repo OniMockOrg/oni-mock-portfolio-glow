@@ -43,39 +43,59 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-6 relative overflow-hidden bg-gradient-to-br from-slate-900/50 via-purple-900/30 to-slate-900/50">
-      {/* Animated Background Grid */}
-      <div className="absolute inset-0 opacity-10">
+    <section id="about" className="py-20 px-6 relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Code Matrix Background */}
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: `
-            linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
+            linear-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(16, 185, 129, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '40px 40px',
-          animation: 'grid-move 25s linear infinite reverse'
+          backgroundSize: '30px 30px',
+          animation: 'grid-move 20s linear infinite'
         }}></div>
       </div>
 
-      {/* Dynamic Gradient Orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute top-3/4 left-3/4 w-60 h-60 bg-gradient-to-br from-violet-500 to-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-      </div>
-
-      {/* Floating Particles */}
+      {/* Floating Code Symbols */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(15)].map((_, i) => (
+        {['<', '>', '{', '}', '(', ')', '[', ']', ';', '='].map((symbol, i) => (
           <div
             key={i}
-            className="absolute w-1.5 h-1.5 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full opacity-50"
+            className="absolute text-emerald-400/20 text-2xl font-mono"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `float ${4 + Math.random() * 3}s ease-in-out infinite`,
+              animation: `float ${6 + Math.random() * 4}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 5}s`
+            }}
+          >
+            {symbol}
+          </div>
+        ))}
+      </div>
+
+      {/* Gradient Orbs - Developer Theme */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/3 left-1/5 w-96 h-96 bg-gradient-to-br from-emerald-500/30 to-teal-500/30 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/5 w-80 h-80 bg-gradient-to-br from-cyan-500/25 to-blue-500/25 rounded-full mix-blend-multiply filter blur-3xl opacity-35 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-2/3 left-2/3 w-64 h-64 bg-gradient-to-br from-teal-500/20 to-green-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" style={{ animationDelay: '4s' }}></div>
+      </div>
+
+      {/* Binary Rain Effect */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute text-emerald-400/10 text-xs font-mono leading-tight"
+            style={{
+              left: `${10 + i * 12}%`,
+              top: '-10%',
+              animation: `fall ${8 + Math.random() * 4}s linear infinite`,
               animationDelay: `${Math.random() * 3}s`
             }}
-          ></div>
+          >
+            {Array.from({ length: 20 }, () => Math.random() > 0.5 ? '1' : '0').join('\n')}
+          </div>
         ))}
       </div>
 

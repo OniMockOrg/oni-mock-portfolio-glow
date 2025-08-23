@@ -124,47 +124,71 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-900/50 via-purple-900/30 to-slate-900/50"
+      className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
     >
-      {/* Animated Background Grid */}
-      <div className="absolute inset-0 opacity-10">
+      {/* Creative Mesh Background */}
+      <div className="absolute inset-0 opacity-6">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage: `
-            linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
+            radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.15) 1px, transparent 1px),
+            radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.15) 1px, transparent 1px),
+            linear-gradient(45deg, rgba(168, 85, 247, 0.05) 1px, transparent 1px)
           `,
-            backgroundSize: '60px 60px',
-            animation: 'grid-move 30s linear infinite',
+            backgroundSize: '40px 40px, 60px 60px, 80px 80px',
+            animation: 'grid-move 35s linear infinite',
           }}
         ></div>
       </div>
 
-      {/* Dynamic Gradient Orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div
-          className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
-          style={{ animationDelay: '2s' }}
-        ></div>
-        <div
-          className="absolute top-3/4 right-3/4 w-80 h-80 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse"
-          style={{ animationDelay: '4s' }}
-        ></div>
-      </div>
-
-      {/* Floating Particles */}
+      {/* Floating Creative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {['◆', '●', '▲', '■', '★', '◇', '◯', '△'].map((shape, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-60"
+            className="absolute text-violet-400/20 text-3xl"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 2}s`,
+              animation: `float ${8 + Math.random() * 6}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 4}s`,
+              transform: `rotate(${Math.random() * 360}deg)`
+            }}
+          >
+            {shape}
+          </div>
+        ))}
+      </div>
+
+      {/* Portfolio Gradient Orbs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-violet-500/30 to-purple-500/30 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse"></div>
+        <div
+          className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-fuchsia-500/25 to-pink-500/25 rounded-full mix-blend-multiply filter blur-3xl opacity-45 animate-pulse"
+          style={{ animationDelay: '2.5s' }}
+        ></div>
+        <div
+          className="absolute top-3/4 right-3/4 w-72 h-72 bg-gradient-to-br from-indigo-500/20 to-violet-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse"
+          style={{ animationDelay: '5s' }}
+        ></div>
+      </div>
+
+      {/* Artistic Brush Strokes */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(10)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute bg-gradient-to-r from-violet-400/10 via-fuchsia-400/15 to-transparent opacity-40"
+            style={{
+              width: `${150 + Math.random() * 300}px`,
+              height: `${8 + Math.random() * 12}px`,
+              left: `${Math.random() * 90}%`,
+              top: `${Math.random() * 100}%`,
+              transform: `rotate(${Math.random() * 180 - 90}deg) skewX(${Math.random() * 30 - 15}deg)`,
+              animation: `pulse-glow ${6 + Math.random() * 4}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 4}s`,
+              borderRadius: '50px'
             }}
           ></div>
         ))}
