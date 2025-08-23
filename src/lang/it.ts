@@ -92,6 +92,25 @@ const it: LanguageFile = {
     'alphabot.features.security.description': 'Protezione avanzata dei dati e trasparenza totale nei sorteggi.',
     'alphabot.features.reports.title': 'Report Dettagliati',
     'alphabot.features.reports.description': 'Analisi complete e report in tempo reale per una migliore gestione.',
+
+    // Sezioni informative di AlphaBot
+    'alphabot.sections.automation.title': 'Automazione di Registrazione Lotterie con Alphabot',
+    'alphabot.sections.automation.description': 'Massimizza le tue opportunità con efficienza! Automatizza le registrazioni sulla piattaforma Alphabot, risparmiando tempo e aumentando le tue possibilità di vincere NFT.',
+    'alphabot.sections.automation.feature1': 'Registrazione Automatica: Iscrive i tuoi account non appena le lotterie diventano attive.',
+    'alphabot.sections.automation.feature2': 'Supporto Multi-Account: Gestisci più account contemporaneamente.',
+    'alphabot.sections.automation.feature3': 'Gestione Intelligente della Coda: Iscrizioni ottimizzate con controllo dei limiti.',
+
+    'alphabot.sections.notifications.title': 'Notifiche in Tempo Reale via Discord e Telegram',
+    'alphabot.sections.notifications.description': 'Ricevi avvisi istantanei su iscrizioni, vittorie e opportunità di mint.',
+    'alphabot.sections.notifications.feature1': 'Avvisi Istantanei: Informazioni al momento giusto.',
+    'alphabot.sections.notifications.feature2': 'Webhook Personalizzabili: Configura secondo le tue preferenze.',
+    'alphabot.sections.notifications.feature3': 'Aggiornamenti User-Friendly: Messaggi chiari con link utili.',
+
+    'alphabot.sections.management.title': 'Gestione Robusta di Errori e Dati',
+    'alphabot.sections.management.description': 'Affidabilità garantita per mantenere la tua strategia in funzione.',
+    'alphabot.sections.management.feature1': 'Recupero Intelligente degli Errori: Tentativi automatici.',
+    'alphabot.sections.management.feature2': 'Archiviazione Sicura: MongoDB con pulizia periodica.',
+    'alphabot.sections.management.feature3': 'Infrastruttura Scalabile: Gestisce alti volumi senza conflitti.',
   },
 };
 

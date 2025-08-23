@@ -91,6 +91,25 @@ const ja: LanguageFile = {
     'alphabot.features.security.description': '高度なデータ保護と抽選の完全な透明性。',
     'alphabot.features.reports.title': '詳細レポート',
     'alphabot.features.reports.description': '包括的な分析とリアルタイムレポートによる優れた管理。',
+
+    // AlphaBot情報セクション
+    'alphabot.sections.automation.title': 'Alphabotによる抽選登録の自動化',
+    'alphabot.sections.automation.description': '効率的にチャンスを最大化！Alphabotプラットフォームでの登録を自動化し、時間を節約してNFTを獲得する可能性を高めます。',
+    'alphabot.sections.automation.feature1': '自動登録：抽選がアクティブになるとすぐにアカウントを登録します。',
+    'alphabot.sections.automation.feature2': 'マルチアカウントサポート：複数のアカウントを同時に管理します。',
+    'alphabot.sections.automation.feature3': 'インテリジェントキュー管理：制限制御による最適化された登録。',
+
+    'alphabot.sections.notifications.title': 'DiscordとTelegramによるリアルタイム通知',
+    'alphabot.sections.notifications.description': '登録、勝利、ミント機会に関する即座のアラートを受信します。',
+    'alphabot.sections.notifications.feature1': '即座のアラート：適切なタイミングでの情報。',
+    'alphabot.sections.notifications.feature2': 'カスタマイズ可能なWebhook：お好みに応じて設定。',
+    'alphabot.sections.notifications.feature3': 'ユーザーフレンドリーな更新：有用なリンク付きの明確なメッセージ。',
+
+    'alphabot.sections.management.title': '堅牢なエラーとデータ管理',
+    'alphabot.sections.management.description': '戦略を継続的に機能させるための保証された信頼性。',
+    'alphabot.sections.management.feature1': 'インテリジェントエラー回復：自動再試行。',
+    'alphabot.sections.management.feature2': '安全なストレージ：定期的なクリーンアップ付きMongoDB。',
+    'alphabot.sections.management.feature3': 'スケーラブルなインフラストラクチャ：競合なしで大量処理を管理。',
   },
 };
 

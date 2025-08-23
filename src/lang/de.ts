@@ -93,6 +93,25 @@ const de: LanguageFile = {
     'alphabot.features.security.description': 'Erweiterte Datensicherheit und vollständige Transparenz bei Verlosungen.',
     'alphabot.features.reports.title': 'Detaillierte Berichte',
     'alphabot.features.reports.description': 'Umfassende Analysen und Echtzeitberichte für besseres Management.',
+
+    // AlphaBot Informationssektionen
+    'alphabot.sections.automation.title': 'Automatisierung der Verlosungsregistrierung mit Alphabot',
+    'alphabot.sections.automation.description': 'Maximieren Sie Ihre Chancen mit Effizienz! Automatisieren Sie Registrierungen auf der Alphabot-Plattform, sparen Sie Zeit und erhöhen Sie Ihre Gewinnchancen für NFTs.',
+    'alphabot.sections.automation.feature1': 'Automatische Registrierung: Meldet Ihre Konten an, sobald Verlosungen aktiv werden.',
+    'alphabot.sections.automation.feature2': 'Multi-Account-Unterstützung: Verwalten Sie mehrere Konten gleichzeitig.',
+    'alphabot.sections.automation.feature3': 'Intelligente Warteschlangenverwaltung: Optimierte Anmeldungen mit Limitkontrolle.',
+
+    'alphabot.sections.notifications.title': 'Echtzeit-Benachrichtigungen über Discord und Telegram',
+    'alphabot.sections.notifications.description': 'Erhalten Sie sofortige Benachrichtigungen über Anmeldungen, Gewinne und Mint-Gelegenheiten.',
+    'alphabot.sections.notifications.feature1': 'Sofortige Benachrichtigungen: Informationen zum richtigen Zeitpunkt.',
+    'alphabot.sections.notifications.feature2': 'Anpassbare Webhooks: Konfigurieren Sie nach Ihren Vorlieben.',
+    'alphabot.sections.notifications.feature3': 'Benutzerfreundliche Updates: Klare Nachrichten mit nützlichen Links.',
+
+    'alphabot.sections.management.title': 'Robuste Fehler- und Datenverwaltung',
+    'alphabot.sections.management.description': 'Garantierte Zuverlässigkeit, um Ihre Strategie am Laufen zu halten.',
+    'alphabot.sections.management.feature1': 'Intelligente Fehlerbehebung: Automatische Wiederholungsversuche.',
+    'alphabot.sections.management.feature2': 'Sichere Speicherung: MongoDB mit regelmäßiger Bereinigung.',
+    'alphabot.sections.management.feature3': 'Skalierbare Infrastruktur: Verwaltet hohe Volumina ohne Konflikte.',
   },
 };
 

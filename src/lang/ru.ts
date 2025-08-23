@@ -93,6 +93,25 @@ const ru: LanguageFile = {
     'alphabot.features.security.description': 'Продвинутая защита данных и полная прозрачность в розыгрышах.',
     'alphabot.features.reports.title': 'Детальные Отчеты',
     'alphabot.features.reports.description': 'Комплексная аналитика и отчеты в реальном времени для лучшего управления.',
+
+    // Информационные разделы AlphaBot
+    'alphabot.sections.automation.title': 'Автоматизация Регистрации в Розыгрышах с Alphabot',
+    'alphabot.sections.automation.description': 'Максимизируйте свои шансы с эффективностью! Автоматизируйте регистрации на платформе Alphabot, экономьте время и увеличивайте шансы получить NFT.',
+    'alphabot.sections.automation.feature1': 'Автоматическая Регистрация: Регистрирует ваши аккаунты как только розыгрыши становятся активными.',
+    'alphabot.sections.automation.feature2': 'Поддержка Мульти-Аккаунтов: Управляйте несколькими аккаунтами одновременно.',
+    'alphabot.sections.automation.feature3': 'Умное Управление Очередью: Оптимизированные регистрации с контролем лимитов.',
+
+    'alphabot.sections.notifications.title': 'Уведомления в Реальном Времени через Discord и Telegram',
+    'alphabot.sections.notifications.description': 'Получайте мгновенные уведомления о регистрациях, победах и возможностях минтинга.',
+    'alphabot.sections.notifications.feature1': 'Мгновенные Уведомления: Информация в нужное время.',
+    'alphabot.sections.notifications.feature2': 'Настраиваемые Вебхуки: Настройте согласно вашим предпочтениям.',
+    'alphabot.sections.notifications.feature3': 'Дружелюбные Обновления: Четкие сообщения с полезными ссылками.',
+
+    'alphabot.sections.management.title': 'Надежное Управление Ошибками и Данными',
+    'alphabot.sections.management.description': 'Гарантированная надежность для поддержания работы вашей стратегии.',
+    'alphabot.sections.management.feature1': 'Умное Восстановление Ошибок: Автоматические повторные попытки.',
+    'alphabot.sections.management.feature2': 'Безопасное Хранение: MongoDB с периодической очисткой.',
+    'alphabot.sections.management.feature3': 'Масштабируемая Инфраструктура: Управляет большими объемами без конфликтов.',
   },
 };
 

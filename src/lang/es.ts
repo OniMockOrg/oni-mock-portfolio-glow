@@ -92,6 +92,25 @@ const es: LanguageFile = {
     'alphabot.features.security.description': 'Protección avanzada de datos y transparencia total en los sorteos.',
     'alphabot.features.reports.title': 'Informes Detallados',
     'alphabot.features.reports.description': 'Análisis completos e informes en tiempo real para una mejor gestión.',
+
+    // Secciones informativas de AlphaBot
+    'alphabot.sections.automation.title': 'Automatización de Registro de Sorteos con Alphabot',
+    'alphabot.sections.automation.description': '¡Maximiza tus oportunidades con eficiencia! Automatiza registros en la plataforma Alphabot, ahorrando tiempo y aumentando tus posibilidades de ganar NFTs.',
+    'alphabot.sections.automation.feature1': 'Registro Automático: Inscribe tus cuentas tan pronto como los sorteos se activen.',
+    'alphabot.sections.automation.feature2': 'Soporte Multi-Cuentas: Gestiona múltiples cuentas simultáneamente.',
+    'alphabot.sections.automation.feature3': 'Gestión Inteligente de Cola: Inscripciones optimizadas con control de límites.',
+
+    'alphabot.sections.notifications.title': 'Notificaciones en Tiempo Real vía Discord y Telegram',
+    'alphabot.sections.notifications.description': 'Recibe alertas instantáneas sobre inscripciones, victorias y oportunidades de mint.',
+    'alphabot.sections.notifications.feature1': 'Alertas Instantáneas: Información en el momento adecuado.',
+    'alphabot.sections.notifications.feature2': 'Webhooks Personalizables: Configura según tus preferencias.',
+    'alphabot.sections.notifications.feature3': 'Actualizaciones Amigables: Mensajes claros con enlaces útiles.',
+
+    'alphabot.sections.management.title': 'Gestión Robusta de Errores y Datos',
+    'alphabot.sections.management.description': 'Confiabilidad garantizada para mantener tu estrategia funcionando.',
+    'alphabot.sections.management.feature1': 'Recuperación Inteligente de Errores: Reintentos automáticos.',
+    'alphabot.sections.management.feature2': 'Almacenamiento Seguro: MongoDB con limpieza periódica.',
+    'alphabot.sections.management.feature3': 'Infraestructura Escalable: Gestiona altos volúmenes sin conflictos.',
   },
 };
 

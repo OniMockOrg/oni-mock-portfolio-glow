@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../hooks/use-language';
 import Navigation from '../components/Navigation';
+import AlphaBotSections from '../components/AlphaBotSections';
 import { Button } from '../components/ui/button';
 import { ArrowRight, Zap, Shield, BarChart3 } from 'lucide-react';
 
@@ -72,6 +73,9 @@ export const AlphaBot = () => {
           </div>
         </div>
       </section>
+
+      {/* Informational Sections */}
+      <AlphaBotSections />
 
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-gray-800">

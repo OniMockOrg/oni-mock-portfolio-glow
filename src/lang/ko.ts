@@ -91,6 +91,25 @@ const ko: LanguageFile = {
     'alphabot.features.security.description': '고급 데이터 보호 및 추첨의 완전한 투명성.',
     'alphabot.features.reports.title': '상세 보고서',
     'alphabot.features.reports.description': '포괄적인 분석 및 실시간 보고서로 더 나은 관리.',
+
+    // AlphaBot 정보 섹션
+    'alphabot.sections.automation.title': 'Alphabot을 통한 추첨 등록 자동화',
+    'alphabot.sections.automation.description': '효율성으로 기회를 극대화하세요! Alphabot 플랫폼에서 등록을 자동화하여 시간을 절약하고 NFT 획득 가능성을 높이세요.',
+    'alphabot.sections.automation.feature1': '자동 등록: 추첨이 활성화되는 즉시 계정을 등록합니다.',
+    'alphabot.sections.automation.feature2': '멀티 계정 지원: 여러 계정을 동시에 관리합니다.',
+    'alphabot.sections.automation.feature3': '지능형 대기열 관리: 제한 제어를 통한 최적화된 등록.',
+
+    'alphabot.sections.notifications.title': 'Discord 및 Telegram을 통한 실시간 알림',
+    'alphabot.sections.notifications.description': '등록, 승리 및 민트 기회에 대한 즉각적인 알림을 받으세요.',
+    'alphabot.sections.notifications.feature1': '즉각적인 알림: 적절한 시점의 정보.',
+    'alphabot.sections.notifications.feature2': '사용자 정의 가능한 웹훅: 선호도에 따라 구성.',
+    'alphabot.sections.notifications.feature3': '사용자 친화적인 업데이트: 유용한 링크가 포함된 명확한 메시지.',
+
+    'alphabot.sections.management.title': '강력한 오류 및 데이터 관리',
+    'alphabot.sections.management.description': '전략을 계속 작동시키기 위한 보장된 신뢰성.',
+    'alphabot.sections.management.feature1': '지능형 오류 복구: 자동 재시도.',
+    'alphabot.sections.management.feature2': '안전한 저장소: 정기적인 정리가 포함된 MongoDB.',
+    'alphabot.sections.management.feature3': '확장 가능한 인프라: 충돌 없이 대용량 처리 관리.',
   },
 };
 

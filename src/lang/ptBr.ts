@@ -92,6 +92,25 @@ const ptBr: LanguageFile = {
     'alphabot.features.security.description': 'Proteção avançada de dados e transparência total nos sorteios.',
     'alphabot.features.reports.title': 'Relatórios Detalhados',
     'alphabot.features.reports.description': 'Análises completas e relatórios em tempo real para melhor gestão.',
+
+    // Seções informativas do AlphaBot
+    'alphabot.sections.automation.title': 'Automação de Registro de Rifas com Alphabot',
+    'alphabot.sections.automation.description': 'Maximize suas chances com eficiência! Automatize registros na plataforma Alphabot, poupando tempo e aumentando suas chances de ganhar NFTs.',
+    'alphabot.sections.automation.feature1': 'Registro Automático: Inscreve suas contas assim que as rifas ficam ativas.',
+    'alphabot.sections.automation.feature2': 'Suporte Multi-Contas: Gerencie várias contas ao mesmo tempo.',
+    'alphabot.sections.automation.feature3': 'Gerenciamento Inteligente de Fila: Inscrições otimizadas com controle de limites.',
+
+    'alphabot.sections.notifications.title': 'Notificações em Tempo Real via Discord e Telegram',
+    'alphabot.sections.notifications.description': 'Receba alertas instantâneos sobre inscrições, vitórias e oportunidades de mint.',
+    'alphabot.sections.notifications.feature1': 'Alertas Instantâneos: Informações no momento certo.',
+    'alphabot.sections.notifications.feature2': 'Webhooks Personalizáveis: Configure conforme suas preferências.',
+    'alphabot.sections.notifications.feature3': 'Atualizações Amigáveis: Mensagens claras com links úteis.',
+
+    'alphabot.sections.management.title': 'Gerenciamento Robusto de Erros e Dados',
+    'alphabot.sections.management.description': 'Confiabilidade garantida para manter sua estratégia funcionando.',
+    'alphabot.sections.management.feature1': 'Recuperação Inteligente de Erros: Retentativas automáticas.',
+    'alphabot.sections.management.feature2': 'Armazenamento Seguro: MongoDB com limpeza periódica.',
+    'alphabot.sections.management.feature3': 'Infraestrutura Escalável: Gerencia altos volumes sem conflitos.',
   },
 };
 

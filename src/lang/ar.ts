@@ -91,6 +91,25 @@ const ar: LanguageFile = {
     'alphabot.features.security.description': 'حماية متقدمة للبيانات وشفافية كاملة في السحوبات.',
     'alphabot.features.reports.title': 'تقارير مفصلة',
     'alphabot.features.reports.description': 'تحليلات شاملة وتقارير فورية لإدارة أفضل.',
+
+    // أقسام معلومات AlphaBot
+    'alphabot.sections.automation.title': 'أتمتة تسجيل السحوبات مع Alphabot',
+    'alphabot.sections.automation.description': 'عظّم فرصك بالكفاءة! أتمت التسجيلات في منصة Alphabot، وفر الوقت وزد فرصك في الحصول على NFTs.',
+    'alphabot.sections.automation.feature1': 'التسجيل التلقائي: يسجل حساباتك بمجرد تفعيل السحوبات.',
+    'alphabot.sections.automation.feature2': 'دعم متعدد الحسابات: إدارة عدة حسابات في نفس الوقت.',
+    'alphabot.sections.automation.feature3': 'إدارة ذكية للطوابير: تسجيلات محسنة مع التحكم في الحدود.',
+
+    'alphabot.sections.notifications.title': 'إشعارات فورية عبر Discord و Telegram',
+    'alphabot.sections.notifications.description': 'احصل على تنبيهات فورية حول التسجيلات والانتصارات وفرص السك.',
+    'alphabot.sections.notifications.feature1': 'تنبيهات فورية: معلومات في الوقت المناسب.',
+    'alphabot.sections.notifications.feature2': 'ويب هوكس قابلة للتخصيص: اضبط حسب تفضيلاتك.',
+    'alphabot.sections.notifications.feature3': 'تحديثات سهلة الاستخدام: رسائل واضحة مع روابط مفيدة.',
+
+    'alphabot.sections.management.title': 'إدارة قوية للأخطاء والبيانات',
+    'alphabot.sections.management.description': 'موثوقية مضمونة للحفاظ على استراتيجيتك تعمل.',
+    'alphabot.sections.management.feature1': 'استرداد ذكي للأخطاء: إعادة محاولة تلقائية.',
+    'alphabot.sections.management.feature2': 'تخزين آمن: MongoDB مع تنظيف دوري.',
+    'alphabot.sections.management.feature3': 'بنية تحتية قابلة للتوسع: إدارة أحجام عالية بدون تضارب.',
   },
 };
 
