@@ -83,6 +83,7 @@ const ko: LanguageFile = {
     'alphabot.hero.subtitle': '추첨 및 디지털 관리를 위한 완전한 자동화 플랫폼',
     'alphabot.hero.description': '우리의 고급 자동화 시스템으로 추첨 관리를 혁신하세요. 참가자 등록부터 당첨자 선택까지, AlphaBot은 완전하고 신뢰할 수 있는 솔루션을 제공합니다.',
     'alphabot.hero.cta': '지금 시작하기',
+    'alphabot.hero.demo': '데모 보기',
     
     // AlphaBot Features
     'alphabot.features.automation.title': '완전 자동화',
@@ -110,6 +111,8 @@ const ko: LanguageFile = {
     'alphabot.sections.management.feature1': '지능형 오류 복구: 자동 재시도.',
     'alphabot.sections.management.feature2': '안전한 저장소: 정기적인 정리가 포함된 MongoDB.',
     'alphabot.sections.management.feature3': '확장 가능한 인프라: 충돌 없이 대용량 처리 관리.',
+
+    'alphabot.sections.learnMore': '자세히 보기',
   },
 };
 

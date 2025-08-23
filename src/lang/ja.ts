@@ -83,6 +83,7 @@ const ja: LanguageFile = {
     'alphabot.hero.subtitle': '抽選とデジタル管理のための完全な自動化プラットフォーム',
     'alphabot.hero.description': '私たちの高度な自動化システムで抽選管理を変革しましょう。参加者登録から当選者選択まで、AlphaBotは完全で信頼性の高いソリューションを提供します。',
     'alphabot.hero.cta': '今すぐ始める',
+    'alphabot.hero.demo': 'デモを見る',
     
     // AlphaBot Features
     'alphabot.features.automation.title': '完全自動化',
@@ -110,6 +111,8 @@ const ja: LanguageFile = {
     'alphabot.sections.management.feature1': 'インテリジェントエラー回復：自動再試行。',
     'alphabot.sections.management.feature2': '安全なストレージ：定期的なクリーンアップ付きMongoDB。',
     'alphabot.sections.management.feature3': 'スケーラブルなインフラストラクチャ：競合なしで大量処理を管理。',
+
+    'alphabot.sections.learnMore': '詳細を見る',
   },
 };
 

@@ -84,6 +84,7 @@ const es: LanguageFile = {
     'alphabot.hero.subtitle': 'Plataforma completa de automatización para sorteos y gestión digital',
     'alphabot.hero.description': 'Transforma tu gestión de sorteos con nuestro sistema avanzado de automatización. Desde el registro de participantes hasta la selección de ganadores, AlphaBot ofrece una solución completa y confiable.',
     'alphabot.hero.cta': 'Comenzar Ahora',
+    'alphabot.hero.demo': 'Ver Demo',
     
     // AlphaBot Features
     'alphabot.features.automation.title': 'Automatización Completa',
@@ -111,6 +112,8 @@ const es: LanguageFile = {
     'alphabot.sections.management.feature1': 'Recuperación Inteligente de Errores: Reintentos automáticos.',
     'alphabot.sections.management.feature2': 'Almacenamiento Seguro: MongoDB con limpieza periódica.',
     'alphabot.sections.management.feature3': 'Infraestructura Escalable: Gestiona altos volúmenes sin conflictos.',
+
+    'alphabot.sections.learnMore': 'Saber Más',
   },
 };
 

@@ -84,6 +84,7 @@ const ptBr: LanguageFile = {
     'alphabot.hero.subtitle': 'Plataforma completa de automação para rifas e gestão digital',
     'alphabot.hero.description': 'Transforme sua gestão de rifas com nosso sistema avançado de automação. Do cadastro de participantes à seleção de ganhadores, o AlphaBot oferece uma solução completa e confiável.',
     'alphabot.hero.cta': 'Começar Agora',
+    'alphabot.hero.demo': 'Ver Demo',
     
     // AlphaBot Features
     'alphabot.features.automation.title': 'Automação Completa',
@@ -111,6 +112,8 @@ const ptBr: LanguageFile = {
     'alphabot.sections.management.feature1': 'Recuperação Inteligente de Erros: Retentativas automáticas.',
     'alphabot.sections.management.feature2': 'Armazenamento Seguro: MongoDB com limpeza periódica.',
     'alphabot.sections.management.feature3': 'Infraestrutura Escalável: Gerencia altos volumes sem conflitos.',
+    
+    'alphabot.sections.learnMore': 'Saiba Mais',
   },
 };
 

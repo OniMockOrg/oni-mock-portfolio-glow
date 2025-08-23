@@ -84,6 +84,7 @@ const en: LanguageFile = {
     'alphabot.hero.subtitle': 'Complete automation platform for raffles and digital management',
     'alphabot.hero.description': 'Transform your raffle management with our advanced automation system. From participant registration to winner selection, AlphaBot offers a complete and reliable solution.',
     'alphabot.hero.cta': 'Get Started',
+    'alphabot.hero.demo': 'View Demo',
     
     // AlphaBot Features
     'alphabot.features.automation.title': 'Complete Automation',
@@ -111,6 +112,8 @@ const en: LanguageFile = {
     'alphabot.sections.management.feature1': 'Smart Error Recovery: Automatic retries.',
     'alphabot.sections.management.feature2': 'Secure Storage: MongoDB with periodic cleanup.',
     'alphabot.sections.management.feature3': 'Scalable Infrastructure: Handles high volumes without conflicts.',
+
+    'alphabot.sections.learnMore': 'Learn More',
   },
 };
 

@@ -83,8 +83,9 @@ const de: LanguageFile = {
     // AlphaBot Page
     'alphabot.hero.title': 'AlphaBot Verlosungsautomatisierung',
     'alphabot.hero.subtitle': 'Komplette Automatisierungsplattform für Verlosungen und digitales Management',
-    'alphabot.hero.description': 'Transformieren Sie Ihr Verlosungsmanagement mit unserem fortschrittlichen Automatisierungssystem. Von der Teilnehmerregistrierung bis zur Gewinnerauswahl bietet AlphaBot eine vollständige und zuverlässige Lösung.',
-    'alphabot.hero.cta': 'Jetzt Starten',
+    'alphabot.hero.description': 'Verwandeln Sie Ihr Verlosungsmanagement mit unserem fortschrittlichen Automatisierungssystem. Von der Teilnehmerregistrierung bis zur Gewinnerauswahl bietet AlphaBot eine vollständige und zuverlässige Lösung.',
+    'alphabot.hero.cta': 'Loslegen',
+    'alphabot.hero.demo': 'Demo ansehen',
     
     // AlphaBot Features
     'alphabot.features.automation.title': 'Vollständige Automatisierung',
@@ -111,7 +112,9 @@ const de: LanguageFile = {
     'alphabot.sections.management.description': 'Garantierte Zuverlässigkeit, um Ihre Strategie am Laufen zu halten.',
     'alphabot.sections.management.feature1': 'Intelligente Fehlerbehebung: Automatische Wiederholungsversuche.',
     'alphabot.sections.management.feature2': 'Sichere Speicherung: MongoDB mit regelmäßiger Bereinigung.',
-    'alphabot.sections.management.feature3': 'Skalierbare Infrastruktur: Verwaltet hohe Volumina ohne Konflikte.',
+    'alphabot.sections.management.feature3': 'Skalierbare Infrastruktur: Bewältigt hohe Volumina ohne Konflikte.',
+
+    'alphabot.sections.learnMore': 'Mehr erfahren',
   },
 };
 

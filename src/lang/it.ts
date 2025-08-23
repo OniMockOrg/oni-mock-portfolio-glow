@@ -84,6 +84,7 @@ const it: LanguageFile = {
     'alphabot.hero.subtitle': 'Piattaforma completa di automazione per lotterie e gestione digitale',
     'alphabot.hero.description': 'Trasforma la tua gestione delle lotterie con il nostro sistema di automazione avanzato. Dalla registrazione dei partecipanti alla selezione dei vincitori, AlphaBot offre una soluzione completa e affidabile.',
     'alphabot.hero.cta': 'Inizia Ora',
+    'alphabot.hero.demo': 'Vedi Demo',
     
     // AlphaBot Features
     'alphabot.features.automation.title': 'Automazione Completa',
@@ -111,6 +112,8 @@ const it: LanguageFile = {
     'alphabot.sections.management.feature1': 'Recupero Intelligente degli Errori: Tentativi automatici.',
     'alphabot.sections.management.feature2': 'Archiviazione Sicura: MongoDB con pulizia periodica.',
     'alphabot.sections.management.feature3': 'Infrastruttura Scalabile: Gestisce alti volumi senza conflitti.',
+
+    'alphabot.sections.learnMore': 'Scopri di più',
   },
 };
 

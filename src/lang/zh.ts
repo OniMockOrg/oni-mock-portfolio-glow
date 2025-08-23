@@ -82,6 +82,7 @@ const zh: LanguageFile = {
     'alphabot.hero.subtitle': '抽奖和数字化管理的完整自动化平台',
     'alphabot.hero.description': '使用我们先进的自动化系统改变您的抽奖管理。从参与者注册到获奖者选择，AlphaBot 提供完整可靠的解决方案。',
     'alphabot.hero.cta': '立即开始',
+    'alphabot.hero.demo': '查看演示',
     
     // AlphaBot Features
     'alphabot.features.automation.title': '完全自动化',
@@ -109,6 +110,8 @@ const zh: LanguageFile = {
     'alphabot.sections.management.feature1': '智能错误恢复：自动重试。',
     'alphabot.sections.management.feature2': '安全存储：MongoDB 定期清理。',
     'alphabot.sections.management.feature3': '可扩展基础设施：无冲突地管理大容量。',
+
+    'alphabot.sections.learnMore': '了解更多',
   },
 };
 

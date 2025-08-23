@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Navigation from './Navigation';
 import Hero from './Hero';
 import About from './About';
@@ -8,6 +9,11 @@ import { useLanguage } from '../hooks/use-language';
 
 const Portfolio = () => {
   const { t } = useLanguage();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   return (
     <div className="min-h-screen">

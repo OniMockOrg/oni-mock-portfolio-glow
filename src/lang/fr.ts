@@ -85,6 +85,7 @@ const fr: LanguageFile = {
     'alphabot.hero.subtitle': 'Plateforme complète d\'automatisation pour tirages et gestion numérique',
     'alphabot.hero.description': 'Transformez votre gestion de tirages avec notre système d\'automatisation avancé. De l\'inscription des participants à la sélection des gagnants, AlphaBot offre une solution complète et fiable.',
     'alphabot.hero.cta': 'Commencer Maintenant',
+    'alphabot.hero.demo': 'Voir la Démo',
     
     // AlphaBot Features
     'alphabot.features.automation.title': 'Automatisation Complète',
@@ -112,6 +113,8 @@ const fr: LanguageFile = {
     'alphabot.sections.management.feature1': 'Récupération Intelligente d\'Erreurs : Tentatives automatiques.',
     'alphabot.sections.management.feature2': 'Stockage Sécurisé : MongoDB avec nettoyage périodique.',
     'alphabot.sections.management.feature3': 'Infrastructure Évolutive : Gère de gros volumes sans conflits.',
+
+    'alphabot.sections.learnMore': 'En savoir plus',
   },
 };
 

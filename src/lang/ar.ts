@@ -83,6 +83,7 @@ const ar: LanguageFile = {
     'alphabot.hero.subtitle': 'منصة أتمتة شاملة للسحوبات والإدارة الرقمية',
     'alphabot.hero.description': 'حوّل إدارة السحوبات الخاصة بك مع نظام الأتمتة المتقدم لدينا. من تسجيل المشاركين إلى اختيار الفائزين، يقدم AlphaBot حلاً شاملاً وموثوقاً.',
     'alphabot.hero.cta': 'ابدأ الآن',
+    'alphabot.hero.demo': 'عرض التجربة',
     
     // AlphaBot Features
     'alphabot.features.automation.title': 'أتمتة كاملة',
@@ -110,6 +111,8 @@ const ar: LanguageFile = {
     'alphabot.sections.management.feature1': 'استرداد ذكي للأخطاء: إعادة محاولة تلقائية.',
     'alphabot.sections.management.feature2': 'تخزين آمن: MongoDB مع تنظيف دوري.',
     'alphabot.sections.management.feature3': 'بنية تحتية قابلة للتوسع: إدارة أحجام عالية بدون تضارب.',
+
+    'alphabot.sections.learnMore': 'اعرف المزيد',
   },
 };
 

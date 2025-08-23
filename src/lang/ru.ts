@@ -85,6 +85,7 @@ const ru: LanguageFile = {
     'alphabot.hero.subtitle': 'Полная платформа автоматизации для розыгрышей и цифрового управления',
     'alphabot.hero.description': 'Трансформируйте управление розыгрышами с нашей продвинутой системой автоматизации. От регистрации участников до выбора победителей, AlphaBot предлагает полное и надежное решение.',
     'alphabot.hero.cta': 'Начать Сейчас',
+    'alphabot.hero.demo': 'Посмотреть Демо',
     
     // AlphaBot Features
     'alphabot.features.automation.title': 'Полная Автоматизация',
@@ -112,6 +113,8 @@ const ru: LanguageFile = {
     'alphabot.sections.management.feature1': 'Умное Восстановление Ошибок: Автоматические повторные попытки.',
     'alphabot.sections.management.feature2': 'Безопасное Хранение: MongoDB с периодической очисткой.',
     'alphabot.sections.management.feature3': 'Масштабируемая Инфраструктура: Управляет большими объемами без конфликтов.',
+
+    'alphabot.sections.learnMore': 'Узнать больше',
   },
 };
 
