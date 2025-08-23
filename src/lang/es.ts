@@ -48,12 +48,17 @@ const es: LanguageFile = {
 
     // Services
     'services.title': 'Servicios',
-    'services.subtitle': 'Soluciones especializadas en automatización de rifas y gestión digital',
+    'services.subtitle':
+      'Soluciones especializadas en automatización de rifas y gestión digital',
     'services.automation.title': 'Automatización de Rifas',
-    'services.automation.description': 'Sistema completo de automatización para rifas a través de la plataforma AlphaBot. Ofrecemos soluciones eficientes y confiables para la gestión de rifas, desde el registro de participantes hasta la selección de ganadores.',
-    'services.automation.feature1': 'Gestión automatizada de participantes y registros',
-    'services.automation.feature2': 'Sistema transparente y seguro de selección de ganadores',
-    'services.automation.feature3': 'Informes en tiempo real y análisis detallados',
+    'services.automation.description':
+      'Sistema completo de automatización para rifas a través de la plataforma AlphaBot. Ofrecemos soluciones eficientes y confiables para la gestión de rifas, desde el registro de participantes hasta la selección de ganadores.',
+    'services.automation.feature1':
+      'Gestión automatizada de participantes y registros',
+    'services.automation.feature2':
+      'Sistema transparente y seguro de selección de ganadores',
+    'services.automation.feature3':
+      'Informes en tiempo real y análisis detallados',
     'services.automation.cta': 'Saber Más',
 
     // Projects
@@ -81,37 +86,56 @@ const es: LanguageFile = {
 
     // AlphaBot Page
     'alphabot.hero.title': 'Automatización de Sorteos AlphaBot',
-    'alphabot.hero.subtitle': 'Plataforma completa de automatización para sorteos y gestión digital',
-    'alphabot.hero.description': 'Transforma tu gestión de sorteos con nuestro sistema avanzado de automatización. Desde el registro de participantes hasta la selección de ganadores, AlphaBot ofrece una solución completa y confiable.',
+    'alphabot.hero.subtitle':
+      'Plataforma completa de automatización para sorteos y gestión digital',
+    'alphabot.hero.description':
+      'Transforma tu gestión de sorteos con nuestro sistema avanzado de automatización. Desde el registro de participantes hasta la selección de ganadores, AlphaBot ofrece una solución completa y confiable.',
     'alphabot.hero.cta': 'Comenzar Ahora',
     'alphabot.hero.demo': 'Ver Demo',
-    
+
     // AlphaBot Features
     'alphabot.features.automation.title': 'Automatización Completa',
-    'alphabot.features.automation.description': 'Sistema totalmente automatizado para gestionar sorteos de principio a fin.',
+    'alphabot.features.automation.description':
+      'Sistema totalmente automatizado para gestionar sorteos de principio a fin.',
     'alphabot.features.security.title': 'Seguridad Garantizada',
-    'alphabot.features.security.description': 'Protección avanzada de datos y transparencia total en los sorteos.',
+    'alphabot.features.security.description':
+      'Protección avanzada de datos y transparencia total en los sorteos.',
     'alphabot.features.reports.title': 'Informes Detallados',
-    'alphabot.features.reports.description': 'Análisis completos e informes en tiempo real para una mejor gestión.',
+    'alphabot.features.reports.description':
+      'Análisis completos e informes en tiempo real para una mejor gestión.',
 
     // Secciones informativas de AlphaBot
-    'alphabot.sections.automation.title': 'Automatización de Registro de Sorteos con Alphabot',
-    'alphabot.sections.automation.description': '¡Maximiza tus oportunidades con eficiencia! Automatiza registros en la plataforma Alphabot, ahorrando tiempo y aumentando tus posibilidades de ganar NFTs.',
-    'alphabot.sections.automation.feature1': 'Registro Automático: Inscribe tus cuentas tan pronto como los sorteos se activen.',
-    'alphabot.sections.automation.feature2': 'Soporte Multi-Cuentas: Gestiona múltiples cuentas simultáneamente.',
-    'alphabot.sections.automation.feature3': 'Gestión Inteligente de Cola: Inscripciones optimizadas con control de límites.',
+    'alphabot.sections.automation.title':
+      'Automatización de Registro de Sorteos con Alphabot',
+    'alphabot.sections.automation.description':
+      '¡Maximiza tus oportunidades con eficiencia! Automatiza registros en la plataforma Alphabot, ahorrando tiempo y aumentando tus posibilidades de ganar NFTs.',
+    'alphabot.sections.automation.feature1':
+      'Registro Automático: Inscribe tus cuentas tan pronto como los sorteos se activen.',
+    'alphabot.sections.automation.feature2':
+      'Soporte Multi-Cuentas: Gestiona múltiples cuentas simultáneamente.',
+    'alphabot.sections.automation.feature3':
+      'Gestión Inteligente de Cola: Inscripciones optimizadas con control de límites.',
 
-    'alphabot.sections.notifications.title': 'Notificaciones en Tiempo Real vía Discord y Telegram',
-    'alphabot.sections.notifications.description': 'Recibe alertas instantáneas sobre inscripciones, victorias y oportunidades de mint.',
-    'alphabot.sections.notifications.feature1': 'Alertas Instantáneas: Información en el momento adecuado.',
-    'alphabot.sections.notifications.feature2': 'Webhooks Personalizables: Configura según tus preferencias.',
-    'alphabot.sections.notifications.feature3': 'Actualizaciones Amigables: Mensajes claros con enlaces útiles.',
+    'alphabot.sections.notifications.title':
+      'Notificaciones en Tiempo Real vía Discord y Telegram',
+    'alphabot.sections.notifications.description':
+      'Recibe alertas instantáneas sobre inscripciones, victorias y oportunidades de mint.',
+    'alphabot.sections.notifications.feature1':
+      'Alertas Instantáneas: Información en el momento adecuado.',
+    'alphabot.sections.notifications.feature2':
+      'Webhooks Personalizables: Configura según tus preferencias.',
+    'alphabot.sections.notifications.feature3':
+      'Actualizaciones Amigables: Mensajes claros con enlaces útiles.',
 
     'alphabot.sections.management.title': 'Gestión Robusta de Errores y Datos',
-    'alphabot.sections.management.description': 'Confiabilidad garantizada para mantener tu estrategia funcionando.',
-    'alphabot.sections.management.feature1': 'Recuperación Inteligente de Errores: Reintentos automáticos.',
-    'alphabot.sections.management.feature2': 'Almacenamiento Seguro: MongoDB con limpieza periódica.',
-    'alphabot.sections.management.feature3': 'Infraestructura Escalable: Gestiona altos volúmenes sin conflictos.',
+    'alphabot.sections.management.description':
+      'Confiabilidad garantizada para mantener tu estrategia funcionando.',
+    'alphabot.sections.management.feature1':
+      'Recuperación Inteligente de Errores: Reintentos automáticos.',
+    'alphabot.sections.management.feature2':
+      'Almacenamiento Seguro: MongoDB con limpieza periódica.',
+    'alphabot.sections.management.feature3':
+      'Infraestructura Escalable: Gestiona altos volúmenes sin conflictos.',
 
     'alphabot.sections.learnMore': 'Saber Más',
   },

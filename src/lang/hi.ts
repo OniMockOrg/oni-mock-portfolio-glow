@@ -50,8 +50,10 @@ const hi: LanguageFile = {
     'services.title': 'सेवाएं',
     'services.subtitle': 'लॉटरी ऑटोमेशन और डिजिटल प्रबंधन में विशेषज्ञ समाधान',
     'services.automation.title': 'लॉटरी ऑटोमेशन',
-    'services.automation.description': 'AlphaBot प्लेटफॉर्म के माध्यम से व्यापक लॉटरी ऑटोमेशन सिस्टम। प्रतिभागी पंजीकरण से विजेता चयन तक कुशल और विश्वसनीय लॉटरी प्रबंधन समाधान प्रदान करते हैं।',
-    'services.automation.feature1': 'प्रतिभागियों और पंजीकरण का स्वचालित प्रबंधन',
+    'services.automation.description':
+      'AlphaBot प्लेटफॉर्म के माध्यम से व्यापक लॉटरी ऑटोमेशन सिस्टम। प्रतिभागी पंजीकरण से विजेता चयन तक कुशल और विश्वसनीय लॉटरी प्रबंधन समाधान प्रदान करते हैं।',
+    'services.automation.feature1':
+      'प्रतिभागियों और पंजीकरण का स्वचालित प्रबंधन',
     'services.automation.feature2': 'पारदर्शी और सुरक्षित विजेता चयन प्रणाली',
     'services.automation.feature3': 'रीयल-टाइम रिपोर्ट और विस्तृत विश्लेषण',
     'services.automation.cta': 'और जानें',
@@ -81,18 +83,23 @@ const hi: LanguageFile = {
 
     // AlphaBot Page
     'alphabot.hero.title': 'AlphaBot लॉटरी स्वचालन',
-    'alphabot.hero.subtitle': 'लॉटरी और डिजिटल प्रबंधन के लिए पूर्ण स्वचालन प्लेटफॉर्म',
-    'alphabot.hero.description': 'हमारे उन्नत स्वचालन सिस्टम के साथ अपने लॉटरी प्रबंधन को बदलें। प्रतिभागी पंजीकरण से विजेता चयन तक, AlphaBot एक पूर्ण और विश्वसनीय समाधान प्रदान करता है।',
+    'alphabot.hero.subtitle':
+      'लॉटरी और डिजिटल प्रबंधन के लिए पूर्ण स्वचालन प्लेटफॉर्म',
+    'alphabot.hero.description':
+      'हमारे उन्नत स्वचालन सिस्टम के साथ अपने लॉटरी प्रबंधन को बदलें। प्रतिभागी पंजीकरण से विजेता चयन तक, AlphaBot एक पूर्ण और विश्वसनीय समाधान प्रदान करता है।',
     'alphabot.hero.cta': 'अभी शुरू करें',
     'alphabot.hero.demo': 'डेमो देखें',
-    
+
     // AlphaBot Features
     'alphabot.features.automation.title': 'पूर्ण स्वचालन',
-    'alphabot.features.automation.description': 'शुरू से अंत तक लॉटरी प्रबंधन के लिए पूर्णतः स्वचालित सिस्टम।',
+    'alphabot.features.automation.description':
+      'शुरू से अंत तक लॉटरी प्रबंधन के लिए पूर्णतः स्वचालित सिस्टम।',
     'alphabot.features.security.title': 'गारंटीशुदा सुरक्षा',
-    'alphabot.features.security.description': 'उन्नत डेटा सुरक्षा और लॉटरी में पूर्ण पारदर्शिता।',
+    'alphabot.features.security.description':
+      'उन्नत डेटा सुरक्षा और लॉटरी में पूर्ण पारदर्शिता।',
     'alphabot.features.reports.title': 'विस्तृत रिपोर्ट',
-    'alphabot.features.reports.description': 'बेहतर प्रबंधन के लिए व्यापक विश्लेषण और रीयल-टाइम रिपोर्ट।',
+    'alphabot.features.reports.description':
+      'बेहतर प्रबंधन के लिए व्यापक विश्लेषण और रीयल-टाइम रिपोर्ट।',
 
     'alphabot.sections.learnMore': 'और जानें',
   },

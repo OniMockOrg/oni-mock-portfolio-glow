@@ -49,12 +49,17 @@ const fr: LanguageFile = {
 
     // Services
     'services.title': 'Services',
-    'services.subtitle': 'Solutions spécialisées en automatisation de tirages au sort et gestion numérique',
+    'services.subtitle':
+      'Solutions spécialisées en automatisation de tirages au sort et gestion numérique',
     'services.automation.title': 'Automatisation de Tirages au Sort',
-    'services.automation.description': 'Système complet d\'automatisation pour les tirages au sort via la plateforme AlphaBot. Nous offrons des solutions efficaces et fiables pour la gestion des tirages au sort, de l\'inscription des participants à la sélection des gagnants.',
-    'services.automation.feature1': 'Gestion automatisée des participants et des inscriptions',
-    'services.automation.feature2': 'Système transparent et sécurisé de sélection des gagnants',
-    'services.automation.feature3': 'Rapports en temps réel et analyses détaillées',
+    'services.automation.description':
+      "Système complet d'automatisation pour les tirages au sort via la plateforme AlphaBot. Nous offrons des solutions efficaces et fiables pour la gestion des tirages au sort, de l'inscription des participants à la sélection des gagnants.",
+    'services.automation.feature1':
+      'Gestion automatisée des participants et des inscriptions',
+    'services.automation.feature2':
+      'Système transparent et sécurisé de sélection des gagnants',
+    'services.automation.feature3':
+      'Rapports en temps réel et analyses détaillées',
     'services.automation.cta': 'En savoir plus',
 
     // Projects
@@ -82,37 +87,57 @@ const fr: LanguageFile = {
 
     // AlphaBot Page
     'alphabot.hero.title': 'Automatisation de Tirages AlphaBot',
-    'alphabot.hero.subtitle': 'Plateforme complète d\'automatisation pour tirages et gestion numérique',
-    'alphabot.hero.description': 'Transformez votre gestion de tirages avec notre système d\'automatisation avancé. De l\'inscription des participants à la sélection des gagnants, AlphaBot offre une solution complète et fiable.',
+    'alphabot.hero.subtitle':
+      "Plateforme complète d'automatisation pour tirages et gestion numérique",
+    'alphabot.hero.description':
+      "Transformez votre gestion de tirages avec notre système d'automatisation avancé. De l'inscription des participants à la sélection des gagnants, AlphaBot offre une solution complète et fiable.",
     'alphabot.hero.cta': 'Commencer Maintenant',
     'alphabot.hero.demo': 'Voir la Démo',
-    
+
     // AlphaBot Features
     'alphabot.features.automation.title': 'Automatisation Complète',
-    'alphabot.features.automation.description': 'Système entièrement automatisé pour gérer les tirages du début à la fin.',
+    'alphabot.features.automation.description':
+      'Système entièrement automatisé pour gérer les tirages du début à la fin.',
     'alphabot.features.security.title': 'Sécurité Garantie',
-    'alphabot.features.security.description': 'Protection avancée des données et transparence totale dans les tirages.',
+    'alphabot.features.security.description':
+      'Protection avancée des données et transparence totale dans les tirages.',
     'alphabot.features.reports.title': 'Rapports Détaillés',
-    'alphabot.features.reports.description': 'Analyses complètes et rapports en temps réel pour une meilleure gestion.',
+    'alphabot.features.reports.description':
+      'Analyses complètes et rapports en temps réel pour une meilleure gestion.',
 
     // Sections informatives d'AlphaBot
-    'alphabot.sections.automation.title': 'Automatisation d\'Inscription aux Tirages avec Alphabot',
-    'alphabot.sections.automation.description': 'Maximisez vos chances avec efficacité ! Automatisez les inscriptions sur la plateforme Alphabot, économisant du temps et augmentant vos chances de gagner des NFTs.',
-    'alphabot.sections.automation.feature1': 'Inscription Automatique : Inscrit vos comptes dès que les tirages deviennent actifs.',
-    'alphabot.sections.automation.feature2': 'Support Multi-Comptes : Gérez plusieurs comptes simultanément.',
-    'alphabot.sections.automation.feature3': 'Gestion Intelligente de File : Inscriptions optimisées avec contrôle des limites.',
+    'alphabot.sections.automation.title':
+      "Automatisation d'Inscription aux Tirages avec Alphabot",
+    'alphabot.sections.automation.description':
+      'Maximisez vos chances avec efficacité ! Automatisez les inscriptions sur la plateforme Alphabot, économisant du temps et augmentant vos chances de gagner des NFTs.',
+    'alphabot.sections.automation.feature1':
+      'Inscription Automatique : Inscrit vos comptes dès que les tirages deviennent actifs.',
+    'alphabot.sections.automation.feature2':
+      'Support Multi-Comptes : Gérez plusieurs comptes simultanément.',
+    'alphabot.sections.automation.feature3':
+      'Gestion Intelligente de File : Inscriptions optimisées avec contrôle des limites.',
 
-    'alphabot.sections.notifications.title': 'Notifications en Temps Réel via Discord et Telegram',
-    'alphabot.sections.notifications.description': 'Recevez des alertes instantanées sur les inscriptions, victoires et opportunités de mint.',
-    'alphabot.sections.notifications.feature1': 'Alertes Instantanées : Informations au bon moment.',
-    'alphabot.sections.notifications.feature2': 'Webhooks Personnalisables : Configurez selon vos préférences.',
-    'alphabot.sections.notifications.feature3': 'Mises à jour Conviviales : Messages clairs avec liens utiles.',
+    'alphabot.sections.notifications.title':
+      'Notifications en Temps Réel via Discord et Telegram',
+    'alphabot.sections.notifications.description':
+      'Recevez des alertes instantanées sur les inscriptions, victoires et opportunités de mint.',
+    'alphabot.sections.notifications.feature1':
+      'Alertes Instantanées : Informations au bon moment.',
+    'alphabot.sections.notifications.feature2':
+      'Webhooks Personnalisables : Configurez selon vos préférences.',
+    'alphabot.sections.notifications.feature3':
+      'Mises à jour Conviviales : Messages clairs avec liens utiles.',
 
-    'alphabot.sections.management.title': 'Gestion Robuste des Erreurs et Données',
-    'alphabot.sections.management.description': 'Fiabilité garantie pour maintenir votre stratégie en fonctionnement.',
-    'alphabot.sections.management.feature1': 'Récupération Intelligente d\'Erreurs : Tentatives automatiques.',
-    'alphabot.sections.management.feature2': 'Stockage Sécurisé : MongoDB avec nettoyage périodique.',
-    'alphabot.sections.management.feature3': 'Infrastructure Évolutive : Gère de gros volumes sans conflits.',
+    'alphabot.sections.management.title':
+      'Gestion Robuste des Erreurs et Données',
+    'alphabot.sections.management.description':
+      'Fiabilité garantie pour maintenir votre stratégie en fonctionnement.',
+    'alphabot.sections.management.feature1':
+      "Récupération Intelligente d'Erreurs : Tentatives automatiques.",
+    'alphabot.sections.management.feature2':
+      'Stockage Sécurisé : MongoDB avec nettoyage périodique.',
+    'alphabot.sections.management.feature3':
+      'Infrastructure Évolutive : Gère de gros volumes sans conflits.',
 
     'alphabot.sections.learnMore': 'En savoir plus',
   },
