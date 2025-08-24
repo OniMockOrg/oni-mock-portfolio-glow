@@ -75,6 +75,17 @@ const ptBr: LanguageFile = {
     'contact.description':
       'Seja um projeto freelance, uma oportunidade de trabalho ou apenas uma conversa sobre tecnologia, estou sempre aberto a novas possibilidades.',
     'contact.button': 'Entrar em Contato',
+    'contact.email': 'E-mail',
+    'contact.location': 'Localização',
+    'contact.social': 'Redes Sociais',
+    'contact.form.name': 'Nome',
+    'contact.form.email': 'E-mail',
+    'contact.form.email.placeholder': 'seu@email.com',
+    'contact.form.subject': 'Assunto',
+    'contact.form.subject.placeholder': 'Sobre o que é isso?',
+    'contact.form.message': 'Mensagem',
+    'contact.form.message.placeholder': 'Me conte sobre seu projeto',
+    'contact.form.submit': 'Enviar mensagem',
 
     // Footer
     'footer.text': '© {year} OniMock. Construído com ❤️ e muito café.',

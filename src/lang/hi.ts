@@ -77,6 +77,17 @@ const hi: LanguageFile = {
     'contact.description':
       'चाहे वह फ्रीलांस प्रोजेक्ट हो, नौकरी का अवसर हो या सिर्फ़ तकनीक के बारे में बातचीत, मैं हमेशा नई संभावनाओं के लिए खुला हूँ।',
     'contact.button': 'संपर्क करें',
+    'contact.email': 'ईमेल',
+    'contact.location': 'स्थान',
+    'contact.social': 'सोशल लिंक्स',
+    'contact.name': 'नाम',
+    'contact.subject': 'विषय',
+    'contact.message': 'संदेश',
+    'contact.name.placeholder': 'आपका नाम',
+    'contact.email.placeholder': 'आपका ईमेल',
+    'contact.subject.placeholder': 'आपके संदेश का विषय',
+    'contact.message.placeholder': 'आपका संदेश',
+    'contact.submit': 'संदेश भेजें',
 
     // Footer
     'footer.text': '© {year} OniMock. ❤️ और बहुत सारी कॉफी के साथ विकसित।',

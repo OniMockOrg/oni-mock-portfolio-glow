@@ -33,7 +33,7 @@ const fr: LanguageFile = {
       'Développeur passionné par la technologie, toujours à la recherche de solutions élégantes et efficaces qui ont un impact positif sur la vie des gens.',
     'about.journey': 'Mon parcours',
     'about.journey.p1':
-      'En tant que développeur full stack, je suis passionné par la création d’expériences numériques exceptionnelles. Je me spécialise dans les technologies modernes et explore constamment de nouveaux outils et méthodologies.',
+      'En tant que développeur full stack, je suis passionné par la création d\'expériences numériques exceptionnelles. Je me spécialise dans les technologies modernes et explore constamment de nouveaux outils et méthodologies.',
     'about.journey.p2':
       'Je crois que le code doit être non seulement fonctionnel, mais aussi élégant et maintenable. Chaque projet est une opportunité d’apprendre quelque chose de nouveau et de contribuer à la communauté des développeurs.',
     'about.technologies': 'Technologies',
@@ -79,8 +79,19 @@ const fr: LanguageFile = {
       'Intéressé par une collaboration ou une idée incroyable ? Transformons des concepts en réalité ensemble.',
     'contact.ready': 'Prêt pour le prochain projet ?',
     'contact.description':
-      'Qu’il s’agisse d’un projet freelance, d’une opportunité de travail ou simplement d’une discussion sur la technologie, je suis toujours ouvert à de nouvelles possibilités.',
+      'Qu\'il s\'agisse d\'un projet freelance, d\'une opportunité de travail ou simplement d\'une discussion sur la technologie, je suis toujours ouvert à de nouvelles possibilités.',
     'contact.button': 'Me contacter',
+    'contact.email': 'E-mail',
+    'contact.location': 'Localisation',
+    'contact.social': 'Réseaux Sociaux',
+    'contact.name': 'Nom',
+    'contact.subject': 'Sujet',
+    'contact.message': 'Message',
+    'contact.name.placeholder': 'Votre nom',
+    'contact.email.placeholder': 'Votre e-mail',
+    'contact.subject.placeholder': 'Le sujet de votre message',
+    'contact.message.placeholder': 'Votre message',
+    'contact.submit': 'Envoyer le message',
 
     // Footer
     'footer.text': '© {year} OniMock. Développé avec ❤️ et beaucoup de café.',

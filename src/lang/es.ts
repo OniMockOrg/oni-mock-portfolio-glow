@@ -80,6 +80,17 @@ const es: LanguageFile = {
     'contact.description':
       'Ya sea un proyecto freelance, una oportunidad de trabajo o simplemente una charla sobre tecnología, estoy siempre abierto a nuevas posibilidades.',
     'contact.button': 'Contactar',
+    'contact.email': 'Correo electrónico',
+    'contact.location': 'Ubicación',
+    'contact.social': 'Redes Sociales',
+    'contact.name': 'Nombre',
+    'contact.subject': 'Asunto',
+    'contact.message': 'Mensaje',
+    'contact.name.placeholder': 'Tu nombre',
+    'contact.email.placeholder': 'Tu correo electrónico',
+    'contact.subject.placeholder': 'El asunto de tu mensaje',
+    'contact.message.placeholder': 'Tu mensaje',
+    'contact.submit': 'Enviar mensaje',
 
     // Footer
     'footer.text': '© {year} OniMock. Construido con ❤️ y mucho café.',

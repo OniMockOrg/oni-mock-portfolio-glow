@@ -74,6 +74,17 @@ const ar: LanguageFile = {
     'contact.description':
       'سواء كان مشروعًا حرًا، فرصة عمل، أو مجرد حوار حول التكنولوجيا، أنا دائمًا منفتح على الإمكانيات الجديدة.',
     'contact.button': 'اتصل بي',
+    'contact.email': 'البريد الإلكتروني',
+    'contact.location': 'الموقع',
+    'contact.social': 'وسائل التواصل الاجتماعي',
+    'contact.name': 'الاسم',
+    'contact.subject': 'الموضوع',
+    'contact.message': 'الرسالة',
+    'contact.name.placeholder': 'اسمك',
+    'contact.email.placeholder': 'بريدك الإلكتروني',
+    'contact.subject.placeholder': 'موضوع رسالتك',
+    'contact.message.placeholder': 'رسالتك',
+    'contact.submit': 'إرسال الرسالة',
 
     // Footer
     'footer.text': '© {year} OniMock. تم التطوير بـ ❤️ والكثير من القهوة.',

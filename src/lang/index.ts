@@ -3,6 +3,7 @@ import ar from './ar';
 import de from './de';
 import en from './en';
 import es from './es';
+import pt from './pt';
 import fr from './fr';
 import hi from './hi';
 import it from './it';
@@ -15,6 +16,7 @@ import zh from './zh';
 export const languageFiles: Record<string, LanguageFile> = {
   en, // Inglês (global)
   'pt-br': ptBr, // Português (local)
+  pt, // Português
   zh, // Chinês (muitos falantes)
   es, // Espanhol (global)
   hi, // Hindi (muitos falantes)

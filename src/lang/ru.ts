@@ -81,6 +81,17 @@ const ru: LanguageFile = {
     'contact.description':
       'Будь то фриланс-проект, возможность работы или просто разговор о технологиях, я всегда открыт для новых возможностей.',
     'contact.button': 'Связаться',
+    'contact.email': 'Электронная почта',
+    'contact.location': 'Местоположение',
+    'contact.social': 'Социальные сети',
+    'contact.name': 'Имя',
+    'contact.subject': 'Тема',
+    'contact.message': 'Сообщение',
+    'contact.name.placeholder': 'Ваше имя',
+    'contact.email.placeholder': 'Ваша электронная почта',
+    'contact.subject.placeholder': 'Тема вашего сообщения',
+    'contact.message.placeholder': 'Ваше сообщение',
+    'contact.submit': 'Отправить сообщение',
 
     // Footer
     'footer.text':

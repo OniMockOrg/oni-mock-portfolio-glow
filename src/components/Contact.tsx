@@ -185,7 +185,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm group-hover/item:text-gray-300 transition-colors duration-300">
-                        Email
+                        {t('contact.email')}
                       </p>
                       <p className="text-white font-medium group-hover/item:text-blue-300 transition-colors duration-300">
                         onimock@gmail.com
@@ -198,7 +198,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm group-hover/item:text-gray-300 transition-colors duration-300">
-                        Location
+                        {t('contact.location')}
                       </p>
                       <p className="text-white font-medium group-hover/item:text-purple-300 transition-colors duration-300">
                         {t('contact.country')}
@@ -214,7 +214,7 @@ const Contact = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative glass-card p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6 group-hover:text-purple-300 transition-colors duration-300">
-                  Social Links
+                  {t('contact.social')}
                 </h3>
                 <div className="flex gap-4">
                   {socialLinks.map((link) => {
@@ -251,7 +251,7 @@ const Contact = () => {
                       htmlFor="name"
                       className="block text-sm font-medium text-gray-300 mb-2"
                     >
-                      Name
+                      {t('contact.form.name')}
                     </label>
                     <input
                       type="text"
@@ -261,7 +261,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300 hover:border-cyan-500/50"
-                      placeholder="Your name"
+                      placeholder={t('contact.form.name')}
                     />
                   </div>
                   <div>
@@ -269,7 +269,7 @@ const Contact = () => {
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-300 mb-2"
                     >
-                      Email
+                      {t('contact.form.email')}
                     </label>
                     <input
                       type="email"
@@ -279,7 +279,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300 hover:border-cyan-500/50"
-                      placeholder="your@email.com"
+                      placeholder={t('contact.form.email.placeholder')}
                     />
                   </div>
                 </div>
@@ -288,7 +288,7 @@ const Contact = () => {
                     htmlFor="subject"
                     className="block text-sm font-medium text-gray-300 mb-2"
                   >
-                    Subject
+                    {t('contact.form.subject')}
                   </label>
                   <input
                     type="text"
@@ -298,7 +298,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300 hover:border-cyan-500/50"
-                    placeholder="What's this about?"
+                    placeholder={t('contact.form.subject.placeholder')}
                   />
                 </div>
                 <div>
@@ -306,7 +306,7 @@ const Contact = () => {
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-300 mb-2"
                   >
-                    Message
+                    {t('contact.form.message')}
                   </label>
                   <textarea
                     id="message"
@@ -316,7 +316,7 @@ const Contact = () => {
                     required
                     rows={6}
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400 resize-none transition-all duration-300 hover:border-cyan-500/50"
-                    placeholder="Tell me about your project..."
+                    placeholder={t('contact.form.message.placeholder')}
                   ></textarea>
                 </div>
                 <button
@@ -332,7 +332,7 @@ const Contact = () => {
                   ) : (
                     <>
                       <Send className="w-5 h-5" />
-                      Send Message
+                      {t('contact.form.submit')}
                     </>
                   )}
                 </button>

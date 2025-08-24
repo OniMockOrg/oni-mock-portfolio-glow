@@ -74,6 +74,17 @@ const zh: LanguageFile = {
     'contact.description':
       '无论是自由职业项目、工作机会，还是仅关于技术的对话，我始终对新可能性持开放态度。',
     'contact.button': '联系我',
+    'contact.email': '电子邮件',
+    'contact.location': '位置',
+    'contact.social': '社交链接',
+    'contact.name': '姓名',
+    'contact.subject': '主题',
+    'contact.message': '消息',
+    'contact.name.placeholder': '您的姓名',
+    'contact.email.placeholder': '您的电子邮件',
+    'contact.subject.placeholder': '您的消息主题',
+    'contact.message.placeholder': '您的消息',
+    'contact.submit': '发送消息',
 
     // Footer
     'footer.text': '© {year} OniMock。用❤️和大量咖啡开发。',

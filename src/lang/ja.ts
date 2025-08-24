@@ -74,6 +74,17 @@ const ja: LanguageFile = {
     'contact.description':
       'フリーランスプロジェクト、仕事の機会、またはテクノロジーについての会話であっても、常に新しい可能性にオープンです。',
     'contact.button': '連絡する',
+    'contact.email': 'メールアドレス',
+    'contact.location': '場所',
+    'contact.social': 'ソーシャルリンク',
+    'contact.name': '名前',
+    'contact.subject': '件名',
+    'contact.message': 'メッセージ',
+    'contact.name.placeholder': 'あなたの名前',
+    'contact.email.placeholder': 'あなたのメールアドレス',
+    'contact.subject.placeholder': 'メッセージの件名',
+    'contact.message.placeholder': 'あなたのメッセージ',
+    'contact.submit': 'メッセージを送信',
 
     // Footer
     'footer.text': '© {year} OniMock. ❤️とたくさんのコーヒーで開発されました。',
