@@ -1,12 +1,10 @@
 import { useLanguage } from '../hooks/use-language';
 import { useNavigate } from 'react-router-dom';
 import {
-  Code,
-  Palette,
-  Smartphone,
-  Globe,
-  Database,
-  Zap,
+  Bot,
+  CheckCircle,
+  BarChart3,
+  Shield,
   Rocket,
   Star,
 } from 'lucide-react';
@@ -15,81 +13,6 @@ import { AnimatedButton } from './ui/animated-button';
 const Services = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
-
-  const services = [
-    {
-      icon: Code,
-      title: t('services.webDev.title'),
-      description: t('services.webDev.description'),
-      features: [
-        t('services.webDev.features.0'),
-        t('services.webDev.features.1'),
-        t('services.webDev.features.2'),
-      ],
-      gradient: 'from-blue-500 to-cyan-500',
-      hoverGradient: 'from-blue-400 to-cyan-400',
-    },
-    {
-      icon: Smartphone,
-      title: t('services.mobileDev.title'),
-      description: t('services.mobileDev.description'),
-      features: [
-        t('services.mobileDev.features.0'),
-        t('services.mobileDev.features.1'),
-        t('services.mobileDev.features.2'),
-      ],
-      gradient: 'from-purple-500 to-pink-500',
-      hoverGradient: 'from-purple-400 to-pink-400',
-    },
-    {
-      icon: Palette,
-      title: t('services.uiux.title'),
-      description: t('services.uiux.description'),
-      features: [
-        t('services.uiux.features.0'),
-        t('services.uiux.features.1'),
-        t('services.uiux.features.2'),
-      ],
-      gradient: 'from-green-500 to-emerald-500',
-      hoverGradient: 'from-green-400 to-emerald-400',
-    },
-    {
-      icon: Globe,
-      title: t('services.consulting.title'),
-      description: t('services.consulting.description'),
-      features: [
-        t('services.consulting.features.0'),
-        t('services.consulting.features.1'),
-        t('services.consulting.features.2'),
-      ],
-      gradient: 'from-orange-500 to-red-500',
-      hoverGradient: 'from-orange-400 to-red-400',
-    },
-    {
-      icon: Database,
-      title: t('services.backend.title'),
-      description: t('services.backend.description'),
-      features: [
-        t('services.backend.features.0'),
-        t('services.backend.features.1'),
-        t('services.backend.features.2'),
-      ],
-      gradient: 'from-indigo-500 to-purple-500',
-      hoverGradient: 'from-indigo-400 to-purple-400',
-    },
-    {
-      icon: Zap,
-      title: t('services.optimization.title'),
-      description: t('services.optimization.description'),
-      features: [
-        t('services.optimization.features.0'),
-        t('services.optimization.features.1'),
-        t('services.optimization.features.2'),
-      ],
-      gradient: 'from-yellow-500 to-orange-500',
-      hoverGradient: 'from-yellow-400 to-orange-400',
-    },
-  ];
 
   return (
     <section
@@ -198,53 +121,56 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 auto-rows-fr">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <div key={service.title} className="group relative">
-                <div
-                  className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200`}
-                ></div>
-                <div
-                  className="relative glass-card p-8 group-hover:scale-[1.01] transition-all duration-500 hover:shadow-xl backdrop-blur-none h-full"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="w-[80px] h-[80px] mx-auto mb-6">
-                    <div className="w-full h-full relative">
-                      <div 
-                        className={`absolute inset-0 bg-gradient-to-r ${service.gradient} rounded-full flex items-center justify-center group-hover:rotate-3 transition-transform duration-500`}
-                      >
-                        <Icon className="w-10 h-10 text-white relative z-10" />
-                      </div>
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-r ${service.hoverGradient} rounded-full blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
-                      ></div>
-                    </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch mb-16">
+          {/* Imagem à esquerda */}
+          <div className="relative group h-full">
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
+            <div className="relative glass-card p-8 group-hover:scale-[1.02] transition-all duration-500 h-full flex items-center">
+              <div className="w-full h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-pink-600/10 animate-pulse"></div>
+                <Bot className="w-32 h-32 text-purple-400 relative z-10 animate-bounce" />
+                <div className="absolute top-4 right-4 w-4 h-4 bg-green-400 rounded-full animate-ping"></div>
+                <div className="absolute bottom-4 left-4 w-6 h-6 bg-blue-400/30 rounded-full animate-pulse"></div>
+                <div className="absolute top-1/2 left-4 w-3 h-3 bg-yellow-400/40 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card do AlphaBot à direita */}
+          <div className="group relative h-full">
+            <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200"></div>
+            <div className="relative glass-card p-8 group-hover:scale-[1.01] transition-all duration-500 hover:shadow-xl backdrop-blur-none h-full flex flex-col">
+              <div className="w-[80px] h-[80px] mx-auto mb-6">
+                <div className="w-full h-full relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center group-hover:rotate-3 transition-transform duration-500">
+                    <Bot className="w-10 h-10 text-white relative z-10" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-indigo-200 transition-colors duration-300 backdrop-blur-none">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-400 transition-colors duration-300 backdrop-blur-none">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-3 backdrop-blur-none">
-                    {service.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-center text-gray-300 group-hover:text-gray-300 transition-colors duration-300 backdrop-blur-none"
-                      >
-                        <div
-                          className={`min-w-[12px] min-h-[12px] w-3 h-3 bg-gradient-to-r ${service.gradient} rounded-full mr-3 flex-shrink-0 group-hover:scale-105 transition-transform duration-300`}
-                        ></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 rounded-full blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
                 </div>
               </div>
-            );
-          })}
+              <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-indigo-200 transition-colors duration-300 backdrop-blur-none">
+                {t('services.automation.title')}
+              </h3>
+              <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-400 transition-colors duration-300 backdrop-blur-none">
+                {t('services.automation.description')}
+              </p>
+              <ul className="space-y-3 backdrop-blur-none mb-8 flex-grow">
+                <li className="flex items-center text-gray-300 group-hover:text-gray-300 transition-colors duration-300 backdrop-blur-none">
+                  <div className="min-w-[12px] min-h-[12px] w-3 h-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mr-3 flex-shrink-0 group-hover:scale-105 transition-transform duration-300"></div>
+                  {t('services.automation.feature1')}
+                </li>
+                <li className="flex items-center text-gray-300 group-hover:text-gray-300 transition-colors duration-300 backdrop-blur-none">
+                  <div className="min-w-[12px] min-h-[12px] w-3 h-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mr-3 flex-shrink-0 group-hover:scale-105 transition-transform duration-300"></div>
+                  {t('services.automation.feature2')}
+                </li>
+                <li className="flex items-center text-gray-300 group-hover:text-gray-300 transition-colors duration-300 backdrop-blur-none">
+                  <div className="min-w-[12px] min-h-[12px] w-3 h-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mr-3 flex-shrink-0 group-hover:scale-105 transition-transform duration-300"></div>
+                  {t('services.automation.feature3')}
+                </li>
+              </ul>
+
+            </div>
+          </div>
         </div>
 
         <div className="text-center">
@@ -253,13 +179,9 @@ const Services = () => {
             size="lg"
             leftIcon={Rocket}
             rightIcon={Star}
-            onClick={() =>
-              document
-                .getElementById('contact')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
+            onClick={() => navigate('/alphabot')}
           >
-            {t('services.cta')}
+            {t('services.learnMore')}
           </AnimatedButton>
         </div>
       </div>

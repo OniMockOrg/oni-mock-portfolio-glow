@@ -60,6 +60,7 @@ const es: LanguageFile = {
     'services.automation.feature3':
       'Informes en tiempo real y análisis detallados',
     'services.automation.cta': 'Saber Más',
+    'services.learnMore': 'Saber Más',
 
     // Projects
     'projects.title': 'Proyectos',
@@ -83,14 +84,15 @@ const es: LanguageFile = {
     'contact.email': 'Correo electrónico',
     'contact.location': 'Ubicación',
     'contact.social': 'Redes Sociales',
-    'contact.name': 'Nombre',
-    'contact.subject': 'Asunto',
-    'contact.message': 'Mensaje',
-    'contact.name.placeholder': 'Tu nombre',
-    'contact.email.placeholder': 'Tu correo electrónico',
-    'contact.subject.placeholder': 'El asunto de tu mensaje',
-    'contact.message.placeholder': 'Tu mensaje',
-    'contact.submit': 'Enviar mensaje',
+    'contact.form.name': 'Nombre',
+    'contact.form.email': 'Correo electrónico',
+    'contact.form.email.placeholder': 'Tu correo electrónico',
+    'contact.form.subject': 'Asunto',
+    'contact.form.subject.placeholder': 'El asunto de tu mensaje',
+    'contact.form.message': 'Mensaje',
+    'contact.form.message.placeholder': 'Tu mensaje',
+    'contact.form.submit': 'Enviar mensaje',
+    'contact.form.sending': 'Enviando...',
 
     // Footer
     'footer.text': '© {year} OniMock. Construido con ❤️ y mucho café.',

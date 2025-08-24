@@ -55,6 +55,7 @@ const ptBr: LanguageFile = {
     'services.automation.feature2': 'Sistema transparente e seguro de seleção de ganhadores',
     'services.automation.feature3': 'Relatórios em tempo real e análises detalhadas',
     'services.automation.cta': 'Saiba Mais',
+    'services.learnMore': 'Saiba Mais',
 
     // Projects
     'projects.title': 'Projetos',
@@ -86,6 +87,7 @@ const ptBr: LanguageFile = {
     'contact.form.message': 'Mensagem',
     'contact.form.message.placeholder': 'Me conte sobre seu projeto',
     'contact.form.submit': 'Enviar mensagem',
+    'contact.form.sending': 'Enviando...',
 
     // Footer
     'footer.text': '© {year} OniMock. Construído com ❤️ e muito café.',

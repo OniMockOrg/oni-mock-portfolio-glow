@@ -55,6 +55,7 @@ const ar: LanguageFile = {
     'services.automation.feature2': 'نظام اختيار الفائزين الشفاف والآمن',
     'services.automation.feature3': 'تقارير فورية وتحليلات مفصلة',
     'services.automation.cta': 'اعرف المزيد',
+    'services.learnMore': 'اعرف المزيد',
 
     // Projects
     'projects.title': 'المشاريع',
@@ -77,14 +78,15 @@ const ar: LanguageFile = {
     'contact.email': 'البريد الإلكتروني',
     'contact.location': 'الموقع',
     'contact.social': 'وسائل التواصل الاجتماعي',
-    'contact.name': 'الاسم',
-    'contact.subject': 'الموضوع',
-    'contact.message': 'الرسالة',
-    'contact.name.placeholder': 'اسمك',
-    'contact.email.placeholder': 'بريدك الإلكتروني',
-    'contact.subject.placeholder': 'موضوع رسالتك',
-    'contact.message.placeholder': 'رسالتك',
-    'contact.submit': 'إرسال الرسالة',
+    'contact.form.name': 'الاسم',
+    'contact.form.email': 'البريد الإلكتروني',
+    'contact.form.email.placeholder': 'بريدك الإلكتروني',
+    'contact.form.subject': 'الموضوع',
+    'contact.form.subject.placeholder': 'موضوع رسالتك',
+    'contact.form.message': 'الرسالة',
+    'contact.form.message.placeholder': 'رسالتك',
+    'contact.form.submit': 'إرسال الرسالة',
+    'contact.form.sending': 'جارٍ الإرسال...',
 
     // Footer
     'footer.text': '© {year} OniMock. تم التطوير بـ ❤️ والكثير من القهوة.',

@@ -55,6 +55,7 @@ const ja: LanguageFile = {
     'services.automation.feature2': '透明で安全な当選者選出システム',
     'services.automation.feature3': 'リアルタイムレポートと詳細分析',
     'services.automation.cta': '詳細を見る',
+    'services.learnMore': '詳細を見る',
 
     // Projects
     'projects.title': 'プロジェクト',
@@ -77,14 +78,15 @@ const ja: LanguageFile = {
     'contact.email': 'メールアドレス',
     'contact.location': '場所',
     'contact.social': 'ソーシャルリンク',
-    'contact.name': '名前',
-    'contact.subject': '件名',
-    'contact.message': 'メッセージ',
-    'contact.name.placeholder': 'あなたの名前',
-    'contact.email.placeholder': 'あなたのメールアドレス',
-    'contact.subject.placeholder': 'メッセージの件名',
-    'contact.message.placeholder': 'あなたのメッセージ',
-    'contact.submit': 'メッセージを送信',
+    'contact.form.name': '名前',
+    'contact.form.email': 'メールアドレス',
+    'contact.form.email.placeholder': 'あなたのメールアドレス',
+    'contact.form.subject': '件名',
+    'contact.form.subject.placeholder': 'メッセージの件名',
+    'contact.form.message': 'メッセージ',
+    'contact.form.message.placeholder': 'あなたのメッセージ',
+    'contact.form.submit': 'メッセージを送信',
+    'contact.form.sending': '送信中...',
 
     // Footer
     'footer.text': '© {year} OniMock. ❤️とたくさんのコーヒーで開発されました。',

@@ -61,6 +61,7 @@ const ru: LanguageFile = {
     'services.automation.feature3':
       'Отчеты в реальном времени и детальная аналитика',
     'services.automation.cta': 'Узнать больше',
+    'services.learnMore': 'Узнать больше',
 
     // Projects
     'projects.title': 'Проекты',
@@ -84,14 +85,15 @@ const ru: LanguageFile = {
     'contact.email': 'Электронная почта',
     'contact.location': 'Местоположение',
     'contact.social': 'Социальные сети',
-    'contact.name': 'Имя',
-    'contact.subject': 'Тема',
-    'contact.message': 'Сообщение',
-    'contact.name.placeholder': 'Ваше имя',
-    'contact.email.placeholder': 'Ваша электронная почта',
-    'contact.subject.placeholder': 'Тема вашего сообщения',
-    'contact.message.placeholder': 'Ваше сообщение',
-    'contact.submit': 'Отправить сообщение',
+    'contact.form.name': 'Имя',
+    'contact.form.email': 'Электронная почта',
+    'contact.form.email.placeholder': 'Ваша электронная почта',
+    'contact.form.subject': 'Тема',
+    'contact.form.subject.placeholder': 'Тема вашего сообщения',
+    'contact.form.message': 'Сообщение',
+    'contact.form.message.placeholder': 'Ваше сообщение',
+    'contact.form.submit': 'Отправить сообщение',
+    'contact.form.sending': 'Отправка...',
 
     // Footer
     'footer.text':

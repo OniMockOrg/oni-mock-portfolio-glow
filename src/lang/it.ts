@@ -59,7 +59,8 @@ const it: LanguageFile = {
       'Sistema trasparente e sicuro di selezione dei vincitori',
     'services.automation.feature3':
       'Report in tempo reale e analisi dettagliate',
-    'services.automation.cta': 'Scopri di più',
+    'services.automation.cta': 'Scopri di Più',
+    'services.learnMore': 'Scopri di Più',
 
     // Projects
     'projects.title': 'Progetti',
@@ -83,14 +84,15 @@ const it: LanguageFile = {
     'contact.email': 'Email',
     'contact.location': 'Posizione',
     'contact.social': 'Social Media',
-    'contact.name': 'Nome',
-    'contact.subject': 'Oggetto',
-    'contact.message': 'Messaggio',
-    'contact.name.placeholder': 'Il tuo nome',
-    'contact.email.placeholder': 'La tua email',
-    'contact.subject.placeholder': "L'oggetto del tuo messaggio",
-    'contact.message.placeholder': 'Il tuo messaggio',
-    'contact.submit': 'Invia messaggio',
+    'contact.form.name': 'Nome',
+    'contact.form.email': 'Email',
+    'contact.form.email.placeholder': 'La tua email',
+    'contact.form.subject': 'Oggetto',
+    'contact.form.subject.placeholder': "L'oggetto del tuo messaggio",
+    'contact.form.message': 'Messaggio',
+    'contact.form.message.placeholder': 'Il tuo messaggio',
+    'contact.form.submit': 'Invia messaggio',
+    'contact.form.sending': 'Invio in corso...',
 
     // Footer
     'footer.text': '© {year} OniMock. Sviluppato con ❤️ e tanto caffè.',

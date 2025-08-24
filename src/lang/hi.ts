@@ -57,6 +57,7 @@ const hi: LanguageFile = {
     'services.automation.feature2': 'पारदर्शी और सुरक्षित विजेता चयन प्रणाली',
     'services.automation.feature3': 'रीयल-टाइम रिपोर्ट और विस्तृत विश्लेषण',
     'services.automation.cta': 'और जानें',
+    'services.learnMore': 'और जानें',
 
     // Projects
     'projects.title': 'प्रोजेक्ट्स',
@@ -80,14 +81,15 @@ const hi: LanguageFile = {
     'contact.email': 'ईमेल',
     'contact.location': 'स्थान',
     'contact.social': 'सोशल लिंक्स',
-    'contact.name': 'नाम',
-    'contact.subject': 'विषय',
-    'contact.message': 'संदेश',
-    'contact.name.placeholder': 'आपका नाम',
-    'contact.email.placeholder': 'आपका ईमेल',
-    'contact.subject.placeholder': 'आपके संदेश का विषय',
-    'contact.message.placeholder': 'आपका संदेश',
-    'contact.submit': 'संदेश भेजें',
+    'contact.form.name': 'नाम',
+    'contact.form.email': 'ईमेल',
+    'contact.form.email.placeholder': 'आपका ईमेल',
+    'contact.form.subject': 'विषय',
+    'contact.form.subject.placeholder': 'आपके संदेश का विषय',
+    'contact.form.message': 'संदेश',
+    'contact.form.message.placeholder': 'आपका संदेश',
+    'contact.form.submit': 'संदेश भेजें',
+    'contact.form.sending': 'भेजा जा रहा है...',
 
     // Footer
     'footer.text': '© {year} OniMock. ❤️ और बहुत सारी कॉफी के साथ विकसित।',
@@ -112,6 +114,25 @@ const hi: LanguageFile = {
     'alphabot.features.reports.description':
       'बेहतर प्रबंधन के लिए व्यापक विश्लेषण और रीयल-टाइम रिपोर्ट।',
 
+    // AlphaBot के सूचनात्मक अनुभाग
+    'alphabot.sections.automation.title': 'Alphabot के साथ लॉटरी पंजीकरण स्वचालन',
+    'alphabot.sections.automation.description': 'दक्षता के साथ अपनी संभावनाओं को अधिकतम करें! Alphabot प्लेटफॉर्म पर पंजीकरण स्वचालित करें, समय बचाएं और NFTs जीतने की संभावना बढ़ाएं।',
+    'alphabot.sections.automation.feature1': 'स्वचालित पंजीकरण: लॉटरी सक्रिय होते ही आपके खातों को पंजीकृत करता है।',
+    'alphabot.sections.automation.feature2': 'मल्टी-अकाउंट समर्थन: एक साथ कई खातों का प्रबंधन करें।',
+    'alphabot.sections.automation.feature3': 'बुद्धिमान कतार प्रबंधन: सीमा नियंत्रण के साथ अनुकूलित पंजीकरण।',
+
+    'alphabot.sections.notifications.title': 'Discord और Telegram के माध्यम से रीयल-टाइम सूचनाएं',
+    'alphabot.sections.notifications.description': 'पंजीकरण, जीत और मिंट अवसरों के बारे में तत्काल अलर्ट प्राप्त करें।',
+    'alphabot.sections.notifications.feature1': 'तत्काल अलर्ट: सही समय पर जानकारी।',
+    'alphabot.sections.notifications.feature2': 'अनुकूलन योग्य वेबहुक: अपनी प्राथमिकताओं के अनुसार कॉन्फ़िगर करें।',
+    'alphabot.sections.notifications.feature3': 'उपयोगकर्ता-अनुकूल अपडेट: उपयोगी लिंक के साथ स्पष्ट संदेश।',
+
+    'alphabot.sections.management.title': 'मजबूत त्रुटि और डेटा प्रबंधन',
+    'alphabot.sections.management.description': 'आपकी रणनीति को चालू रखने के लिए गारंटीशुदा विश्वसनीयता।',
+    'alphabot.sections.management.feature1': 'बुद्धिमान त्रुटि रिकवरी: स्वचालित पुनः प्रयास।',
+    'alphabot.sections.management.feature2': 'सुरक्षित भंडारण: आवधिक सफाई के साथ MongoDB।',
+    'alphabot.sections.management.feature3': 'स्केलेबल इन्फ्रास्ट्रक्चर: बिना संघर्ष के उच्च वॉल्यूम का प्रबंधन।',
+    
     'alphabot.sections.learnMore': 'और जानें',
   },
 };

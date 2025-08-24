@@ -56,6 +56,7 @@ const zh: LanguageFile = {
     'services.automation.feature2': '透明安全的获奖者选择系统',
     'services.automation.feature3': '实时报告和详细分析',
     'services.automation.cta': '了解更多',
+    'services.learnMore': '了解更多',
 
     // Projects
     'projects.title': '项目',
@@ -77,14 +78,15 @@ const zh: LanguageFile = {
     'contact.email': '电子邮件',
     'contact.location': '位置',
     'contact.social': '社交链接',
-    'contact.name': '姓名',
-    'contact.subject': '主题',
-    'contact.message': '消息',
-    'contact.name.placeholder': '您的姓名',
-    'contact.email.placeholder': '您的电子邮件',
-    'contact.subject.placeholder': '您的消息主题',
-    'contact.message.placeholder': '您的消息',
-    'contact.submit': '发送消息',
+    'contact.form.name': '姓名',
+    'contact.form.email': '电子邮件',
+    'contact.form.email.placeholder': '您的电子邮件',
+    'contact.form.subject': '主题',
+    'contact.form.subject.placeholder': '您的消息主题',
+    'contact.form.message': '消息',
+    'contact.form.message.placeholder': '您的消息',
+    'contact.form.submit': '发送消息',
+    'contact.form.sending': '发送中...',
 
     // Footer
     'footer.text': '© {year} OniMock。用❤️和大量咖啡开发。',

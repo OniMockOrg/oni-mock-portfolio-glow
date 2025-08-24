@@ -56,6 +56,7 @@ const ko: LanguageFile = {
     'services.automation.feature2': '투명하고 안전한 당첨자 선정 시스템',
     'services.automation.feature3': '실시간 보고서 및 상세 분석',
     'services.automation.cta': '자세히 보기',
+    'services.learnMore': '자세히 보기',
 
     // Projects
     'projects.title': '프로젝트',
@@ -78,14 +79,15 @@ const ko: LanguageFile = {
     'contact.email': '이메일',
     'contact.location': '위치',
     'contact.social': '소셜 링크',
-    'contact.name': '이름',
-    'contact.subject': '제목',
-    'contact.message': '메시지',
-    'contact.name.placeholder': '귀하의 이름',
-    'contact.email.placeholder': '귀하의 이메일',
-    'contact.subject.placeholder': '메시지 제목',
-    'contact.message.placeholder': '귀하의 메시지',
-    'contact.submit': '메시지 보내기',
+    'contact.form.name': '이름',
+    'contact.form.email': '이메일',
+    'contact.form.email.placeholder': '귀하의 이메일',
+    'contact.form.subject': '제목',
+    'contact.form.subject.placeholder': '메시지 제목',
+    'contact.form.message': '메시지',
+    'contact.form.message.placeholder': '귀하의 메시지',
+    'contact.form.submit': '메시지 보내기',
+    'contact.form.sending': '전송 중...',
 
     // Footer
     'footer.text': '© {year} OniMock. ❤️와 많은 커피로 개발되었습니다.',

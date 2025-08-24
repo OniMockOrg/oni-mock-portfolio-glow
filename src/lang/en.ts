@@ -55,6 +55,7 @@ const en: LanguageFile = {
     'services.automation.feature2': 'Transparent and secure winner selection system',
     'services.automation.feature3': 'Real-time reports and detailed analytics',
     'services.automation.cta': 'Learn More',
+    'services.learnMore': 'Learn More',
 
     // Projects
     'projects.title': 'Projects',
@@ -86,6 +87,7 @@ const en: LanguageFile = {
     'contact.form.message': 'Message',
     'contact.form.message.placeholder': 'Tell me about your project',
     'contact.form.submit': 'Send message',
+    'contact.form.sending': 'Sending...',
 
     // Footer
     'footer.text': '© {year} OniMock. Built with ❤️ and lots of coffee.',
