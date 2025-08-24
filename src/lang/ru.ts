@@ -52,6 +52,7 @@ const ru: LanguageFile = {
     'about.stats.years': '{years} Года',
     'about.stats.focus': 'Фокус',
     'about.stats.fullstack': 'Full Stack',
+    'about.cta': 'Связаться со мной',
 
     // Services
     'services.title': 'Услуги',

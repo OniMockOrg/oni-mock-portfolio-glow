@@ -51,6 +51,7 @@ const hi: LanguageFile = {
     'about.stats.years': '{years} वर्ष',
     'about.stats.focus': 'फोकस',
     'about.stats.fullstack': 'फुल स्टैक',
+    'about.cta': 'संपर्क करें',
 
     // Services
     'services.title': 'सेवाएँ',

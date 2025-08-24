@@ -51,6 +51,7 @@ const it: LanguageFile = {
     'about.stats.years': '{years} Anni',
     'about.stats.focus': 'Focus',
     'about.stats.fullstack': 'Full Stack',
+    'about.cta': 'Contattami',
 
     // Services
     'services.title': 'Servizi',

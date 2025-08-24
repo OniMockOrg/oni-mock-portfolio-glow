@@ -52,6 +52,7 @@ const fr: LanguageFile = {
     'about.stats.years': '{years} Ans',
     'about.stats.focus': 'Focus',
     'about.stats.fullstack': 'Full Stack',
+    'about.cta': 'Contactez-moi',
 
     // Services
     'services.title': 'Services',

@@ -51,6 +51,7 @@ const ja: LanguageFile = {
     'about.stats.years': '{years} 年',
     'about.stats.focus': '焦点',
     'about.stats.fullstack': 'フルスタック',
+    'about.cta': 'お問い合わせ',
 
     // Services
     'services.title': 'サービス',

@@ -51,6 +51,7 @@ const zh: LanguageFile = {
     'about.stats.years': '{years} 年',
     'about.stats.focus': '专注领域',
     'about.stats.fullstack': '全栈开发',
+    'about.cta': '联系我',
 
     // Services
     'services.title': '服务',

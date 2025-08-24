@@ -51,6 +51,7 @@ const ptBr: LanguageFile = {
     'about.stats.years': '{years} Anos',
     'about.stats.focus': 'Foco',
     'about.stats.fullstack': 'Full Stack',
+    'about.cta': 'Entre em Contato',
 
     // Services
     'services.title': 'Serviços',

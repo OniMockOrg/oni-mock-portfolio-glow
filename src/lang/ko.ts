@@ -51,6 +51,7 @@ const ko: LanguageFile = {
     'about.stats.years': '{years}년',
     'about.stats.focus': '초점',
     'about.stats.fullstack': '풀스택',
+    'about.cta': '연락하기',
 
     // Services
     'services.title': '서비스',

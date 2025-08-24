@@ -51,6 +51,7 @@ const ar: LanguageFile = {
     'about.stats.years': '{years} سنوات',
     'about.stats.focus': 'التركيز',
     'about.stats.fullstack': 'كامل المهارات',
+    'about.cta': 'تواصل معي',
 
     // Services
     'services.title': 'الخدمات',
