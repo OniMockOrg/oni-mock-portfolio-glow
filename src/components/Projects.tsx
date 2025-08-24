@@ -97,11 +97,11 @@ const Projects = () => {
               <span className="text-gradient">{t('projects.title')}</span>
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
             {[...Array(projectQuantity)].map((_, index) => (
               <div key={index} className="group relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-25 animate-pulse"></div>
-                <div className="relative glass-card p-6 animate-pulse">
+                <div className="relative glass-card p-6 animate-pulse group-hover:scale-[1.01] transition-all duration-500 h-full">
                   <div className="h-4 bg-gray-700 rounded mb-4"></div>
                   <div className="h-3 bg-gray-700 rounded mb-2 w-3/4"></div>
                   <div className="h-3 bg-gray-700 rounded mb-4 w-1/2"></div>
@@ -155,7 +155,7 @@ const Projects = () => {
               top: `${Math.random() * 100}%`,
               animation: `float ${8 + Math.random() * 6}s ease-in-out infinite`,
               animationDelay: `${Math.random() * 4}s`,
-              transform: `rotate(${Math.random() * 360}deg)`
+              transform: `rotate(${Math.random() * 360}deg)`,
             }}
           >
             {shape}
@@ -187,10 +187,14 @@ const Projects = () => {
               height: `${8 + Math.random() * 12}px`,
               left: `${Math.random() * 90}%`,
               top: `${Math.random() * 100}%`,
-              transform: `rotate(${Math.random() * 180 - 90}deg) skewX(${Math.random() * 30 - 15}deg)`,
-              animation: `pulse-glow ${6 + Math.random() * 4}s ease-in-out infinite`,
+              transform: `rotate(${Math.random() * 180 - 90}deg) skewX(${
+                Math.random() * 30 - 15
+              }deg)`,
+              animation: `pulse-glow ${
+                6 + Math.random() * 4
+              }s ease-in-out infinite`,
               animationDelay: `${Math.random() * 4}s`,
-              borderRadius: '50px'
+              borderRadius: '50px',
             }}
           ></div>
         ))}
@@ -247,7 +251,7 @@ const Projects = () => {
                   className={`absolute -inset-1 bg-gradient-to-r ${gradient.main} rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200`}
                 ></div>
                 <div
-                  className="relative glass-card p-6 flex flex-col h-full hover:bg-white/10 transition-all duration-500 hover:scale-102 animate-fade-in"
+                  className="relative glass-card p-6 flex flex-col h-full hover:bg-white/10 transition-all duration-500 hover:scale-105 animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex items-center mb-4">

@@ -457,21 +457,28 @@ const LogoWithMoonOrbit = () => {
   // Suavização dos ângulos (lerp)
   useEffect(() => {
     let animationFrame: number;
+    
     const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+    
     const update = () => {
-      // Ângulo alvo baseado no scroll
       const targetAngle = (scrollY * 0.5) % 360;
-      setAngle((prev) => lerp(prev, targetAngle, 0.15));
-      // Rotação da lua no próprio eixo (profundidade)
       const targetMoonRot = (scrollY * 1.2) % 360;
-      setMoonRot((prev) => lerp(prev, targetMoonRot, 0.12));
-      // Rotação do campo de estrelas (bem sutil)
       const targetStarRot = (scrollY * 0.18) % 360;
+      
+      setAngle((prev) => lerp(prev, targetAngle, 0.15));
+      setMoonRot((prev) => lerp(prev, targetMoonRot, 0.12));
       setStarRot((prev) => lerp(prev, targetStarRot, 0.09));
+      
       animationFrame = requestAnimationFrame(update);
     };
+    
     animationFrame = requestAnimationFrame(update);
-    return () => cancelAnimationFrame(animationFrame);
+    
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
   }, [scrollY]);
 
   useEffect(() => {
@@ -697,21 +704,30 @@ const Hero = () => {
     >
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
             linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px',
-          animation: 'grid-move 20s linear infinite'
-        }}></div>
+            backgroundSize: '50px 50px',
+            animation: 'grid-move 20s linear infinite',
+          }}
+        ></div>
       </div>
 
       {/* Dynamic Gradient Orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"
+          style={{ animation: 'pulse 4s ease-in-out infinite 2s' }}
+        ></div>
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
+          style={{ animation: 'pulse 4s ease-in-out infinite 4s' }}
+        ></div>
       </div>
 
       {/* Floating Particles */}
@@ -723,8 +739,7 @@ const Hero = () => {
             style={{
               left: `${(i / 8) * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `float ${15 + Math.random() * 10}s ease-in-out infinite`,
-              animationDelay: `${i * 2}s`
+              animation: `float ${15 + Math.random() * 10}s ease-in-out infinite ${i * 2}s`
             }}
           ></div>
         ))}
@@ -782,7 +797,11 @@ const Hero = () => {
               size="lg"
               leftIcon={Rocket}
               rightIcon={Zap}
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById('projects')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
             >
               {t('hero.viewProjects')}
             </AnimatedButton>
@@ -790,7 +809,11 @@ const Hero = () => {
               variant="outline"
               size="lg"
               leftIcon={Brain}
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById('about')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
             >
               {t('hero.aboutMe')}
             </AnimatedButton>

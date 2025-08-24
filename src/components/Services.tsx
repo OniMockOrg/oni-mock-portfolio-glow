@@ -1,6 +1,15 @@
 import { useLanguage } from '../hooks/use-language';
 import { useNavigate } from 'react-router-dom';
-import { Code, Palette, Smartphone, Globe, Database, Zap, Rocket, Star } from 'lucide-react';
+import {
+  Code,
+  Palette,
+  Smartphone,
+  Globe,
+  Database,
+  Zap,
+  Rocket,
+  Star,
+} from 'lucide-react';
 import { AnimatedButton } from './ui/animated-button';
 
 const Services = () => {
@@ -18,7 +27,7 @@ const Services = () => {
         t('services.webDev.features.2'),
       ],
       gradient: 'from-blue-500 to-cyan-500',
-      hoverGradient: 'from-blue-400 to-cyan-400'
+      hoverGradient: 'from-blue-400 to-cyan-400',
     },
     {
       icon: Smartphone,
@@ -30,7 +39,7 @@ const Services = () => {
         t('services.mobileDev.features.2'),
       ],
       gradient: 'from-purple-500 to-pink-500',
-      hoverGradient: 'from-purple-400 to-pink-400'
+      hoverGradient: 'from-purple-400 to-pink-400',
     },
     {
       icon: Palette,
@@ -42,7 +51,7 @@ const Services = () => {
         t('services.uiux.features.2'),
       ],
       gradient: 'from-green-500 to-emerald-500',
-      hoverGradient: 'from-green-400 to-emerald-400'
+      hoverGradient: 'from-green-400 to-emerald-400',
     },
     {
       icon: Globe,
@@ -54,7 +63,7 @@ const Services = () => {
         t('services.consulting.features.2'),
       ],
       gradient: 'from-orange-500 to-red-500',
-      hoverGradient: 'from-orange-400 to-red-400'
+      hoverGradient: 'from-orange-400 to-red-400',
     },
     {
       icon: Database,
@@ -66,7 +75,7 @@ const Services = () => {
         t('services.backend.features.2'),
       ],
       gradient: 'from-indigo-500 to-purple-500',
-      hoverGradient: 'from-indigo-400 to-purple-400'
+      hoverGradient: 'from-indigo-400 to-purple-400',
     },
     {
       icon: Zap,
@@ -78,24 +87,30 @@ const Services = () => {
         t('services.optimization.features.2'),
       ],
       gradient: 'from-yellow-500 to-orange-500',
-      hoverGradient: 'from-yellow-400 to-orange-400'
+      hoverGradient: 'from-yellow-400 to-orange-400',
     },
   ];
 
   return (
-    <section id="services" className="py-20 px-6 relative overflow-hidden border-b border-purple-800/30">
+    <section
+      id="services"
+      className="py-20 px-6 relative overflow-hidden border-b border-purple-800/30"
+    >
       {/* Subtle gradient overlay for section distinction */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/20 via-transparent to-purple-900/20 pointer-events-none" />
       {/* Hexagonal Pattern Background */}
       <div className="absolute inset-0 opacity-8">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
             radial-gradient(circle at 25% 25%, rgba(249, 115, 22, 0.1) 2px, transparent 2px),
             radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 2px, transparent 2px)
           `,
-          backgroundSize: '50px 50px',
-          animation: 'grid-move 25s linear infinite reverse'
-        }}></div>
+            backgroundSize: '50px 50px',
+            animation: 'grid-move 25s linear infinite reverse',
+          }}
+        ></div>
       </div>
 
       {/* Rotating Gears */}
@@ -109,8 +124,10 @@ const Services = () => {
               height: `${60 + i * 20}px`,
               left: `${20 + i * 15}%`,
               top: `${10 + i * 12}%`,
-              animation: `rotate-slow ${15 + i * 3}s linear infinite ${i % 2 === 0 ? '' : 'reverse'}`,
-              transform: 'rotate(0deg)'
+              animation: `rotate-slow ${15 + i * 3}s linear infinite ${
+                i % 2 === 0 ? '' : 'reverse'
+              }`,
+              transform: 'rotate(0deg)',
             }}
           >
             <div className="absolute inset-2 border border-orange-400/5 rounded-full"></div>
@@ -122,7 +139,7 @@ const Services = () => {
                   left: '50%',
                   top: '-6px',
                   transform: `translateX(-50%) rotate(${j * 45}deg)`,
-                  transformOrigin: '50% 50px'
+                  transformOrigin: '50% 50px',
                 }}
               ></div>
             ))}
@@ -133,8 +150,14 @@ const Services = () => {
       {/* Innovation Orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-orange-500/25 to-red-500/25 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-35 animate-pulse" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute top-3/4 right-3/4 w-72 h-72 bg-gradient-to-br from-amber-500/15 to-yellow-500/15 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div
+          className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-35 animate-pulse"
+          style={{ animationDelay: '3s' }}
+        ></div>
+        <div
+          className="absolute top-3/4 right-3/4 w-72 h-72 bg-gradient-to-br from-amber-500/15 to-yellow-500/15 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"
+          style={{ animationDelay: '1.5s' }}
+        ></div>
       </div>
 
       {/* Circuit Lines */}
@@ -149,8 +172,10 @@ const Services = () => {
               left: `${Math.random() * 80}%`,
               top: `${Math.random() * 100}%`,
               transform: `rotate(${Math.random() * 360}deg)`,
-              animation: `pulse-glow ${4 + Math.random() * 3}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 3}s`
+              animation: `pulse-glow ${
+                4 + Math.random() * 3
+              }s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 3}s`,
             }}
           >
             <div className="absolute w-2 h-2 bg-orange-400/40 rounded-full -left-1 -top-0.5"></div>
@@ -168,31 +193,50 @@ const Services = () => {
             </h2>
             <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 blur-2xl rounded-full opacity-50"></div>
           </div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed backdrop-blur-none bg-white/5 p-6 rounded-2xl border border-white/10">
             {t('services.subtitle')}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 auto-rows-fr">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <div key={service.title} className="group relative">
-                <div className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200`}></div>
                 <div
-                  className="relative glass-card p-8 hover:scale-[1.01] transition-all duration-500 hover:shadow-xl"
+                  className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200`}
+                ></div>
+                <div
+                  className="relative glass-card p-8 group-hover:scale-[1.01] transition-all duration-500 hover:shadow-xl backdrop-blur-none h-full"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className={`relative w-20 h-20 bg-gradient-to-r ${service.gradient} rounded-full flex items-center justify-center mb-6 group-hover:rotate-3 transition-transform duration-500`}>
-                    <Icon className="w-10 h-10 text-white" />
-                    <div className={`absolute inset-0 bg-gradient-to-r ${service.hoverGradient} rounded-full blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-500`}></div>
+                  <div className="w-[80px] h-[80px] mx-auto mb-6">
+                    <div className="w-full h-full relative">
+                      <div 
+                        className={`absolute inset-0 bg-gradient-to-r ${service.gradient} rounded-full flex items-center justify-center group-hover:rotate-3 transition-transform duration-500`}
+                      >
+                        <Icon className="w-10 h-10 text-white relative z-10" />
+                      </div>
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-r ${service.hoverGradient} rounded-full blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
+                      ></div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-indigo-200 transition-colors duration-300 backdrop-blur-none">{service.title}</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-400 transition-colors duration-300 backdrop-blur-none">{service.description}</p>
-                  <ul className="space-y-3">
+                  <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-indigo-200 transition-colors duration-300 backdrop-blur-none">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-400 transition-colors duration-300 backdrop-blur-none">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-3 backdrop-blur-none">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300 group-hover:text-gray-300 transition-colors duration-300 backdrop-blur-none">
-                        <div className={`w-3 h-3 bg-gradient-to-r ${service.gradient} rounded-full mr-3 group-hover:scale-105 transition-transform duration-300`}></div>
+                      <li
+                        key={featureIndex}
+                        className="flex items-center text-gray-300 group-hover:text-gray-300 transition-colors duration-300 backdrop-blur-none"
+                      >
+                        <div
+                          className={`min-w-[12px] min-h-[12px] w-3 h-3 bg-gradient-to-r ${service.gradient} rounded-full mr-3 flex-shrink-0 group-hover:scale-105 transition-transform duration-300`}
+                        ></div>
                         {feature}
                       </li>
                     ))}
@@ -209,7 +253,11 @@ const Services = () => {
             size="lg"
             leftIcon={Rocket}
             rightIcon={Star}
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() =>
+              document
+                .getElementById('contact')
+                ?.scrollIntoView({ behavior: 'smooth' })
+            }
           >
             {t('services.cta')}
           </AnimatedButton>
