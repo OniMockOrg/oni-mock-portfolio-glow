@@ -64,7 +64,6 @@ const en: LanguageFile = {
     'services.automation.feature2':
       'Transparent and secure winner selection system',
     'services.automation.feature3': 'Real-time reports and detailed analytics',
-    'services.automation.cta': 'Learn More',
     'services.learnMore': 'Learn More',
 
     // Projects
@@ -83,8 +82,6 @@ const en: LanguageFile = {
     'contact.subtitle':
       "Interested in collaborating or have an amazing idea? Let's transform concepts into reality together.",
     'contact.ready': 'Ready for the next project?',
-    'contact.description':
-      "Whether it's a freelance project, job opportunity, or just a chat about technology, I'm always open to new possibilities.",
     'contact.button': 'Get In Touch',
     'contact.email': 'Email',
     'contact.location': 'Location',
@@ -98,8 +95,10 @@ const en: LanguageFile = {
     'contact.form.message.placeholder': 'Tell me about your project',
     'contact.form.submit': 'Send message',
     'contact.form.sending': 'Sending...',
-    'contact.form.success': '✅ Your message was sent successfully! I will get in touch soon.',
-    'contact.form.error': '❌ There was an error sending your message. Please check if you have configured EmailJS correctly or try again later.',
+    'contact.form.success':
+      '✅ Your message was sent successfully! I will get in touch soon.',
+    'contact.form.error':
+      '❌ There was an error sending your message. Please check if you have configured EmailJS correctly or try again later.',
 
     // Footer
     'footer.text': '© {year} OniMock. Built with ❤️ and lots of coffee.',
@@ -115,7 +114,8 @@ const en: LanguageFile = {
 
     // AlphaBot Features
     'alphabot.features.title': 'Revolutionary Features',
-    'alphabot.features.subtitle': 'Cutting-edge technology that transforms how you manage your projects',
+    'alphabot.features.subtitle':
+      'Cutting-edge technology that transforms how you manage your projects',
     'alphabot.features.automation.title': 'Complete Automation',
     'alphabot.features.automation.description':
       'Fully automated system to manage raffles from start to finish.',
@@ -127,7 +127,8 @@ const en: LanguageFile = {
       'Complete analysis and real-time reports for better management.',
 
     // AlphaBot informative sections
-    'alphabot.sections.automation.title': 'Raffle Registration Automation with Alphabot',
+    'alphabot.sections.automation.title':
+      'Raffle Registration Automation with Alphabot',
     'alphabot.sections.automation.description':
       'Maximize your chances with efficiency! Automate registrations on the Alphabot platform, saving time and increasing your chances of winning NFTs.',
     'alphabot.sections.automation.feature1':
