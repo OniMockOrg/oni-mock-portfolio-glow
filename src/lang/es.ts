@@ -45,9 +45,21 @@ const es: LanguageFile = {
     'about.interests.performance.desc': 'Optimización y alto rendimiento',
     'about.interests.opensource.title': 'Código Abierto',
     'about.interests.opensource.desc': 'Contribuyendo a la comunidad',
+    'about.stats.location': 'Ubicación',
+    'about.stats.country': 'Brasil',
+    'about.stats.experience': 'Experiencia',
+    'about.stats.years': '3+ Años',
+    'about.stats.focus': 'Enfoque',
+    'about.stats.fullstack': 'Full Stack',
 
     // Services
     'services.title': 'Servicios',
+    'about.stats.location': 'Ubicación',
+    'about.stats.country': 'Brasil',
+    'about.stats.experience': 'Experiencia',
+    'about.stats.years': '{years} Años',
+    'about.stats.focus': 'Enfoque',
+    'about.stats.fullstack': 'Full Stack',
     'services.subtitle':
       'Soluciones especializadas en automatización de rifas y gestión digital',
     'services.automation.title': 'Automatización de Rifas',

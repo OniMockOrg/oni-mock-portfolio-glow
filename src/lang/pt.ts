@@ -45,6 +45,12 @@ const pt: LanguageFile = {
     'about.interests.performance.desc': 'Otimização e alta performance',
     'about.interests.opensource.title': 'Open Source',
     'about.interests.opensource.desc': 'Contribuindo para a comunidade',
+    'about.stats.location': 'Localização',
+    'about.stats.country': 'Brasil',
+    'about.stats.experience': 'Experiência',
+    'about.stats.years': '{years} Anos',
+    'about.stats.focus': 'Foco',
+    'about.stats.fullstack': 'Full Stack',
 
     // Services
     'services.title': 'Serviços',
