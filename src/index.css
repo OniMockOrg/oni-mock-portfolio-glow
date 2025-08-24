@@ -108,7 +108,7 @@
   }
 
   .glass-card {
-    @apply backdrop-blur-md bg-white/5 border border-white/10 rounded-xl shadow-2xl transition-all duration-300;
+    @apply bg-white/5 border border-white/10 rounded-xl shadow-2xl transition-all duration-300;
     box-shadow:
       0 8px 32px rgba(0, 0, 0, 0.3),
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -340,4 +340,46 @@ html {
 
 .hover-glow:hover {
   filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+}
+
+/* Custom animations for About section */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
 }
