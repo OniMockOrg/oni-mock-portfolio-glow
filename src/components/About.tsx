@@ -182,10 +182,10 @@ const About = () => {
                     <Icon className="w-10 h-10 text-white" />
                     <div className={`absolute inset-0 bg-gradient-to-r ${gradients[index].hoverGradient} rounded-full blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-500`}></div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-indigo-200 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-indigo-200 transition-colors duration-300 backdrop-blur-none">
                     {interest.title}
                   </h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-400 transition-colors duration-300">{interest.desc}</p>
+                  <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-400 transition-colors duration-300 backdrop-blur-none">{interest.desc}</p>
                 </div>
               </div>
             );

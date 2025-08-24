@@ -187,11 +187,11 @@ const Services = () => {
                     <Icon className="w-10 h-10 text-white" />
                     <div className={`absolute inset-0 bg-gradient-to-r ${service.hoverGradient} rounded-full blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-500`}></div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-indigo-200 transition-colors duration-300">{service.title}</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-400 transition-colors duration-300">{service.description}</p>
+                  <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-indigo-200 transition-colors duration-300 backdrop-blur-none">{service.title}</h3>
+                  <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-400 transition-colors duration-300 backdrop-blur-none">{service.description}</p>
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300 group-hover:text-gray-300 transition-colors duration-300">
+                      <li key={featureIndex} className="flex items-center text-gray-300 group-hover:text-gray-300 transition-colors duration-300 backdrop-blur-none">
                         <div className={`w-3 h-3 bg-gradient-to-r ${service.gradient} rounded-full mr-3 group-hover:scale-105 transition-transform duration-300`}></div>
                         {feature}
                       </li>
