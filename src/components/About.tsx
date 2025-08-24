@@ -43,7 +43,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-6 relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="py-20 px-6 relative overflow-hidden">
       {/* Code Matrix Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

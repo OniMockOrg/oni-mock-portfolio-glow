@@ -124,7 +124,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+      className="py-20 relative overflow-hidden"
     >
       {/* Creative Mesh Background */}
       <div className="absolute inset-0 opacity-6">

@@ -83,7 +83,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="py-20 px-6 relative overflow-hidden">
       {/* Hexagonal Pattern Background */}
       <div className="absolute inset-0 opacity-8">
         <div className="absolute inset-0" style={{
