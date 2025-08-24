@@ -716,15 +716,15 @@ const Hero = () => {
 
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(8)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-60"
+            className="absolute w-1.5 h-1.5 bg-gradient-to-r from-purple-400/40 to-pink-400/40 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
+              left: `${(i / 8) * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 2}s`
+              animation: `float ${15 + Math.random() * 10}s ease-in-out infinite`,
+              animationDelay: `${i * 2}s`
             }}
           ></div>
         ))}

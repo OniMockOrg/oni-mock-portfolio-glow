@@ -162,12 +162,12 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="group relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative glass-card p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6 group-hover:text-blue-300 transition-colors duration-300">{t('contact.ready')}</h3>
                 <div className="space-y-6">
-                  <div className="flex items-center gap-4 group/item hover:scale-105 transition-transform duration-300">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover/item:rotate-12 transition-transform duration-300">
+                  <div className="flex items-center gap-4 group/item hover:scale-[1.01] transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover/item:rotate-3 transition-transform duration-300">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -175,7 +175,7 @@ const Contact = () => {
                       <p className="text-white font-medium group-hover/item:text-blue-300 transition-colors duration-300">onimock@gmail.com</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4 group/item hover:scale-105 transition-transform duration-300">
+                  <div className="flex items-center gap-4 group/item hover:scale-[1.01] transition-transform duration-300">
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover/item:rotate-12 transition-transform duration-300">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
@@ -190,7 +190,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="group relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative glass-card p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6 group-hover:text-purple-300 transition-colors duration-300">Social Links</h3>
                 <div className="flex gap-4">
@@ -202,7 +202,7 @@ const Contact = () => {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`p-4 rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110 hover:rotate-12 ${link.color}`}
+                        className={`p-4 rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-102 hover:rotate-12 ${link.color}`}
                         aria-label={link.label}
                       >
                         <Icon className="w-6 h-6" />
@@ -216,7 +216,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="group relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative glass-card p-8">
               <h3 className="text-2xl font-semibold text-white mb-6 group-hover:text-cyan-300 transition-colors duration-300">{t('contact.button')}</h3>
               <form onSubmit={handleSubmit} className="space-y-6">

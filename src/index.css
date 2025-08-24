@@ -202,10 +202,20 @@ html {
 /* Additional animations for modernized components */
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.2;
+  }
+  25% {
+    transform: translateY(-4px) translateX(2px);
+    opacity: 0.3;
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-6px) translateX(-2px);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-2px) translateX(1px);
+    opacity: 0.3;
   }
 }
 
@@ -301,7 +311,7 @@ html {
 }
 
 .animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
+  animation: pulse-glow 8s ease-in-out infinite;
 }
 
 .animate-gradient-x {

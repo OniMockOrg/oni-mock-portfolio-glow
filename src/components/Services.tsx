@@ -178,21 +178,21 @@ const Services = () => {
             const Icon = service.icon;
             return (
               <div key={service.title} className="group relative">
-                <div className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200`}></div>
+                <div className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200`}></div>
                 <div
-                  className="relative glass-card p-8 hover:scale-105 transition-all duration-500 hover:shadow-2xl"
+                  className="relative glass-card p-8 hover:scale-[1.01] transition-all duration-500 hover:shadow-xl"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className={`relative w-20 h-20 bg-gradient-to-r ${service.gradient} rounded-full flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-500`}>
+                  <div className={`relative w-20 h-20 bg-gradient-to-r ${service.gradient} rounded-full flex items-center justify-center mb-6 group-hover:rotate-3 transition-transform duration-500`}>
                     <Icon className="w-10 h-10 text-white" />
-                    <div className={`absolute inset-0 bg-gradient-to-r ${service.hoverGradient} rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500`}></div>
+                    <div className={`absolute inset-0 bg-gradient-to-r ${service.hoverGradient} rounded-full blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-500`}></div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-indigo-300 transition-colors duration-300">{service.title}</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">{service.description}</p>
+                  <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-indigo-200 transition-colors duration-300">{service.title}</h3>
+                  <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-400 transition-colors duration-300">{service.description}</p>
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                        <div className={`w-3 h-3 bg-gradient-to-r ${service.gradient} rounded-full mr-3 group-hover:scale-110 transition-transform duration-300`}></div>
+                      <li key={featureIndex} className="flex items-center text-gray-300 group-hover:text-gray-300 transition-colors duration-300">
+                        <div className={`w-3 h-3 bg-gradient-to-r ${service.gradient} rounded-full mr-3 group-hover:scale-105 transition-transform duration-300`}></div>
                         {feature}
                       </li>
                     ))}

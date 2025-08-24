@@ -162,24 +162,30 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {interests.map((interest, index) => {
             const Icon = interest.icon;
+            const gradients = [
+              { gradient: 'from-blue-500 to-cyan-500', hoverGradient: 'from-blue-400 to-cyan-400' },
+              { gradient: 'from-purple-500 to-pink-500', hoverGradient: 'from-purple-400 to-pink-400' },
+              { gradient: 'from-green-500 to-emerald-500', hoverGradient: 'from-green-400 to-emerald-400' },
+              { gradient: 'from-orange-500 to-red-500', hoverGradient: 'from-orange-400 to-red-400' }
+            ];
             return (
               <div key={interest.title} className="group relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                <div className={`absolute -inset-1 bg-gradient-to-r ${gradients[index].gradient} rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200`}></div>
                 <div
-                  className="relative glass-card p-6 text-center hover:scale-105 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/25 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                  className="relative glass-card p-8 hover:scale-[1.01] transition-all duration-500 hover:shadow-xl"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="relative w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-500">
-                    <Icon className="w-8 h-8 text-white" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
+                  <div className={`relative w-20 h-20 bg-gradient-to-r ${gradients[index].gradient} rounded-full flex items-center justify-center mb-6 group-hover:rotate-3 transition-transform duration-500`}>
+                    <Icon className="w-10 h-10 text-white" />
+                    <div className={`absolute inset-0 bg-gradient-to-r ${gradients[index].hoverGradient} rounded-full blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-500`}></div>
                   </div>
-                  <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-indigo-200 transition-colors duration-300">
                     {interest.title}
-                  </h4>
-                  <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">{interest.desc}</p>
+                  </h3>
+                  <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-400 transition-colors duration-300">{interest.desc}</p>
                 </div>
               </div>
             );
