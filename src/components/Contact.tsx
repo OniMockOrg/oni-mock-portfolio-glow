@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Mail, MapPin, Send, MessageCircle, Rocket, Star } from 'lucide-react';
 import { SiDiscord, SiGithub, SiX, SiTelegram } from 'react-icons/si';
 import { useLanguage } from '../hooks/use-language';
 import { AnimatedButton } from './ui/animated-button';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../config/emailjs';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -13,6 +15,9 @@ const Contact = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
 
   const handleChange = (e) => {
     setFormData({
@@ -24,10 +29,57 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setSubmitStatus('idle');
+
+    // Verificar se as variáveis de ambiente estão configuradas
+    if (
+      !EMAILJS_CONFIG.SERVICE_ID ||
+      !EMAILJS_CONFIG.TEMPLATE_ID ||
+      !EMAILJS_CONFIG.PUBLIC_KEY
+    ) {
+      console.error(
+        'EmailJS não está configurado. Verifique as variáveis de ambiente.'
+      );
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      // Preparar os dados do template para o EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      };
+
+      // Enviar email usando EmailJS
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAILJS_CONFIG.PUBLIC_KEY
+      );
+
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+
+      // Reset status after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus('idle');
+      }, 5000);
+    } catch (error) {
+      console.error('Erro ao enviar email:', error);
+      setSubmitStatus('error');
+
+      // Reset status after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus('idle');
+      }, 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const socialLinks = [
@@ -322,12 +374,28 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 disabled:from-gray-500 disabled:to-gray-600 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-cyan-500/25 disabled:cursor-not-allowed disabled:hover:scale-100"
+                  className={`w-full flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg ${
+                    submitStatus === 'success'
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600'
+                      : submitStatus === 'error'
+                      ? 'bg-gradient-to-r from-red-500 to-rose-500 hover:from-red-600 hover:to-rose-600'
+                      : 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600'
+                  } disabled:from-gray-500 disabled:to-gray-600 text-white`}
                 >
                   {isSubmitting ? (
                     <div className="flex items-center gap-2">
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       {t('contact.form.sending')}
+                    </div>
+                  ) : submitStatus === 'success' ? (
+                    <div className="flex items-center gap-2">
+                      <Star className="w-5 h-5" />
+                      Enviado com sucesso!
+                    </div>
+                  ) : submitStatus === 'error' ? (
+                    <div className="flex items-center gap-2">
+                      <MessageCircle className="w-5 h-5" />
+                      Erro ao enviar. Tente novamente.
                     </div>
                   ) : (
                     <>
@@ -336,6 +404,23 @@ const Contact = () => {
                     </>
                   )}
                 </button>
+
+                {/* Mensagem de status adicional */}
+                {submitStatus === 'success' && (
+                  <div className="mt-4 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
+                    <p className="text-green-400 text-sm text-center">
+                      {t('contact.form.success')}
+                    </p>
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="mt-4 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+                    <p className="text-red-400 text-sm text-center">
+                      {t('contact.form.error')}
+                    </p>
+                  </div>
+                )}
               </form>
             </div>
           </div>

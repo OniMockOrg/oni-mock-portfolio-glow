@@ -98,6 +98,8 @@ const en: LanguageFile = {
     'contact.form.message.placeholder': 'Tell me about your project',
     'contact.form.submit': 'Send message',
     'contact.form.sending': 'Sending...',
+    'contact.form.success': '✅ Your message was sent successfully! I will get in touch soon.',
+    'contact.form.error': '❌ There was an error sending your message. Please check if you have configured EmailJS correctly or try again later.',
 
     // Footer
     'footer.text': '© {year} OniMock. Built with ❤️ and lots of coffee.',
