@@ -43,7 +43,9 @@ const About = () => {
   ];
 
   return (
-    <section className="py-20 px-6 relative overflow-hidden">
+    <section id="about" className="py-20 px-6 relative overflow-hidden border-b border-purple-800/30">
+      {/* Subtle gradient overlay for section distinction */}
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 via-transparent to-purple-900/10 pointer-events-none" />
       {/* Code Matrix Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

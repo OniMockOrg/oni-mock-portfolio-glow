@@ -124,8 +124,10 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 relative overflow-hidden"
+      className="py-20 px-6 relative overflow-hidden border-b border-purple-800/30"
     >
+      {/* Subtle gradient overlay for section distinction */}
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-900/15 via-slate-900/10 to-purple-900/15 pointer-events-none" />
       {/* Creative Mesh Background */}
       <div className="absolute inset-0 opacity-6">
         <div

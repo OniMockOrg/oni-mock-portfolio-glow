@@ -19,9 +19,13 @@ const Portfolio = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <Hero />
+      <div className="h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
       <About />
+      <div className="h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
       <Services />
+      <div className="h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
       <Projects />
+      <div className="h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
       <Contact />
 
       {/* Footer */}
