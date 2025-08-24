@@ -100,11 +100,10 @@ export const AlphaBot = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
-              Recursos Revolucionários
+              {t('alphabot.features.title')}
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tecnologia de ponta que transforma a forma como você gerencia seus
-              projetos
+              {t('alphabot.features.subtitle')}
             </p>
           </div>
 

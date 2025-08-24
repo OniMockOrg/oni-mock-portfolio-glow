@@ -48,18 +48,12 @@ const es: LanguageFile = {
     'about.stats.location': 'Ubicación',
     'about.stats.country': 'Brasil',
     'about.stats.experience': 'Experiencia',
-    'about.stats.years': '3+ Años',
+    'about.stats.years': '{years} Años',
     'about.stats.focus': 'Enfoque',
     'about.stats.fullstack': 'Full Stack',
 
     // Services
     'services.title': 'Servicios',
-    'about.stats.location': 'Ubicación',
-    'about.stats.country': 'Brasil',
-    'about.stats.experience': 'Experiencia',
-    'about.stats.years': '{years} Años',
-    'about.stats.focus': 'Enfoque',
-    'about.stats.fullstack': 'Full Stack',
     'services.subtitle':
       'Soluciones especializadas en automatización de rifas y gestión digital',
     'services.automation.title': 'Automatización de Rifas',
@@ -119,6 +113,8 @@ const es: LanguageFile = {
     'alphabot.hero.demo': 'Ver Demo',
 
     // AlphaBot Features
+    'alphabot.features.title': 'Características Revolucionarias',
+    'alphabot.features.subtitle': 'Tecnología de vanguardia que transforma la forma en que gestionas tus proyectos',
     'alphabot.features.automation.title': 'Automatización Completa',
     'alphabot.features.automation.description':
       'Sistema totalmente automatizado para gestionar sorteos de principio a fin.',

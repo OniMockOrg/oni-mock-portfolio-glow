@@ -113,6 +113,8 @@ const pt: LanguageFile = {
     'alphabot.hero.demo': 'Ver Demo',
 
     // AlphaBot Features
+    'alphabot.features.title': 'Recursos Revolucionários',
+    'alphabot.features.subtitle': 'Tecnologia de ponta que transforma a forma como você gerencia seus projetos',
     'alphabot.features.automation.title': 'Totalmente Automatizado',
     'alphabot.features.automation.description':
       'Sistema completamente automatizado para gerenciar sorteios do início ao fim.',

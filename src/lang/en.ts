@@ -112,6 +112,8 @@ const en: LanguageFile = {
     'alphabot.hero.demo': 'View Demo',
 
     // AlphaBot Features
+    'alphabot.features.title': 'Revolutionary Features',
+    'alphabot.features.subtitle': 'Cutting-edge technology that transforms how you manage your projects',
     'alphabot.features.automation.title': 'Complete Automation',
     'alphabot.features.automation.description':
       'Fully automated system to manage raffles from start to finish.',
@@ -123,8 +125,7 @@ const en: LanguageFile = {
       'Complete analysis and real-time reports for better management.',
 
     // AlphaBot informative sections
-    'alphabot.sections.automation.title':
-      'Raffle Registration Automation with Alphabot',
+    'alphabot.sections.automation.title': 'Raffle Registration Automation with Alphabot',
     'alphabot.sections.automation.description':
       'Maximize your chances with efficiency! Automate registrations on the Alphabot platform, saving time and increasing your chances of winning NFTs.',
     'alphabot.sections.automation.feature1':
