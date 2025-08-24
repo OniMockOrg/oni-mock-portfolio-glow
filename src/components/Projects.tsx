@@ -280,7 +280,7 @@ const Projects = () => {
                     {repo.topics.slice(0, 3).map((topic) => (
                       <span
                         key={topic}
-                        className={`px-2 py-1 bg-gradient-to-r ${gradient.main} bg-opacity-20 text-blue-300 text-xs rounded-md`}
+                        className={`px-2 py-1 bg-gradient-to-r ${gradient.main} text-white text-xs rounded-md font-medium`}
                       >
                         {topic}
                       </span>
