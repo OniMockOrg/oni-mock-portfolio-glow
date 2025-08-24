@@ -200,10 +200,10 @@ const TextComponent: React.FC<TextComponentProps> = ({
             variant="gradient"
             size="md"
             leftIcon={Rocket}
+            rightIcon={Star}
             className="font-bold"
           >
             {t('alphabot.sections.learnMore')}
-            <Star className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 ml-3" />
           </AnimatedButton>
         </div>
       )}
