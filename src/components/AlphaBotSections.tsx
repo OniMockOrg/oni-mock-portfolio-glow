@@ -124,8 +124,9 @@ const ImageComponent: React.FC<ImageComponentProps> = ({
     className={`flex-1 flex justify-center items-center transform transition-all duration-700 ease-out will-change-transform ${imageAnimationClass}`}
   >
     <div className="relative group">
-      {/* Enhanced Glow Effect */}
-      <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/30 via-pink-500/30 to-cyan-500/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-75 group-hover:opacity-100"></div>
+      {/* Enhanced Multi-layer Glow Effect */}
+      <div className="absolute -inset-6 bg-gradient-to-r from-purple-500/40 via-pink-500/40 to-cyan-500/40 rounded-3xl blur-3xl group-hover:blur-[40px] transition-all duration-700 opacity-60 group-hover:opacity-90 animate-pulse"></div>
+      <div className="absolute -inset-3 bg-gradient-to-r from-blue-400/30 via-purple-400/30 to-teal-400/30 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-50 group-hover:opacity-75"></div>
 
       {/* Discord Emoji - For first and second sections */}
       {(isFirstSection || isSecondSection) && (
@@ -139,33 +140,80 @@ const ImageComponent: React.FC<ImageComponentProps> = ({
         </div>
       )}
 
-      {/* Glass Container */}
+      {/* Premium Glass Container */}
       <div
-        className={`relative w-80 h-80 bg-gradient-to-br ${gradientFrom} ${gradientTo} rounded-3xl flex items-center justify-center shadow-2xl border border-white/20 backdrop-blur-xl group-hover:shadow-purple-500/25 transition-all duration-500 group-hover:scale-105 overflow-hidden`}
+        className={`relative w-80 h-80 bg-gradient-to-br ${gradientFrom} ${gradientTo} rounded-3xl flex items-center justify-center shadow-2xl border border-white/30 backdrop-blur-xl group-hover:shadow-purple-500/40 transition-all duration-700 group-hover:scale-105 overflow-hidden`}
+        style={{
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+        }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-3xl"></div>
+        {/* Enhanced glass effect layers */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/25 via-white/10 to-transparent rounded-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-white/10 via-transparent to-white/5 rounded-3xl"></div>
+        
+        {/* Floating particles animation */}
+        <div className="absolute inset-0 overflow-hidden rounded-3xl">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/40 rounded-full animate-ping" style={{animationDelay: '0s', animationDuration: '3s'}}></div>
+          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-cyan-300/60 rounded-full animate-ping" style={{animationDelay: '1s', animationDuration: '4s'}}></div>
+          <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-purple-300/50 rounded-full animate-ping" style={{animationDelay: '2s', animationDuration: '5s'}}></div>
+        </div>
 
         {isFirstSection ? (
-          <img
-            src="/alphabot_01.jpg"
-            alt="AlphaBot"
-            className="w-full h-full object-cover rounded-3xl group-hover:scale-110 transition-transform duration-500"
-          />
+          <div className="relative w-full h-full rounded-3xl overflow-hidden">
+            {/* Enhanced Background Glow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-cyan-500/20 rounded-3xl blur-xl"></div>
+            
+            {/* Image with enhanced effects */}
+            <img
+              src="/alphabot_01.jpg"
+              alt="AlphaBot"
+              className="w-full h-full object-cover rounded-3xl group-hover:scale-110 transition-all duration-700 ease-out filter brightness-110 contrast-110 saturate-110 group-hover:brightness-125 group-hover:saturate-125 shadow-2xl"
+              style={{
+                filter: 'drop-shadow(0 25px 50px rgba(59, 130, 246, 0.3)) drop-shadow(0 0 30px rgba(147, 51, 234, 0.2))'
+              }}
+            />
+            
+            {/* Overlay gradient for depth */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl"></div>
+            
+            {/* Animated border */}
+            <div className="absolute inset-0 rounded-3xl border-2 border-gradient-to-r from-blue-400/50 via-purple-400/50 to-cyan-400/50 group-hover:from-blue-400/80 group-hover:via-purple-400/80 group-hover:to-cyan-400/80 transition-all duration-500"></div>
+          </div>
         ) : isSecondSection ? (
-          <img
-            src="/alphabot_02.jpg"
-            alt="AlphaBot 2"
-            className="w-full h-full object-cover rounded-3xl group-hover:scale-110 transition-transform duration-500"
-          />
+          <div className="relative w-full h-full rounded-3xl overflow-hidden">
+            {/* Enhanced Background Glow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-teal-500/20 to-blue-500/20 rounded-3xl blur-xl"></div>
+            
+            {/* Image with enhanced effects */}
+            <img
+              src="/alphabot_02.jpg"
+              alt="AlphaBot 2"
+              className="w-full h-full object-cover rounded-3xl group-hover:scale-110 transition-all duration-700 ease-out filter brightness-110 contrast-110 saturate-110 group-hover:brightness-125 group-hover:saturate-125 shadow-2xl"
+              style={{
+                filter: 'drop-shadow(0 25px 50px rgba(16, 185, 129, 0.3)) drop-shadow(0 0 30px rgba(20, 184, 166, 0.2))'
+              }}
+            />
+            
+            {/* Overlay gradient for depth */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl"></div>
+            
+            {/* Animated border */}
+            <div className="absolute inset-0 rounded-3xl border-2 border-gradient-to-r from-emerald-400/50 via-teal-400/50 to-blue-400/50 group-hover:from-emerald-400/80 group-hover:via-teal-400/80 group-hover:to-blue-400/80 transition-all duration-500"></div>
+          </div>
         ) : (
           <div className="relative text-white text-7xl drop-shadow-lg group-hover:scale-110 transition-transform duration-500">
             {icon}
           </div>
         )}
 
-        {/* Floating Elements */}
-        <div className="absolute top-4 right-4 bg-gradient-to-r from-white/20 to-white/10 rounded-full p-2 shadow-lg backdrop-blur-sm">
+        {/* Enhanced Floating Elements */}
+        <div className="absolute top-4 right-4 bg-gradient-to-r from-white/30 to-white/15 rounded-full p-2 shadow-xl backdrop-blur-sm border border-white/20 group-hover:scale-110 transition-all duration-300">
           <Sparkles className="w-4 h-4 text-white animate-pulse" />
+        </div>
+        
+        {/* Additional decorative elements */}
+        <div className="absolute bottom-4 left-4 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full p-1.5 shadow-lg backdrop-blur-sm border border-cyan-300/30 group-hover:rotate-12 transition-all duration-500">
+          <Star className="w-3 h-3 text-cyan-200 animate-pulse" style={{animationDelay: '0.5s'}} />
         </div>
       </div>
     </div>
