@@ -1,12 +1,12 @@
 import { useLanguage } from '../hooks/use-language';
 import { useNavigate } from 'react-router-dom';
 import {
-  Bot,
   CheckCircle,
   BarChart3,
   Shield,
   Rocket,
   Star,
+  Bot,
 } from 'lucide-react';
 import { AnimatedButton } from './ui/animated-button';
 
@@ -128,7 +128,11 @@ const Services = () => {
             <div className="relative glass-card p-8 group-hover:scale-[1.02] transition-all duration-500 h-full flex items-center">
               <div className="w-full h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-pink-600/10 animate-pulse"></div>
-                <Bot className="w-32 h-32 text-purple-400 relative z-10 animate-bounce" />
+                <img 
+                  src="/alphabot_example.png" 
+                  alt="AlphaBot Example" 
+                  className="w-[325px] h-[325px] max-w-full max-h-full object-contain rounded-xl border-2 border-purple-400/30 shadow-lg"
+                />
                 <div className="absolute top-4 right-4 w-4 h-4 bg-green-400 rounded-full animate-ping"></div>
                 <div className="absolute bottom-4 left-4 w-6 h-6 bg-blue-400/30 rounded-full animate-pulse"></div>
                 <div className="absolute top-1/2 left-4 w-3 h-3 bg-yellow-400/40 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
@@ -143,7 +147,7 @@ const Services = () => {
               <div className="w-[80px] h-[80px] mx-auto mb-6">
                 <div className="w-full h-full relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center group-hover:rotate-3 transition-transform duration-500">
-                    <Bot className="w-10 h-10 text-white relative z-10" />
+                    <Bot className="w-16 h-16 relative z-10 text-white/80" />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 rounded-full blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
                 </div>

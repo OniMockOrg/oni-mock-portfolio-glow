@@ -82,11 +82,7 @@ export const AlphaBot = () => {
                 {t('alphabot.hero.cta')}
               </AnimatedButton>
 
-              <AnimatedButton
-                variant="outline"
-                size="lg"
-                leftIcon={Brain}
-              >
+              <AnimatedButton variant="outline" size="lg" leftIcon={Brain}>
                 {t('alphabot.hero.demo')}
               </AnimatedButton>
             </div>
