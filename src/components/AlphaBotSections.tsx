@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../hooks/use-language';
 import AnimatedButton from './ui/animated-button';
 import { Bot, Bell, Shield, Sparkles, Rocket, Star } from 'lucide-react';
+import { SiDiscord } from 'react-icons/si';
 
 interface SectionProps {
   id: string;
@@ -85,6 +86,8 @@ const Section: React.FC<SectionProps> = ({
             icon={icon}
             gradientFrom={gradientFrom}
             gradientTo={gradientTo}
+            isFirstSection={id === 'automation'}
+            isSecondSection={id === 'notifications'}
           />
           <TextComponent
             textAnimationClass={textAnimationClass}
@@ -105,6 +108,8 @@ interface ImageComponentProps {
   icon: React.ReactNode;
   gradientFrom: string;
   gradientTo: string;
+  isFirstSection?: boolean;
+  isSecondSection?: boolean;
 }
 
 const ImageComponent: React.FC<ImageComponentProps> = ({
@@ -112,6 +117,8 @@ const ImageComponent: React.FC<ImageComponentProps> = ({
   icon,
   gradientFrom,
   gradientTo,
+  isFirstSection = false,
+  isSecondSection = false,
 }) => (
   <div
     className={`flex-1 flex justify-center items-center transform transition-all duration-700 ease-out will-change-transform ${imageAnimationClass}`}
@@ -120,14 +127,41 @@ const ImageComponent: React.FC<ImageComponentProps> = ({
       {/* Enhanced Glow Effect */}
       <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/30 via-pink-500/30 to-cyan-500/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-75 group-hover:opacity-100"></div>
 
+      {/* Discord Emoji - For first and second sections */}
+      {(isFirstSection || isSecondSection) && (
+        <div className="absolute -top-6 -left-6 z-20 transform group-hover:scale-110 transition-all duration-500">
+          <div className="relative">
+            <div className="absolute inset-0 bg-[#5865F2] rounded-full blur-lg opacity-60 animate-pulse"></div>
+            <div className="relative bg-[#5865F2] text-white text-lg w-12 h-12 rounded-full flex items-center justify-center shadow-2xl border-2 border-white/30 backdrop-blur-sm hover:shadow-[#5865F2]/50 transition-all duration-300">
+              <SiDiscord className="w-6 h-6" />
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Glass Container */}
       <div
-        className={`relative w-80 h-80 bg-gradient-to-br ${gradientFrom} ${gradientTo} rounded-3xl flex items-center justify-center shadow-2xl border border-white/20 backdrop-blur-xl group-hover:shadow-purple-500/25 transition-all duration-500 group-hover:scale-105`}
+        className={`relative w-80 h-80 bg-gradient-to-br ${gradientFrom} ${gradientTo} rounded-3xl flex items-center justify-center shadow-2xl border border-white/20 backdrop-blur-xl group-hover:shadow-purple-500/25 transition-all duration-500 group-hover:scale-105 overflow-hidden`}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-3xl"></div>
-        <div className="relative text-white text-7xl drop-shadow-lg group-hover:scale-110 transition-transform duration-500">
-          {icon}
-        </div>
+
+        {isFirstSection ? (
+          <img
+            src="/alphabot_01.jpg"
+            alt="AlphaBot"
+            className="w-full h-full object-cover rounded-3xl group-hover:scale-110 transition-transform duration-500"
+          />
+        ) : isSecondSection ? (
+          <img
+            src="/alphabot_02.jpg"
+            alt="AlphaBot 2"
+            className="w-full h-full object-cover rounded-3xl group-hover:scale-110 transition-transform duration-500"
+          />
+        ) : (
+          <div className="relative text-white text-7xl drop-shadow-lg group-hover:scale-110 transition-transform duration-500">
+            {icon}
+          </div>
+        )}
 
         {/* Floating Elements */}
         <div className="absolute top-4 right-4 bg-gradient-to-r from-white/20 to-white/10 rounded-full p-2 shadow-lg backdrop-blur-sm">
