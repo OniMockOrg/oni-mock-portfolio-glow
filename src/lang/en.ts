@@ -88,6 +88,7 @@ const en: LanguageFile = {
     'contact.location': 'Location',
     'contact.social': 'Social Links',
     'contact.form.name': 'Name',
+    'contact.form.name.placeholder': 'Your full name',
     'contact.form.email': 'Email',
     'contact.form.email.placeholder': 'your@email.com',
     'contact.form.subject': 'Subject',
@@ -98,8 +99,14 @@ const en: LanguageFile = {
     'contact.form.sending': 'Sending...',
     'contact.form.success':
       '✅ Your message was sent successfully! I will get in touch soon.',
+    'contact.form.success.button': 'Message sent!',
     'contact.form.error':
       '❌ There was an error sending your message. Please check if you have configured EmailJS correctly or try again later.',
+    'contact.form.error.button': 'Error sending. Try again.',
+    'contact.form.validation.name': 'Name must be at least 2 characters long',
+    'contact.form.validation.email': 'Please enter a valid email address',
+    'contact.form.validation.subject': 'Subject must be at least 3 characters long',
+    'contact.form.validation.message': 'Message must be at least 10 characters long',
 
     // Footer
     'footer.text': '© {year} OniMock. Built with ❤️ and lots of coffee.',

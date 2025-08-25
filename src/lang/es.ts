@@ -101,6 +101,13 @@ const es: LanguageFile = {
       '✅ ¡Tu mensaje se envió con éxito! Me pondré en contacto pronto.',
     'contact.form.error':
       '❌ Hubo un error al enviar tu mensaje. Por favor, verifica si has configurado EmailJS correctamente o intenta de nuevo más tarde.',
+    'contact.form.error.button': 'Error al enviar. Inténtalo de nuevo.',
+    'contact.form.success.button': '¡Mensaje enviado!',
+    'contact.form.name.placeholder': 'Tu nombre completo',
+    'contact.form.validation.name': 'El nombre debe tener al menos 2 caracteres',
+    'contact.form.validation.email': 'Por favor, ingresa una dirección de correo válida',
+    'contact.form.validation.subject': 'El asunto debe tener al menos 3 caracteres',
+    'contact.form.validation.message': 'El mensaje debe tener al menos 10 caracteres',
 
     // Pie de página
     'footer.text': '© {year} OniMock. Construido con ❤️ y mucho café.',

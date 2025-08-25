@@ -102,6 +102,13 @@ const ru: LanguageFile = {
       '✅ Ваше сообщение успешно отправлено! Я скоро свяжусь.',
     'contact.form.error':
       '❌ Произошла ошибка при отправке сообщения. Пожалуйста, проверьте, правильно ли настроен EmailJS, или попробуйте снова позже.',
+    'contact.form.error.button': 'Ошибка отправки. Попробуйте снова.',
+    'contact.form.success.button': 'Сообщение отправлено!',
+    'contact.form.name.placeholder': 'Ваше полное имя',
+    'contact.form.validation.name': 'Имя должно содержать не менее 2 символов',
+    'contact.form.validation.email': 'Пожалуйста, введите действительный адрес электронной почты',
+    'contact.form.validation.subject': 'Тема должна содержать не менее 3 символов',
+    'contact.form.validation.message': 'Сообщение должно содержать не менее 10 символов',
 
     // Footer
     'footer.text': '© {year} OniMock. Создано с ❤️ и большим количеством кофе.',

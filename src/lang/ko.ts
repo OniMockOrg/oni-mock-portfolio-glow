@@ -96,6 +96,13 @@ const ko: LanguageFile = {
       '✅ 메시지가 성공적으로 전송되었습니다! 곧 연락드리겠습니다.',
     'contact.form.error':
       '❌ 메시지 전송 중 오류가 발생했습니다. EmailJS 설정을 확인하거나 나중에 다시 시도해주세요.',
+    'contact.form.error.button': '전송 오류. 다시 시도하세요.',
+    'contact.form.success.button': '메시지가 전송되었습니다!',
+    'contact.form.name.placeholder': '성함',
+    'contact.form.validation.name': '이름은 최소 2자 이상이어야 합니다',
+    'contact.form.validation.email': '유효한 이메일 주소를 입력해주세요',
+    'contact.form.validation.subject': '제목은 최소 3자 이상이어야 합니다',
+    'contact.form.validation.message': '메시지는 최소 10자 이상이어야 합니다',
 
     // Footer
     'footer.text': '© {year} OniMock. ❤️와 많은 커피로 제작됨.',

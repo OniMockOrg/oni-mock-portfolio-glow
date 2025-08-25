@@ -95,6 +95,13 @@ const ar: LanguageFile = {
     'contact.form.success': '✅ تم إرسال رسالتك بنجاح! سأتواصل معك قريبًا.',
     'contact.form.error':
       '❌ حدث خطأ أثناء إرسال رسالتك. يرجى التحقق من إعدادات EmailJS أو المحاولة لاحقًا.',
+    'contact.form.error.button': 'فشل الإرسال. حاول مرة أخرى.',
+    'contact.form.success.button': 'تم إرسال الرسالة!',
+    'contact.form.name.placeholder': 'اسمك الكامل',
+    'contact.form.validation.name': 'الاسم يجب أن يحتوي على حرفين على الأقل',
+    'contact.form.validation.email': 'يرجى إدخال عنوان بريد إلكتروني صحيح',
+    'contact.form.validation.subject': 'الموضوع يجب أن يحتوي على 3 أحرف على الأقل',
+    'contact.form.validation.message': 'الرسالة يجب أن تحتوي على 10 أحرف على الأقل',
 
     // Footer
     'footer.text': '© {year} OniMock. تم بناؤه بـ ❤️ والكثير من القهوة.',

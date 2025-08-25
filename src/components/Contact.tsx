@@ -18,16 +18,67 @@ const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'success' | 'error'
   >('idle');
+  const [fieldErrors, setFieldErrors] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
+    
+    // Clear field error when user starts typing
+    if (fieldErrors[name]) {
+      setFieldErrors({
+        ...fieldErrors,
+        [name]: '',
+      });
+    }
+  };
+
+  const validateField = (name: string, value: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    switch (name) {
+      case 'name':
+        return value.length < 2 ? t('contact.form.validation.name') : '';
+      case 'email': {
+        return !emailRegex.test(value) ? t('contact.form.validation.email') : '';
+      }
+      case 'subject':
+        return value.length < 3 ? t('contact.form.validation.subject') : '';
+      case 'message':
+        return value.length < 10 ? t('contact.form.validation.message') : '';
+      default:
+        return '';
+    }
+  };
+
+  const validateForm = () => {
+    const errors = {
+      name: validateField('name', formData.name),
+      email: validateField('email', formData.email),
+      subject: validateField('subject', formData.subject),
+      message: validateField('message', formData.message),
+    };
+    
+    setFieldErrors(errors);
+    return !Object.values(errors).some(error => error !== '');
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Validate form before submitting
+    if (!validateForm()) {
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
@@ -312,9 +363,19 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300 hover:border-cyan-500/50"
-                      placeholder={t('contact.form.name')}
+                      className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300 hover:border-cyan-500/50 focus:bg-gray-800/70 ${
+                        fieldErrors.name 
+                          ? 'border-red-500 focus:ring-red-500' 
+                          : 'border-gray-700 focus:ring-cyan-500'
+                      }`}
+                      placeholder={t('contact.form.name.placeholder')}
+                      aria-describedby={fieldErrors.name ? 'name-error' : undefined}
                     />
+                    {fieldErrors.name && (
+                      <p id="name-error" className="mt-1 text-sm text-red-400">
+                        {fieldErrors.name}
+                      </p>
+                    )}
                   </div>
                   <div>
                     <label
@@ -330,9 +391,19 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300 hover:border-cyan-500/50"
+                      className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300 hover:border-cyan-500/50 focus:bg-gray-800/70 ${
+                        fieldErrors.email 
+                          ? 'border-red-500 focus:ring-red-500' 
+                          : 'border-gray-700 focus:ring-cyan-500'
+                      }`}
                       placeholder={t('contact.form.email.placeholder')}
+                      aria-describedby={fieldErrors.email ? 'email-error' : undefined}
                     />
+                    {fieldErrors.email && (
+                      <p id="email-error" className="mt-1 text-sm text-red-400">
+                        {fieldErrors.email}
+                      </p>
+                    )}
                   </div>
                 </div>
                 <div>
@@ -343,33 +414,67 @@ const Contact = () => {
                     {t('contact.form.subject')}
                   </label>
                   <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300 hover:border-cyan-500/50"
-                    placeholder={t('contact.form.subject.placeholder')}
-                  />
+                       type="text"
+                       id="subject"
+                       name="subject"
+                       value={formData.subject}
+                       onChange={handleChange}
+                       required
+                       className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300 hover:border-cyan-500/50 focus:bg-gray-800/70 ${
+                         fieldErrors.subject 
+                           ? 'border-red-500 focus:ring-red-500' 
+                           : 'border-gray-700 focus:ring-cyan-500'
+                       }`}
+                       placeholder={t('contact.form.subject.placeholder')}
+                       maxLength={100}
+                       aria-describedby={fieldErrors.subject ? 'subject-error' : undefined}
+                     />
+                     {fieldErrors.subject && (
+                       <p id="subject-error" className="mt-1 text-sm text-red-400">
+                         {fieldErrors.subject}
+                       </p>
+                     )}
                 </div>
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-300 mb-2"
-                  >
-                    {t('contact.form.message')}
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400 resize-none transition-all duration-300 hover:border-cyan-500/50"
-                    placeholder={t('contact.form.message.placeholder')}
-                  ></textarea>
+                  <div className="flex justify-between items-center mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-300"
+                    >
+                      {t('contact.form.message')}
+                    </label>
+                    <span className={`text-xs transition-colors duration-300 ${
+                      formData.message.length > 900 
+                        ? 'text-red-400' 
+                        : formData.message.length > 700 
+                        ? 'text-yellow-400' 
+                        : 'text-gray-500'
+                    }`}>
+                      {formData.message.length}/1000
+                    </span>
+                  </div>
+                    <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        rows={6}
+                        className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:border-transparent text-white placeholder-gray-400 resize-none transition-all duration-300 hover:border-cyan-500/50 focus:bg-gray-800/70 ${
+                          fieldErrors.message 
+                            ? 'border-red-500 focus:ring-red-500' 
+                            : 'border-gray-700 focus:ring-cyan-500'
+                        }`}
+                        placeholder={t('contact.form.message.placeholder')}
+                        minLength={10}
+                        maxLength={1000}
+                        aria-describedby={fieldErrors.message ? 'message-error' : undefined}
+                      ></textarea>
+                      {fieldErrors.message && (
+                        <p id="message-error" className="mt-1 text-sm text-red-400">
+                          {fieldErrors.message}
+                        </p>
+                      )}
                 </div>
                 <button
                   type="submit"
@@ -390,12 +495,12 @@ const Contact = () => {
                   ) : submitStatus === 'success' ? (
                     <div className="flex items-center gap-2">
                       <Star className="w-5 h-5" />
-                      Enviado com sucesso!
+                      {t('contact.form.success.button')}
                     </div>
                   ) : submitStatus === 'error' ? (
                     <div className="flex items-center gap-2">
                       <MessageCircle className="w-5 h-5" />
-                      Erro ao enviar. Tente novamente.
+                      {t('contact.form.error.button')}
                     </div>
                   ) : (
                     <>

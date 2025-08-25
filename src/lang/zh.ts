@@ -93,6 +93,13 @@ const zh: LanguageFile = {
     'contact.form.success': '✅ 您的消息已成功发送！我会尽快联系您。',
     'contact.form.error':
       '❌ 发送消息时出错。请检查是否正确配置了 EmailJS，或稍后再试。',
+    'contact.form.error.button': '发送失败。请重试。',
+    'contact.form.success.button': '消息已发送！',
+    'contact.form.name.placeholder': '您的全名',
+    'contact.form.validation.name': '姓名至少需要2个字符',
+    'contact.form.validation.email': '请输入有效的电子邮件地址',
+    'contact.form.validation.subject': '主题至少需要3个字符',
+    'contact.form.validation.message': '消息至少需要10个字符',
 
     // Footer
     'footer.text': '© {year} OniMock。用❤️和大量咖啡打造。',

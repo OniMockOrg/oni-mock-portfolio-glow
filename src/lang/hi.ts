@@ -98,6 +98,13 @@ const hi: LanguageFile = {
       '✅ आपका संदेश सफलतापूर्वक भेजा गया! मैं जल्द ही संपर्क करूँगा।',
     'contact.form.error':
       '❌ आपके संदेश को भेजने में त्रुटि हुई। कृपया जाँचें कि क्या आपने EmailJS को सही ढंग से कॉन्फ़िगर किया है या बाद में फिर से प्रयास करें।',
+    'contact.form.error.button': 'भेजना असफल। फिर से कोशिश करें।',
+    'contact.form.success.button': 'संदेश भेजा गया!',
+    'contact.form.name.placeholder': 'आपका पूरा नाम',
+    'contact.form.validation.name': 'नाम में कम से कम 2 अक्षर होने चाहिए',
+    'contact.form.validation.email': 'कृपया एक वैध ईमेल पता दर्ज करें',
+    'contact.form.validation.subject': 'विषय में कम से कम 3 अक्षर होने चाहिए',
+    'contact.form.validation.message': 'संदेश में कम से कम 10 अक्षर होने चाहिए',
 
     // Footer
     'footer.text': '© {year} OniMock। ❤️ और ढेर सारी कॉफी के साथ बनाया गया।',

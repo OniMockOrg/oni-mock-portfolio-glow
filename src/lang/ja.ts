@@ -98,6 +98,13 @@ const ja: LanguageFile = {
       '✅ メッセージが正常に送信されました！近日中にお答えします。',
     'contact.form.error':
       '❌ メッセージ送信中にエラーが発生しました。EmailJSの設定を確認するか、後でもう一度試してください。',
+    'contact.form.error.button': '送信エラー。再試行してください。',
+    'contact.form.success.button': 'メッセージが送信されました！',
+    'contact.form.name.placeholder': 'お名前',
+    'contact.form.validation.name': '名前は2文字以上である必要があります',
+    'contact.form.validation.email': '有効なメールアドレスを入力してください',
+    'contact.form.validation.subject': '件名は3文字以上である必要があります',
+    'contact.form.validation.message': 'メッセージは10文字以上である必要があります',
 
     // Footer
     'footer.text': '© {year} OniMock. 愛とたくさんのコーヒーで作られました。',

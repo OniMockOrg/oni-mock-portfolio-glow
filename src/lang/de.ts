@@ -102,6 +102,13 @@ const de: LanguageFile = {
       '✅ Ihre Nachricht wurde erfolgreich gesendet! Ich melde mich bald.',
     'contact.form.error':
       '❌ Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte überprüfen Sie, ob EmailJS korrekt konfiguriert ist, oder versuchen Sie es später erneut.',
+    'contact.form.error.button': 'Sendefehler. Erneut versuchen.',
+    'contact.form.success.button': 'Nachricht gesendet!',
+    'contact.form.name.placeholder': 'Ihr vollständiger Name',
+    'contact.form.validation.name': 'Name muss mindestens 2 Zeichen lang sein',
+    'contact.form.validation.email': 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
+    'contact.form.validation.subject': 'Betreff muss mindestens 3 Zeichen lang sein',
+    'contact.form.validation.message': 'Nachricht muss mindestens 10 Zeichen lang sein',
 
     // Footer
     'footer.text': '© {year} OniMock. Gebaut mit ❤️ und viel Kaffee.',
