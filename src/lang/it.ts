@@ -111,6 +111,7 @@ const it: LanguageFile = {
     'contact.form.validation.message':
       'Il messaggio deve avere almeno 10 caratteri',
 
+
     // Footer
     'footer.text': '© {year} OniMock. Realizzato con ❤️ e tanto caffè.',
 

@@ -103,6 +103,8 @@ const ko: LanguageFile = {
     'contact.form.validation.email': '유효한 이메일 주소를 입력해주세요',
     'contact.form.validation.subject': '제목은 최소 3자 이상이어야 합니다',
     'contact.form.validation.message': '메시지는 최소 10자 이상이어야 합니다',
+    
+    
 
     // Footer
     'footer.text': '© {year} OniMock. ❤️와 많은 커피로 제작됨.',

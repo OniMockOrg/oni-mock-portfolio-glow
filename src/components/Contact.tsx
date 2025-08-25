@@ -1,19 +1,23 @@
-import { useState, useEffect } from 'react';
-import { Mail, MapPin, Send, MessageCircle, Rocket, Star } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Mail, MapPin, Send, MessageCircle, Rocket, Star, Paperclip, X } from 'lucide-react';
 import { SiDiscord, SiGithub, SiX, SiTelegram } from 'react-icons/si';
 import { useLanguage } from '../hooks/use-language';
 import { AnimatedButton } from './ui/animated-button';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailjs';
 
+
+
 const Contact = () => {
   const { t } = useLanguage();
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: '',
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'success' | 'error'
@@ -23,6 +27,7 @@ const Contact = () => {
     email: '',
     subject: '',
     message: '',
+    attachment: '',
   });
 
   const handleChange = (e) => {
@@ -65,11 +70,14 @@ const Contact = () => {
       email: validateField('email', formData.email),
       subject: validateField('subject', formData.subject),
       message: validateField('message', formData.message),
+      attachment: '',
     };
     
     setFieldErrors(errors);
     return !Object.values(errors).some(error => error !== '');
   };
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -97,7 +105,6 @@ const Contact = () => {
     }
 
     try {
-      // Preparar os dados do template para o EmailJS
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -105,7 +112,6 @@ const Contact = () => {
         message: formData.message,
       };
 
-      // Enviar email usando EmailJS
       await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
         EMAILJS_CONFIG.TEMPLATE_ID,
@@ -115,6 +121,7 @@ const Contact = () => {
 
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
+      setFieldErrors({ name: '', email: '', subject: '', message: '', attachment: '' });
 
       // Reset status after 5 seconds
       setTimeout(() => {
@@ -474,8 +481,8 @@ const Contact = () => {
                         <p id="message-error" className="mt-1 text-sm text-red-400">
                           {fieldErrors.message}
                         </p>
-                      )}
-                </div>
+                      )}                </div>
+                
                 <button
                   type="submit"
                   disabled={isSubmitting}

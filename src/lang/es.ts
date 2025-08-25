@@ -104,10 +104,15 @@ const es: LanguageFile = {
     'contact.form.error.button': 'Error al enviar. Inténtalo de nuevo.',
     'contact.form.success.button': '¡Mensaje enviado!',
     'contact.form.name.placeholder': 'Tu nombre completo',
-    'contact.form.validation.name': 'El nombre debe tener al menos 2 caracteres',
-    'contact.form.validation.email': 'Por favor, ingresa una dirección de correo válida',
-    'contact.form.validation.subject': 'El asunto debe tener al menos 3 caracteres',
-    'contact.form.validation.message': 'El mensaje debe tener al menos 10 caracteres',
+    'contact.form.validation.name':
+      'El nombre debe tener al menos 2 caracteres',
+    'contact.form.validation.email':
+      'Por favor, ingresa una dirección de correo válida',
+    'contact.form.validation.subject':
+      'El asunto debe tener al menos 3 caracteres',
+    'contact.form.validation.message':
+      'El mensaje debe tener al menos 10 caracteres',
+
 
     // Pie de página
     'footer.text': '© {year} OniMock. Construido con ❤️ y mucho café.',

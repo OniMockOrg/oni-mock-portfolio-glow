@@ -106,9 +106,14 @@ const de: LanguageFile = {
     'contact.form.success.button': 'Nachricht gesendet!',
     'contact.form.name.placeholder': 'Ihr vollständiger Name',
     'contact.form.validation.name': 'Name muss mindestens 2 Zeichen lang sein',
-    'contact.form.validation.email': 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
-    'contact.form.validation.subject': 'Betreff muss mindestens 3 Zeichen lang sein',
-    'contact.form.validation.message': 'Nachricht muss mindestens 10 Zeichen lang sein',
+    'contact.form.validation.email':
+      'Bitte geben Sie eine gültige E-Mail-Adresse ein',
+    'contact.form.validation.subject':
+      'Betreff muss mindestens 3 Zeichen lang sein',
+    'contact.form.validation.message':
+      'Nachricht muss mindestens 10 Zeichen lang sein',
+    
+      
 
     // Footer
     'footer.text': '© {year} OniMock. Gebaut mit ❤️ und viel Kaffee.',

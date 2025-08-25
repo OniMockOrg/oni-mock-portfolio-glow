@@ -101,6 +101,7 @@ const zh: LanguageFile = {
     'contact.form.validation.subject': '主题至少需要3个字符',
     'contact.form.validation.message': '消息至少需要10个字符',
 
+
     // Footer
     'footer.text': '© {year} OniMock。用❤️和大量咖啡打造。',
 

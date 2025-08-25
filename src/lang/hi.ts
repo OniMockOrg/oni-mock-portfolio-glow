@@ -106,6 +106,7 @@ const hi: LanguageFile = {
     'contact.form.validation.subject': 'विषय में कम से कम 3 अक्षर होने चाहिए',
     'contact.form.validation.message': 'संदेश में कम से कम 10 अक्षर होने चाहिए',
 
+
     // Footer
     'footer.text': '© {year} OniMock। ❤️ और ढेर सारी कॉफी के साथ बनाया गया।',
 

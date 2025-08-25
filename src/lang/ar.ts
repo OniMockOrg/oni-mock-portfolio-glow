@@ -103,6 +103,7 @@ const ar: LanguageFile = {
     'contact.form.validation.subject': 'الموضوع يجب أن يحتوي على 3 أحرف على الأقل',
     'contact.form.validation.message': 'الرسالة يجب أن تحتوي على 10 أحرف على الأقل',
 
+
     // Footer
     'footer.text': '© {year} OniMock. تم بناؤه بـ ❤️ والكثير من القهوة.',
 

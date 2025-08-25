@@ -95,6 +95,7 @@ const en: LanguageFile = {
     'contact.form.subject.placeholder': "What's this about?",
     'contact.form.message': 'Message',
     'contact.form.message.placeholder': 'Tell me about your project',
+
     'contact.form.submit': 'Send message',
     'contact.form.sending': 'Sending...',
     'contact.form.success':

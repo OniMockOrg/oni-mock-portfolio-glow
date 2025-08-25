@@ -95,6 +95,7 @@ const pt: LanguageFile = {
     'contact.form.subject.placeholder': 'De que se trata?',
     'contact.form.message': 'Mensagem',
     'contact.form.message.placeholder': 'Fale-me sobre o seu projeto',
+
     'contact.form.submit': 'Enviar mensagem',
     'contact.form.sending': 'A enviar...',
     'contact.form.success':
